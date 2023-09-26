@@ -5,7 +5,7 @@
 <https://w3id.org/stav> <http://purl.org/dc/terms/description> "STAV represents AI system accountability concepts and relations."@en .
 <https://w3id.org/stav> <http://purl.org/dc/terms/issued> "2023-09-26T04:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/stav> <http://purl.org/dc/terms/license> "<https://creativecommons.org/licenses/by/4.0/>" .
-<https://w3id.org/stav> <http://purl.org/dc/terms/modified> "2021-09-26T08:10:00" .
+<https://w3id.org/stav> <http://purl.org/dc/terms/modified> "2021-09-26T08:25:00" .
 <https://w3id.org/stav> <http://purl.org/dc/terms/publisher> "ADAPT Centre, Trinity College Dublin" .
 <https://w3id.org/stav> <http://purl.org/dc/terms/title> "STAV" .
 <https://w3id.org/stav> <http://www.w3.org/2000/01/rdf-schema#label> "System Trustworthiness and Accountability Vocabulary"@en .
@@ -187,6 +187,8 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/stav#TechnicalDocumentation> .
 _:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/odrl/2/partOf> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/stav#SystemGeneralDescription> <http://www.w3.org/2000/01/rdf-schema#label> "System General Description"@en .
+<https://w3id.org/stav#SystemGeneralDescription> <http://www.w3.org/2004/02/skos/core#definition> "A general description of the AI system."@en .
 # 
 # https://w3id.org/stav#TechnicalDocumentation
 <https://w3id.org/stav#TechnicalDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

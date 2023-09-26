@@ -16,7 +16,7 @@
         <terms:description xml:lang="en">STAV represents AI system accountability concepts and relations.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-26T04:00:00</terms:issued>
         <terms:license>&lt;https://creativecommons.org/licenses/by/4.0/&gt;</terms:license>
-        <terms:modified>2021-09-26T08:10:00</terms:modified>
+        <terms:modified>2021-09-26T08:25:00</terms:modified>
         <terms:publisher>ADAPT Centre, Trinity College Dublin</terms:publisher>
         <terms:title>STAV</terms:title>
         <rdfs:label xml:lang="en">System Trustworthiness and Accountability Vocabulary</rdfs:label>
@@ -349,6 +349,8 @@
                 <owl:someValuesFrom rdf:resource="https://w3id.org/stav#TechnicalDocumentation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">System General Description</rdfs:label>
+        <skos:definition xml:lang="en">A general description of the AI system.</skos:definition>
     </owl:Class>
     
 

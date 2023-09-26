@@ -112,7 +112,7 @@
     "@value" : "<https://creativecommons.org/licenses/by/4.0/>"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2021-09-26T08:10:00"
+    "@value" : "2021-09-26T08:25:00"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ADAPT Centre, Trinity College Dublin"
@@ -328,10 +328,18 @@
 }, {
   "@id" : "https://w3id.org/stav#SystemGeneralDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "System General Description"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Asset"
   }, {
     "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A general description of the AI system."
   } ]
 }, {
   "@id" : "https://w3id.org/stav#TechnicalDocumentation",
