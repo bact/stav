@@ -1,0 +1,183 @@
+<https://w3id.org/stav> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/stav> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/stav/0.1> .
+<https://w3id.org/stav> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/odrl-account/0.1> .
+<https://w3id.org/stav> <http://purl.org/dc/terms/creator> "Arthit Suriyawongkul" .
+<https://w3id.org/stav> <http://purl.org/dc/terms/description> "STAV represents AI system accountability concepts and relations."@en .
+<https://w3id.org/stav> <http://purl.org/dc/terms/issued> "2023-09-26T04:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/stav> <http://purl.org/dc/terms/license> "<https://creativecommons.org/licenses/by/4.0/>" .
+<https://w3id.org/stav> <http://purl.org/dc/terms/modified> "2021-09-26T04:40:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/stav> <http://purl.org/dc/terms/publisher> "ADAPT Centre, Trinity College Dublin" .
+<https://w3id.org/stav> <http://purl.org/dc/terms/title> "STAV" .
+<https://w3id.org/stav> <http://www.w3.org/2000/01/rdf-schema#label> "System Trustworthiness and Accountability Vocabulary"@en .
+<https://w3id.org/stav> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/odrl/2/source
+<http://www.w3.org/ns/odrl/2/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/odrl/2/duty
+<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/odrl/2/partOf
+<http://www.w3.org/ns/odrl/2/partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/odrl/2/Action
+<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/odrl/2/Asset
+<http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/odrl/2/Party
+<http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/odrl-account#InformationCreationObligation
+<https://w3id.org/odrl-account#InformationCreationObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/odrl-account#InformationSubmissionObligation
+<https://w3id.org/odrl-account#InformationSubmissionObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/stav#AIDeployer
+<https://w3id.org/stav#AIDeployer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#AIDeployer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<https://w3id.org/stav#AIDeployer> <http://www.w3.org/2000/01/rdf-schema#label> "AI Deployer"@en .
+<https://w3id.org/stav#AIDeployer> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (4)" .
+<https://w3id.org/stav#AIDeployer> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# 
+# https://w3id.org/stav#AIProvider
+<https://w3id.org/stav#AIProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#AIProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<https://w3id.org/stav#AIProvider> <http://www.w3.org/2000/01/rdf-schema#label> "AI Provider"@en .
+<https://w3id.org/stav#AIProvider> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (2)" .
+<https://w3id.org/stav#AIProvider> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# 
+# https://w3id.org/stav#InstructionsForUse
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/stav#TechnicalDocumentationObligation> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/odrl/2/partOf> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2000/01/rdf-schema#label> "Instructions for Use"@en .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2004/02/skos/core#definition> "‘instructions for use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used."@en .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (15)" .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# 
+# https://w3id.org/stav#Logs
+<https://w3id.org/stav#Logs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#Logs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#Logs> <http://www.w3.org/2000/01/rdf-schema#label> "Logs"@en .
+<https://w3id.org/stav#Logs> <http://www.w3.org/2004/02/skos/core#definition> "Automatic recording of events while the high-risk AI systems is operating. Those logging capabilities shall conform to recognised standards or common specifications. The logging capabilities shall ensure a level of traceability of the AI system’s functioning throughout its lifecycle that is appropriate to the intended purpose of the system."@en .
+<https://w3id.org/stav#Logs> <http://www.w3.org/2004/02/skos/core#note> "Article 12" .
+<https://w3id.org/stav#Logs> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# 
+# https://w3id.org/stav#MakingAvailableOnTheMarket
+<https://w3id.org/stav#MakingAvailableOnTheMarket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#MakingAvailableOnTheMarket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Action> .
+<https://w3id.org/stav#MakingAvailableOnTheMarket> <http://www.w3.org/2004/02/skos/core#definition> "‘making available on the market’ means any supply of an AI system for distribution or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge."@en .
+<https://w3id.org/stav#MakingAvailableOnTheMarket> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (10)" .
+<https://w3id.org/stav#MakingAvailableOnTheMarket> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# 
+# https://w3id.org/stav#MarketSurveillenceAuthority
+<https://w3id.org/stav#MarketSurveillenceAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#MarketSurveillenceAuthority> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<https://w3id.org/stav#MarketSurveillenceAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "Market Surveillence Authority"@en .
+<https://w3id.org/stav#MarketSurveillenceAuthority> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (26)" .
+<https://w3id.org/stav#MarketSurveillenceAuthority> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# 
+# https://w3id.org/stav#PlacingOnTheMarket
+<https://w3id.org/stav#PlacingOnTheMarket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#PlacingOnTheMarket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Action> .
+<https://w3id.org/stav#PlacingOnTheMarket> <http://www.w3.org/2004/02/skos/core#definition> "‘placing on the market’ means the first making available of an AI system on the Union market."@en .
+<https://w3id.org/stav#PlacingOnTheMarket> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (9)" .
+<https://w3id.org/stav#PlacingOnTheMarket> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# 
+# https://w3id.org/stav#PutIntoService
+<https://w3id.org/stav#PutIntoService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#PutIntoService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Action> .
+<https://w3id.org/stav#PutIntoService> <http://www.w3.org/2004/02/skos/core#definition> "‘putting into service’ means the supply of an AI system for first use directly to the user or for own use on the Union market for its intended purpose."@en .
+<https://w3id.org/stav#PutIntoService> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (11)"@en .
+<https://w3id.org/stav#PutIntoService> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# 
+# https://w3id.org/stav#QualityManagementSystemDocumentationObligation
+<https://w3id.org/stav#QualityManagementSystemDocumentationObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#QualityManagementSystemDocumentationObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/odrl-account#InformationCreationObligation> .
+<https://w3id.org/stav#QualityManagementSystemDocumentationObligation> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Management System Documentation Obligation"@en .
+<https://w3id.org/stav#QualityManagementSystemDocumentationObligation> <http://www.w3.org/2004/02/skos/core#definition> "A quality management system ensures compliance of an AI system. A quality management system documentation shall be in the form of written policies, procedures and instructions. It shall include a strategy for regulatory compliance; techniques, procedures and systematic actions to be used for the design, development, and examination of the AI system, etc."@en .
+# 
+# https://w3id.org/stav#RegisterationObligation
+<https://w3id.org/stav#RegisterationObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#RegisterationObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/odrl-account#InformationSubmissionObligation> .
+<https://w3id.org/stav#RegisterationObligation> <http://www.w3.org/2000/01/rdf-schema#label> "Registeration Obligation"@en .
+<https://w3id.org/stav#RegisterationObligation> <http://www.w3.org/2004/02/skos/core#definition> "A registration to a database containing information about AI systems."@en .
+# 
+# https://w3id.org/stav#TechnicalDocumentation
+<https://w3id.org/stav#TechnicalDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#TechnicalDocumentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#TechnicalDocumentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/stav#TechnicalDocumentationObligation> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/odrl/2/duty> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/stav#TechnicalDocumentation> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Documentation"@en .
+<https://w3id.org/stav#TechnicalDocumentation> <http://www.w3.org/2004/02/skos/core#definition> "The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system complies with the requirements set out in Title III Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV."@en .
+<https://w3id.org/stav#TechnicalDocumentation> <http://www.w3.org/2004/02/skos/core#note> "Article 11" .
+<https://w3id.org/stav#TechnicalDocumentation> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# 
+# https://w3id.org/stav#TechnicalDocumentationObligation
+<https://w3id.org/stav#TechnicalDocumentationObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#TechnicalDocumentationObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/odrl-account#InformationCreationObligation> .
+<https://w3id.org/stav#TechnicalDocumentationObligation> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Documentation Obligation"@en .
+<https://w3id.org/stav#TechnicalDocumentationObligation> <http://www.w3.org/2004/02/skos/core#definition> "The technical documentation of an AI system contains information including its intended purpose and limitations, risk management process, data governance, and instructions of use."@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
