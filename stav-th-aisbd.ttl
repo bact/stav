@@ -5,47 +5,42 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix stav: <https://w3id.org/stav#> .
+@prefix stav-th-aisbd: <https://w3id.org/stav-th-aisbd#> .
 @base <https://w3id.org/stav-th-aisbd#> .
 
 <https://w3id.org/stav-th-aisbd/> rdf:type owl:Ontology ;
                                    owl:versionIRI <https://w3id.org/stav-th-aisbd/0.1> ;
                                    owl:imports <https://w3id.org/stav/0.1> ;
                                    dct:creator "Arthit Suriyawongkul" ;
-                                   dct:publisher "ADAPT Centre, Trinity College Dublin"^^xsd:string ;
+                                   dct:description "STAV-TH-AISBD represents AI system accountability concepts and relations based on Thailand AI Service Business Decree proposal."@en ;
+                                   dct:issued "2023-09-26T04:00:00"^^xsd:dateTime ;
                                    dct:license "<https://creativecommons.org/licenses/by/4.0/>" ;
-                                   dct:title "STAV-TH-AISBD"^^xsd:string ;
-                                    rdfs:label "STAV for Thailand AI Service Business Decree"@en ;
-                                    dct:description "STAV-TH-AISBD represents AI system accountability concepts and relations based on Thailand AI Service Business Decree proposal."@en ;
-                                    dct:issued "2023-09-26T04:00:00"^^xsd:dateTime ;
-                                    dct:modified "2021-09-26T04:40:00"^^xsd:dateTime ;
-                                    owl:versionInfo 0.1 .
+                                   dct:modified "2021-09-26T04:40:00"^^xsd:dateTime ;
+                                   dct:publisher "ADAPT Centre, Trinity College Dublin" ;
+                                   dct:title "STAV-TH-AISBD" ;
+                                   rdfs:label "STAV for Thailand AI Service Business Decree"@en ;
+                                   owl:versionInfo 0.1 .
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://w3id.org/stav#AIDatabaseRegisterationObligation
-<https://w3id.org/stav#AIDatabaseRegisterationObligation> rdf:type owl:Class .
-
-
-###  https://w3id.org/stav#TechnicalDocumentationSubmissionObligation
-<https://w3id.org/stav#TechnicalDocumentationSubmissionObligation> rdf:type owl:Class .
-
-
-###  https://w3id.org/stav-th-aisbd#THAIDatabaseRegisterationObligation
-:THAIDatabaseRegisterationObligation rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://w3id.org/stav#AIDatabaseRegisterationObligation> ;
-                                     rdfs:label "AI Database Registration Obligation (Thailand)"@en ;
-                                     <http://www.w3.org/2004/02/skos/core#definition> """มาตรา 12 ให้ผู้ให้บริการที่ใช้งานระบบปัญญาประดิษฐ์ตามมาตรา 8 ขอขึ้น
+###  https://w3id.org/stav-th-aisbd#THAISBDAIDatabaseRegisterationObligation
+stav-th-aisbd:THAISBDAIDatabaseRegisterationObligation rdf:type owl:Class ;
+                                                       rdfs:subClassOf stav:RegisterationObligation ;
+                                                       rdfs:label "AI Database Registration Obligation (Thailand AI Service Business Decree)"@en ;
+                                                       skos:definition """มาตรา 12 ให้ผู้ให้บริการที่ใช้งานระบบปัญญาประดิษฐ์ตามมาตรา 8 ขอขึ้น
 ทะเบียนการประกอบธุรกิจบริการดังกล่าว พร้อมมาตรการตามมาตรา 11 กับสำนักงานได้ รวมถึง การส่งข้อมูลเอกสารและรายงาน การแจ้งเลิกประกอบธุรกิจ การออกใบรับแจ้งและการออกคำสั่งของสานักงานหรือพนักงานเจ้าหน้าที่ รวมทั้งการเผยแพร่ข้อมูลและเอกสารสู่สาธารณะ ตลอดจนการดำเนินการอื่นตามพระราชกฤษฎีกานี้ โดยให้ดำเนินการโดยวิธีการทางอิเล็กทรอนิกส์เป็นหลัก"""@th ;
-                                     <http://www.w3.org/ns/odrl/2/source> "https://bact.cc/f/2022/10/202210-draft-service-business-that-use-ai-regulation-hearing-chula-onde.pdf" .
+                                                       <http://www.w3.org/ns/odrl/2/source> "https://bact.cc/f/2022/10/202210-draft-service-business-that-use-ai-regulation-hearing-chula-onde.pdf" .
 
 
-###  https://w3id.org/stav-th-aisbd#THTechnicalDocumentationSubmissionObligaiton
-:THTechnicalDocumentationSubmissionObligaiton rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://w3id.org/stav#TechnicalDocumentationSubmissionObligation> ;
-                                              rdfs:label "Technical Documentation Submission Obligation (Thailand)"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> """มาตรา 11 ผู้ให้บริการที่ใช้งานระบบปัญญาประดิษฐ์ตามมาตรา 8 มีหน้าที่ตรวจสอบและทำให้แน่ใจว่าระบบปัญญาประดิษฐ์ที่ใช้งานนั้นมีมาตรการควบคุมและจัดการความเสี่ยงที่เหมาะสมตลอดการให้บริการของตนเอง ไม่ว่าจะโดยการจัดทำขึ้นมาเองหรือการอ้างอิงไปยังข้อมูลหรือเอกสารของผู้เกี่ยวข้องที่จัดทามาตรการดังกล่าว พร้อมเผยแพร่สู่สาธารณะ ทั้งนี้ตามรายละเอียดหลักเกณฑ์และวิธีการที่สำนักงานกำหนด โดยอย่างน้อยประกอบด้วยมาตรการดังต่อไปนี้
+###  https://w3id.org/stav-th-aisbd#THAISBDTechnicalDocumentationObligaiton
+stav-th-aisbd:THAISBDTechnicalDocumentationObligaiton rdf:type owl:Class ;
+                                                      rdfs:subClassOf stav:TechnicalDocumentationObligation ;
+                                                      rdfs:label "Technical Documentation Obligation (Thailand AI Service Business Decree)"@en ;
+                                                      skos:definition """มาตรา 11 ผู้ให้บริการที่ใช้งานระบบปัญญาประดิษฐ์ตามมาตรา 8 มีหน้าที่ตรวจสอบและทำให้แน่ใจว่าระบบปัญญาประดิษฐ์ที่ใช้งานนั้นมีมาตรการควบคุมและจัดการความเสี่ยงที่เหมาะสมตลอดการให้บริการของตนเอง ไม่ว่าจะโดยการจัดทำขึ้นมาเองหรือการอ้างอิงไปยังข้อมูลหรือเอกสารของผู้เกี่ยวข้องที่จัดทามาตรการดังกล่าว พร้อมเผยแพร่สู่สาธารณะ ทั้งนี้ตามรายละเอียดหลักเกณฑ์และวิธีการที่สำนักงานกำหนด โดยอย่างน้อยประกอบด้วยมาตรการดังต่อไปนี้
 (1) กระบวนการจัดการความเสี่ยงของระบบ
 (2) กระบวนการจัดการข้อมูลและธรรมาภิบาลข้อมูล
 (3) เอกสารทางเทคนิคที่เกี่ยวข้อง
@@ -53,7 +48,7 @@
 (5) ข้อมูลหรือเอกสารเผยแพร่แก่ผู้ใช้งาน
 (6) กระบวนการควบคุมดูแลโดยมนุษย์
 (7) กระบวนการควบคุมความถูกต้องความสม่ำเสมอและความมั่นคงปลอดภัย"""@th ;
-                                              <http://www.w3.org/ns/odrl/2/source> "https://bact.cc/f/2022/10/202210-draft-service-business-that-use-ai-regulation-hearing-chula-onde.pdf" .
+                                                      <http://www.w3.org/ns/odrl/2/source> "https://bact.cc/f/2022/10/202210-draft-service-business-that-use-ai-regulation-hearing-chula-onde.pdf" .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

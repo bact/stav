@@ -16,7 +16,7 @@
         <terms:description xml:lang="en">STAV represents AI system accountability concepts and relations.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-26T04:00:00</terms:issued>
         <terms:license>&lt;https://creativecommons.org/licenses/by/4.0/&gt;</terms:license>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-26T04:40:00</terms:modified>
+        <terms:modified>2021-09-26T08:10:00</terms:modified>
         <terms:publisher>ADAPT Centre, Trinity College Dublin</terms:publisher>
         <terms:title>STAV</terms:title>
         <rdfs:label xml:lang="en">System Trustworthiness and Accountability Vocabulary</rdfs:label>
@@ -204,18 +204,34 @@
     
 
 
-    <!-- https://w3id.org/stav#InstructionsForUse -->
+    <!-- https://w3id.org/stav#InstallationInstructions -->
 
 
-    <owl:Class rdf:about="https://w3id.org/stav#InstructionsForUse">
+    <owl:Class rdf:about="https://w3id.org/stav#InstallationInstructions">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/odrl/2/partOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/stav#TechnicalDocumentationObligation"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/stav#SystemGeneralDescription"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Instructions for Use</rdfs:label>
+        <rdfs:label xml:lang="en">Installation Instructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#InstructionsOfUse -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#InstructionsOfUse">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/odrl/2/partOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/stav#SystemGeneralDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Instructions of Use</rdfs:label>
         <skos:definition xml:lang="en">‘instructions for use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used.</skos:definition>
         <skos:note>Article 3 (15)</skos:note>
         <odrl:source>https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&amp;from=EN</odrl:source>
@@ -223,12 +239,28 @@
     
 
 
-    <!-- https://w3id.org/stav#Logs -->
+    <!-- https://w3id.org/stav#IntendedPurpose -->
 
 
-    <owl:Class rdf:about="https://w3id.org/stav#Logs">
+    <owl:Class rdf:about="https://w3id.org/stav#IntendedPurpose">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
-        <rdfs:label xml:lang="en">Logs</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/odrl/2/partOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/stav#SystemGeneralDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Intended Purpose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#Log -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#Log">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">Log</rdfs:label>
         <skos:definition xml:lang="en">Automatic recording of events while the high-risk AI systems is operating. Those logging capabilities shall conform to recognised standards or common specifications. The logging capabilities shall ensure a level of traceability of the AI system’s functioning throughout its lifecycle that is appropriate to the intended purpose of the system.</skos:definition>
         <skos:note>Article 12</skos:note>
         <odrl:source>https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&amp;from=EN</odrl:source>
@@ -302,6 +334,21 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/odrl-account#InformationSubmissionObligation"/>
         <rdfs:label xml:lang="en">Registeration Obligation</rdfs:label>
         <skos:definition xml:lang="en">A registration to a database containing information about AI systems.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#SystemGeneralDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#SystemGeneralDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/odrl/2/partOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/stav#TechnicalDocumentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

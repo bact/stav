@@ -5,47 +5,54 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix stav: <https://w3id.org/stav#> .
+@prefix tair: <http://tair.adaptcentre.ie/ontologies/tair/> .
+@prefix stav-eu-aia: <https://w3id.org/stav-eu-aia#> .
 @base <https://w3id.org/stav-eu-aia#> .
 
 <https://w3id.org/stav-eu-aia> rdf:type owl:Ontology ;
                                 owl:versionIRI <https://w3id.org/stav-eu-aia/0.1> ;
-                                owl:imports <http://tair.adaptcentre.ie/ontologies/tair/1.0> ,
-                                            <https://w3id.org/stav/0.1> ;
-                         dct:creator "Arthit Suriyawongkul" ;
-                         dct:publisher "ADAPT Centre, Trinity College Dublin"^^xsd:string ;
-                         dct:license "<https://creativecommons.org/licenses/by/4.0/>" ;
-                         dct:title "STAV-EU-AIA"^^xsd:string ;
-                         rdfs:label "STAV for EU AI Act"@en ;
-                         dct:description "STAV-EU-AIA represents AI system accountability concepts and relations based on the EU AI Act proposal."@en ;
-                         dct:issued "2023-09-26T04:00:00"^^xsd:dateTime ;
-                         dct:modified "2021-09-26T04:40:00"^^xsd:dateTime ;
-                         owl:versionInfo 0.1 .
+                                owl:imports <https://w3id.org/stav/0.1> ;
+                                dct:creator "Arthit Suriyawongkul" ;
+                                dct:description "STAV-EU-AIA represents AI system accountability concepts and relations based on the EU AI Act proposal."@en ;
+                                dct:issued "2023-09-26T04:00:00"^^xsd:dateTime ;
+                                dct:license "<https://creativecommons.org/licenses/by/4.0/>" ;
+                                dct:modified "2021-09-26T04:40:00"^^xsd:dateTime ;
+                                dct:publisher "ADAPT Centre, Trinity College Dublin" ;
+                                dct:title "STAV-EU-AIA" ;
+                                rdfs:label "STAV for EU AI Act"@en ;
+                                owl:versionInfo 0.1 .
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://w3id.org/stav-eu-aia#EUAIDatabaseRegisterationObligation
-:EUAIDatabaseRegisterationObligation rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://tair.adaptcentre.ie/ontologies/tair/AiActRequirement> ,
-                                                     <https://w3id.org/stav#RegisterationObligation> ;
-                                     rdfs:label "AI Database Registeration Obligation (European Union)"@en ;
-                                     <http://www.w3.org/2004/02/skos/core#note> """Article 51 - Registration
+###  http://tair.adaptcentre.ie/ontologies/tair/AiActRequirement
+tair:AiActRequirement rdf:type owl:Class .
+
+
+###  https://w3id.org/stav-eu-aia#EUAIAAIDatabaseRegisterationObligation
+stav-eu-aia:EUAIAAIDatabaseRegisterationObligation rdf:type owl:Class ;
+                                                   rdfs:subClassOf tair:AiActRequirement ,
+                                                                   stav:RegisterationObligation ;
+                                                   rdfs:label "AI Database Registeration Obligation (EU AI Act)"@en ;
+                                                   skos:note """Article 51 - Registration
 
 Before placing on the market or putting into service a high-risk AI system referred to in Article 6(2), the provider or, where applicable, the authorised representative shall register that system in the EU database referred to in Article 60.
 
 Article 60
 
 1. The Commission shall, in collaboration with the Member States, set up and maintain a EU database containing information referred to in paragraph 2 concerning high-risk AI systems referred to in Article 6(2) which are registered in accordance with Article 51."""@en ;
-                                     <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+                                                   <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
 
 
-###  https://w3id.org/stav-eu-aia#EUQualityManagementSystemDocumentationObligation
-:EUQualityManagementSystemDocumentationObligation rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://tair.adaptcentre.ie/ontologies/tair/AiActRequirement> ,
-                                                                  <https://w3id.org/stav#QualityManagementSystemDocumentationObligation> ;
-                                                  rdfs:label "Quality Management System Documentation Obligation (European Union)"@en ;
-                                                  <http://www.w3.org/2004/02/skos/core#definition> """Article 17
+###  https://w3id.org/stav-eu-aia#EUAIAQualityManagementSystemDocumentationObligation
+stav-eu-aia:EUAIAQualityManagementSystemDocumentationObligation rdf:type owl:Class ;
+                                                                rdfs:subClassOf tair:AiActRequirement ,
+                                                                                stav:QualityManagementSystemDocumentationObligation ;
+                                                                rdfs:label "Quality Management System Documentation Obligation (EU AI Act)"@en ;
+                                                                skos:definition """Article 17
 
 Providers of high-risk AI systems shall put a quality management system in place that ensures compliance with this Regulation. That system shall be documented in a systematic and orderly manner in the form of written policies, procedures and instructions, and shall include at least the following aspects:
 
@@ -62,17 +69,17 @@ Providers of high-risk AI systems shall put a quality management system in place
 (k) systems and procedures for record keeping of all relevant documentation and information;
 (l) resource management, including security of supply related measures;
 (m) an accountability framework setting out the responsibilities of the management and other staff with regard to all aspects listed in this paragraph."""@en ;
+                                                                <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+
+###  https://w3id.org/stav-eu-aia#EUAIATechnicalDocumentationObligation
+stav-eu-aia:EUAIATechnicalDocumentationObligation rdf:type owl:Class ;
+                                                  rdfs:subClassOf tair:AiActRequirement ,
+                                                                  stav:TechnicalDocumentationObligation ;
+                                                  rdfs:label "Technical Documentation Obligation (EU AI Act)"@en ;
+                                                  skos:definition "The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system compiles with the requirements set out in Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV. (EU AI Act Article 11)"@en ;
+                                                  skos:note "The Forum initially will be none - as Article 11 does not specify where to submit this to. Only requires it to be drawn up. But regulator can of course ask the Accountee to demonstrate. -- Should we have a property \"mustAbleToDemonstrate\" or something like that?"@en ;
                                                   <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav-eu-aia#EUTechnicalDocumentationObligation
-:EUTechnicalDocumentationObligation rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://tair.adaptcentre.ie/ontologies/tair/AiActRequirement> ,
-                                                    <https://w3id.org/stav#TechnicalDocumentationObligation> ;
-                                    rdfs:label "Technical Documentation Obligation (European Union)"@en ;
-                                    <http://www.w3.org/2004/02/skos/core#definition> "The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system compiles with the requirements set out in Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV. (EU AI Act Article 11)"@en ;
-                                    <http://www.w3.org/2004/02/skos/core#note> "The Forum initially will be none - as Article 11 does not specify where to submit this to. Only requires it to be drawn up. But regulator can of course ask the Accountee to demonstrate. -- Should we have a property \"mustAbleToDemonstrate\" or something like that?"@en ;
-                                    <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
 
 
 #################################################################
@@ -80,19 +87,23 @@ Providers of high-risk AI systems shall put a quality management system in place
 #################################################################
 
 ###  http://tair.adaptcentre.ie/ontologies/tair/AiActChapter3Article18ReqColl
-<http://tair.adaptcentre.ie/ontologies/tair/AiActChapter3Article18ReqColl> rdf:type :EUTechnicalDocumentationObligation .
+tair:AiActChapter3Article18ReqColl rdf:type owl:NamedIndividual ,
+                                            stav-eu-aia:EUAIATechnicalDocumentationObligation .
 
 
 ###  http://tair.adaptcentre.ie/ontologies/tair/AiaPrReq_16.1_R1c
-<http://tair.adaptcentre.ie/ontologies/tair/AiaPrReq_16.1_R1c> rdf:type :EUTechnicalDocumentationObligation .
+tair:AiaPrReq_16.1_R1c rdf:type owl:NamedIndividual ,
+                                stav-eu-aia:EUAIATechnicalDocumentationObligation .
 
 
 ###  http://tair.adaptcentre.ie/ontologies/tair/AiaPrReq_16.1_R1f
-<http://tair.adaptcentre.ie/ontologies/tair/AiaPrReq_16.1_R1f> rdf:type :EUAIDatabaseRegisterationObligation .
+tair:AiaPrReq_16.1_R1f rdf:type owl:NamedIndividual ,
+                                stav-eu-aia:EUAIAAIDatabaseRegisterationObligation .
 
 
 ###  http://tair.adaptcentre.ie/ontologies/tair/AiaPrReq_51.1_R1
-<http://tair.adaptcentre.ie/ontologies/tair/AiaPrReq_51.1_R1> rdf:type :EUAIDatabaseRegisterationObligation .
+tair:AiaPrReq_51.1_R1 rdf:type owl:NamedIndividual ,
+                               stav-eu-aia:EUAIAAIDatabaseRegisterationObligation .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

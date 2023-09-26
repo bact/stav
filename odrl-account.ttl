@@ -5,6 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 # 
 # 
@@ -14,14 +15,6 @@
 # #
 # #################################################################
 # 
-# 
-# http://purl.org/dc/terms/creator
-# 
-# http://purl.org/dc/terms/description
-# 
-# http://purl.org/dc/terms/issued
-# 
-# http://purl.org/dc/terms/license
 # 
 # http://purl.org/dc/terms/modified
 # 
@@ -56,6 +49,7 @@
 
 <odrl-account> a owl:Ontology;
   owl:versionIRI <odrl-account/0.1>;
+  owl:imports <http://www.w3.org/ns/odrl/2/>;
   dct:creator "Arthit Suriyawongkul";
   dct:description "ODRL-Account is an ODRL Profile represents accountability concepts and relations."@en;
   dct:issued "2023-09-26T04:00:00"^^xsd:dateTime;
@@ -66,41 +60,33 @@
   rdfs:label "Accountability relationship ontology"@en;
   owl:versionInfo 0.1 .
 
-dct:creator a owl:AnnotationProperty .
-
-dct:description a owl:AnnotationProperty .
-
-dct:issued a owl:AnnotationProperty .
-
-dct:license a owl:AnnotationProperty .
-
 dct:modified a owl:AnnotationProperty .
 
 dct:publisher a owl:AnnotationProperty .
 
 dct:title a owl:AnnotationProperty .
 
-<http://www.w3.org/ns/odrl/2/Duty> a owl:Class;
+odrl:Duty a owl:Class;
   owl:disjointWith :InformationSubmissionObligation, :QuestionAnswerObligation, :VerdictObligation .
 
-<http://www.w3.org/ns/odrl/2/Permission> a owl:Class;
+odrl:Permission a owl:Class;
   owl:disjointWith :InformationSubmissionObligation, :QuestionAnswerObligation, :VerdictObligation .
 
-<http://www.w3.org/ns/odrl/2/Prohibition> a owl:Class;
+odrl:Prohibition a owl:Class;
   owl:disjointWith :InformationSubmissionObligation, :QuestionAnswerObligation, :VerdictObligation .
 
 :InformationCreationObligation a owl:Class;
-  rdfs:subClassOf <http://www.w3.org/ns/odrl/2/Duty>;
+  rdfs:subClassOf odrl:Duty;
   rdfs:label "Information Creation Obligation"@en .
 
 :InformationSubmissionObligation a owl:Class;
-  rdfs:subClassOf <http://www.w3.org/ns/odrl/2/Duty>;
+  rdfs:subClassOf odrl:Duty;
   rdfs:label "Information Submission Obligation"@en .
 
 :QuestionAnswerObligation a owl:Class;
-  rdfs:subClassOf <http://www.w3.org/ns/odrl/2/Duty>;
+  rdfs:subClassOf odrl:Duty;
   rdfs:label "Question Answer Obligation"@en .
 
 :VerdictObligation a owl:Class;
-  rdfs:subClassOf <http://www.w3.org/ns/odrl/2/Duty>;
+  rdfs:subClassOf odrl:Duty;
   rdfs:label "Verdict Obligation"@en .

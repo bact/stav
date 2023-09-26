@@ -5,10 +5,37 @@
     "@id" : "http://www.w3.org/ns/odrl/2/partOf"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/stav#TechnicalDocumentationObligation"
+    "@id" : "https://w3id.org/stav#SystemGeneralDescription"
   } ]
 }, {
   "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/partOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/stav#SystemGeneralDescription"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/partOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/stav#SystemGeneralDescription"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/partOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/stav#TechnicalDocumentation"
+  } ]
+}, {
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/duty"
@@ -85,8 +112,7 @@
     "@value" : "<https://creativecommons.org/licenses/by/4.0/>"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2021-09-26T04:40:00"
+    "@value" : "2021-09-26T08:10:00"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ADAPT Centre, Trinity College Dublin"
@@ -141,16 +167,28 @@
     "@value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN"
   } ]
 }, {
-  "@id" : "https://w3id.org/stav#InstructionsForUse",
+  "@id" : "https://w3id.org/stav#InstallationInstructions",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Instructions for Use"
+    "@value" : "Installation Instructions"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Asset"
   }, {
     "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#InstructionsOfUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Instructions of Use"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  }, {
+    "@id" : "_:genid2"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -163,11 +201,23 @@
     "@value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN"
   } ]
 }, {
-  "@id" : "https://w3id.org/stav#Logs",
+  "@id" : "https://w3id.org/stav#IntendedPurpose",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Logs"
+    "@value" : "Intended Purpose"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  }, {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#Log",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Log"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Asset"
@@ -276,6 +326,14 @@
     "@value" : "A registration to a database containing information about AI systems."
   } ]
 }, {
+  "@id" : "https://w3id.org/stav#SystemGeneralDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
   "@id" : "https://w3id.org/stav#TechnicalDocumentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -285,7 +343,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Asset"
   }, {
-    "@id" : "_:genid2"
+    "@id" : "_:genid5"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
