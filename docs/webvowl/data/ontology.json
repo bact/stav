@@ -28,16 +28,16 @@
         "value" : "Arthit Suriyawongkul",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2021-09-26T08:10:00",
-        "type" : "label"
-      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "ADAPT Centre, Trinity College Dublin",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2021-09-26T08:10:00",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -46,16 +46,16 @@
         "value" : "0.1",
         "type" : "label"
       } ],
-      "issued" : [ {
-        "identifier" : "issued",
-        "language" : "undefined",
-        "value" : "2023-09-26T04:00:00",
-        "type" : "label"
-      } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "undefined",
         "value" : "STAV",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2023-09-26T04:00:00",
         "type" : "label"
       } ]
     }
@@ -77,22 +77,22 @@
     "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
     "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "28",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
     "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
     "type" : "owl:Class"
   }, {
     "id" : "14",
@@ -253,6 +253,30 @@
     "id" : "22",
     "superClasses" : [ "21" ]
   }, {
+    "iri" : "https://w3id.org/stav#AIProvider",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "Article 3 (2)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AIProvider",
+      "en" : "AI Provider"
+    },
+    "id" : "27",
+    "superClasses" : [ "1" ]
+  }, {
     "iri" : "https://w3id.org/stav#PutIntoService",
     "baseIri" : "https://w3id.org/stav",
     "instances" : 0,
@@ -282,6 +306,16 @@
     "id" : "19",
     "superClasses" : [ "3" ]
   }, {
+    "iri" : "https://w3id.org/stav#IntendedPurpose",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntendedPurpose",
+      "en" : "Intended Purpose"
+    },
+    "id" : "7",
+    "superClasses" : [ "5" ]
+  }, {
     "iri" : "https://w3id.org/stav#InstallationInstructions",
     "baseIri" : "https://w3id.org/stav",
     "instances" : 0,
@@ -292,39 +326,23 @@
     "id" : "24",
     "superClasses" : [ "5" ]
   }, {
-    "iri" : "https://w3id.org/stav#AIProvider",
+    "iri" : "https://w3id.org/stav#RegisterationObligation",
     "baseIri" : "https://w3id.org/stav",
     "instances" : 0,
     "annotations" : {
-      "note" : [ {
-        "identifier" : "note",
-        "language" : "undefined",
-        "value" : "Article 3 (2)",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN",
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A registration to a database containing information about AI systems.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "AIProvider",
-      "en" : "AI Provider"
+      "IRI-based" : "RegisterationObligation",
+      "en" : "Registeration Obligation"
     },
-    "id" : "27",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "https://w3id.org/stav#IntendedPurpose",
-    "baseIri" : "https://w3id.org/stav",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IntendedPurpose",
-      "en" : "Intended Purpose"
-    },
-    "id" : "7",
-    "superClasses" : [ "5" ]
+    "id" : "13",
+    "superClasses" : [ "14" ]
   }, {
     "iri" : "https://w3id.org/stav#Log",
     "baseIri" : "https://w3id.org/stav",
@@ -355,24 +373,6 @@
     },
     "id" : "28",
     "superClasses" : [ "5" ]
-  }, {
-    "iri" : "https://w3id.org/stav#RegisterationObligation",
-    "baseIri" : "https://w3id.org/stav",
-    "instances" : 0,
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A registration to a database containing information about AI systems.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "RegisterationObligation",
-      "en" : "Registeration Obligation"
-    },
-    "id" : "13",
-    "superClasses" : [ "14" ]
   }, {
     "iri" : "https://w3id.org/odrl-account#InformationSubmissionObligation",
     "baseIri" : "https://w3id.org/odrl-account",
@@ -574,7 +574,7 @@
       "IRI-based" : "partOf"
     },
     "domain" : "7",
-    "attributes" : [ "someValues", "object", "external" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "6"
   }, {
     "iri" : "http://www.w3.org/ns/odrl/2/partOf",
@@ -584,7 +584,7 @@
       "IRI-based" : "partOf"
     },
     "domain" : "8",
-    "attributes" : [ "someValues", "object", "external" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "9"
   }, {
     "iri" : "http://www.w3.org/ns/odrl/2/duty",
@@ -594,7 +594,7 @@
       "IRI-based" : "duty"
     },
     "domain" : "4",
-    "attributes" : [ "someValues", "object", "external" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "10"
   }, {
     "range" : "14",
@@ -629,7 +629,7 @@
       "IRI-based" : "partOf"
     },
     "domain" : "24",
-    "attributes" : [ "someValues", "object", "external" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "23"
   }, {
     "iri" : "http://www.w3.org/ns/odrl/2/partOf",
@@ -639,7 +639,7 @@
       "IRI-based" : "partOf"
     },
     "domain" : "26",
-    "attributes" : [ "someValues", "object", "external" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "25"
   }, {
     "range" : "5",

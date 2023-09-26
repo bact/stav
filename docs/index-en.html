@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>STAV</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/stav","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/stav","name":"STAV", "headline":"STAV represents AI system accountability concepts and relations.", "datePublished":"2021-09-26T08:10:00", "version":"0.1", "author":[{"@type":"Person","name":"Arthit Suriyawongkul"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>STAV</h1>
+<h2>Release 2021-09-26T08:10:00</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/stav/0.1">https://w3id.org/stav/0.1</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/stav">https://w3id.org/stav</a></dd>
+<dt>Revision:</dt>
+<dd>0.1</dd>
+<dt>Issued on: </dt>
+<dd>2023-09-26T04:00:00</dd>
+<dt>Authors:</dt>
+<dd>Arthit Suriyawongkul</dd>
+
+<dt>Publisher:</dt>
+<dd>ADAPT Centre, Trinity College Dublin</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-<https://creativecommons.org/licenses/by/4.0/>-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Arthit Suriyawongkul. STAV. Revision: 0.1. Retrieved from: https://w3id.org/stav/0.1</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+STAV represents AI system accountability concepts and relations.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;https://w3id.org/stav&gt;</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td><b>dct</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>odrl-account</b></td><td>&lt;https://w3id.org/odrl-account&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>odrl</b></td><td>&lt;http://www.w3.org/ns/odrl/2&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">System Trustworthiness and Accountability Vocabulary: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:extra="https://w3id.org/extra#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AIDeployer" title="https://w3id.org/stav#AIDeployer">AI Deployer</a>
+   </li>
+   <li>
+      <a href="#AIProvider" title="https://w3id.org/stav#AIProvider">AI Provider</a>
+   </li>
+   <li>
+      <a href="#InstallationInstructions" title="https://w3id.org/stav#InstallationInstructions">Installation Instructions</a>
+   </li>
+   <li>
+      <a href="#InstructionsOfUse" title="https://w3id.org/stav#InstructionsOfUse">Instructions of Use</a>
+   </li>
+   <li>
+      <a href="#IntendedPurpose" title="https://w3id.org/stav#IntendedPurpose">Intended Purpose</a>
+   </li>
+   <li>
+      <a href="#Log" title="https://w3id.org/stav#Log">Log</a>
+   </li>
+   <li>
+      <a href="#MakingAvailableOnTheMarket" title="https://w3id.org/stav#MakingAvailableOnTheMarket">
+         <span>making available on the market</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MarketSurveillenceAuthority"
+         title="https://w3id.org/stav#MarketSurveillenceAuthority">Market Surveillence Authority</a>
+   </li>
+   <li>
+      <a href="#PlacingOnTheMarket" title="https://w3id.org/stav#PlacingOnTheMarket">
+         <span>placing on the market</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PutIntoService" title="https://w3id.org/stav#PutIntoService">
+         <span>put into service</span>
+      </a>
+   </li>
+   <li>
+      <a href="#QualityManagementSystemDocumentationObligation"
+         title="https://w3id.org/stav#QualityManagementSystemDocumentationObligation">Quality Management System Documentation Obligation</a>
+   </li>
+   <li>
+      <a href="#RegisterationObligation" title="https://w3id.org/stav#RegisterationObligation">Registeration Obligation</a>
+   </li>
+   <li>
+      <a href="#SystemGeneralDescription" title="https://w3id.org/stav#SystemGeneralDescription">
+         <span>system general description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TechnicalDocumentation" title="https://w3id.org/stav#TechnicalDocumentation">Technical Documentation</a>
+   </li>
+   <li>
+      <a href="#TechnicalDocumentationObligation"
+         title="https://w3id.org/stav#TechnicalDocumentationObligation">Technical Documentation Obligation</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:extra="https://w3id.org/extra#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note">
+         <span>note</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+         <span>publisher</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/odrl/2/source" title="http://www.w3.org/ns/odrl/2/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">System Trustworthiness and Accountability Vocabulary: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for System Trustworthiness and Accountability Vocabulary classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by System Trustworthiness and Accountability Vocabulary.
+<div xmlns:extra="https://w3id.org/extra#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AIDeployer" title="https://w3id.org/stav#AIDeployer">AI Deployer</a>
+      </li>
+      <li>
+         <a href="#AIProvider" title="https://w3id.org/stav#AIProvider">AI Provider</a>
+      </li>
+      <li>
+         <a href="#InstallationInstructions" title="https://w3id.org/stav#InstallationInstructions">Installation Instructions</a>
+      </li>
+      <li>
+         <a href="#InstructionsOfUse" title="https://w3id.org/stav#InstructionsOfUse">Instructions of Use</a>
+      </li>
+      <li>
+         <a href="#IntendedPurpose" title="https://w3id.org/stav#IntendedPurpose">Intended Purpose</a>
+      </li>
+      <li>
+         <a href="#Log" title="https://w3id.org/stav#Log">Log</a>
+      </li>
+      <li>
+         <a href="#MakingAvailableOnTheMarket" title="https://w3id.org/stav#MakingAvailableOnTheMarket">
+            <span>making available on the market</span>
+         </a>
+      </li>
+      <li>
+         <a href="#MarketSurveillenceAuthority"
+            title="https://w3id.org/stav#MarketSurveillenceAuthority">Market Surveillence Authority</a>
+      </li>
+      <li>
+         <a href="#PlacingOnTheMarket" title="https://w3id.org/stav#PlacingOnTheMarket">
+            <span>placing on the market</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PutIntoService" title="https://w3id.org/stav#PutIntoService">
+            <span>put into service</span>
+         </a>
+      </li>
+      <li>
+         <a href="#QualityManagementSystemDocumentationObligation"
+            title="https://w3id.org/stav#QualityManagementSystemDocumentationObligation">Quality Management System Documentation Obligation</a>
+      </li>
+      <li>
+         <a href="#RegisterationObligation" title="https://w3id.org/stav#RegisterationObligation">Registeration Obligation</a>
+      </li>
+      <li>
+         <a href="#SystemGeneralDescription" title="https://w3id.org/stav#SystemGeneralDescription">
+            <span>system general description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TechnicalDocumentation" title="https://w3id.org/stav#TechnicalDocumentation">Technical Documentation</a>
+      </li>
+      <li>
+         <a href="#TechnicalDocumentationObligation"
+            title="https://w3id.org/stav#TechnicalDocumentationObligation">Technical Documentation Obligation</a>
+      </li>
+   </ul>
+   <div class="entity" id="AIDeployer">
+      <h3>AI Deployer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#AIDeployer</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Party"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Party">party</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AIProvider">
+      <h3>AI Provider<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#AIProvider</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Party"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Party">party</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InstallationInstructions">
+      <h3>Installation Instructions<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#InstallationInstructions</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Asset"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InstructionsOfUse">
+      <h3>Instructions of Use<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#InstructionsOfUse</p>
+      <div class="comment">
+         <span class="markdown">‘instructions for use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Asset"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IntendedPurpose">
+      <h3>Intended Purpose<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#IntendedPurpose</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Asset"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Log">
+      <h3>Log<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#Log</p>
+      <div class="comment">
+         <span class="markdown">Automatic recording of events while the high-risk AI systems is operating. Those logging capabilities shall conform to recognised standards or common specifications. The logging capabilities shall ensure a level of traceability of the AI system’s functioning throughout its lifecycle that is appropriate to the intended purpose of the system.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Asset"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MakingAvailableOnTheMarket">
+      <h3>making available on the market<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#MakingAvailableOnTheMarket</p>
+      <div class="comment">
+         <span class="markdown">‘making available on the market’ means any supply of an AI system for distribution or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Action"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Action">action</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MarketSurveillenceAuthority">
+      <h3>Market Surveillence Authority<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#MarketSurveillenceAuthority</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Party"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Party">party</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PlacingOnTheMarket">
+      <h3>placing on the market<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#PlacingOnTheMarket</p>
+      <div class="comment">
+         <span class="markdown">‘placing on the market’ means the first making available of an AI system on the Union market.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Action"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Action">action</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PutIntoService">
+      <h3>put into service<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#PutIntoService</p>
+      <div class="comment">
+         <span class="markdown">‘putting into service’ means the supply of an AI system for first use directly to the user or for own use on the Union market for its intended purpose.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Action"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Action">action</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="QualityManagementSystemDocumentationObligation">
+      <h3>Quality Management System Documentation Obligation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#QualityManagementSystemDocumentationObligation</p>
+      <div class="comment">
+         <span class="markdown">A quality management system ensures compliance of an AI system. A quality management system documentation shall be in the form of written policies, procedures and instructions. It shall include a strategy for regulatory compliance; techniques, procedures and systematic actions to be used for the design, development, and examination of the AI system, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/odrl-account#InformationCreationObligation"
+               target="_blank"
+               title="https://w3id.org/odrl-account#InformationCreationObligation">information creation obligation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RegisterationObligation">
+      <h3>Registeration Obligation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#RegisterationObligation</p>
+      <div class="comment">
+         <span class="markdown">A registration to a database containing information about AI systems.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/odrl-account#InformationSubmissionObligation"
+               target="_blank"
+               title="https://w3id.org/odrl-account#InformationSubmissionObligation">information submission obligation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SystemGeneralDescription">
+      <h3>system general description<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#SystemGeneralDescription</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Asset"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TechnicalDocumentation">
+      <h3>Technical Documentation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#TechnicalDocumentation</p>
+      <div class="comment">
+         <span class="markdown">The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system complies with the requirements set out in Title III Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/odrl/2/Asset"
+               target="_blank"
+               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TechnicalDocumentationObligation">
+      <h3>Technical Documentation Obligation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/stav#TechnicalDocumentationObligation</p>
+      <div class="comment">
+         <span class="markdown">The technical documentation of an AI system contains information including its intended purpose and limitations, risk management process, data governance, and instructions of use.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/odrl-account#InformationCreationObligation"
+               target="_blank"
+               title="https://w3id.org/odrl-account#InformationCreationObligation">information creation obligation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:extra="https://w3id.org/extra#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+            <span>creator</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+            <span>definition</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+            <span>issued</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+            <span>license</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+            <span>modified</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note">
+            <span>note</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+            <span>publisher</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/odrl/2/source" title="http://www.w3.org/ns/odrl/2/source">
+            <span>source</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+            <span>title</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/dc/terms/creator">
+      <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#definition">
+      <h3>definition<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#definition</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/description">
+      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/issued">
+      <h3>issued<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/license">
+      <h3>license<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/modified">
+      <h3>modified<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#note">
+      <h3>note<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#note</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/publisher">
+      <h3>publisher<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/odrl/2/source">
+      <h3>source<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/odrl/2/source</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/title">
+      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
