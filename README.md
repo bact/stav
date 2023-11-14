@@ -14,3 +14,5 @@ Arthit Suriyawongkul
 ADAPT Centre, Trinity College Dublin
 
 https://regtech.adaptcentre.ie/
+
+https://w3id.org/stav
