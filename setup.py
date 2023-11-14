@@ -17,7 +17,7 @@ pip install stav
 
 setup(
     name="stav",
-    version="0.1",
+    version="0.2.dev0",
     description="STAV: System Trustworthiness and Accountability Vocabulary",
     long_description=readme,
     long_description_content_type="text/markdown",
