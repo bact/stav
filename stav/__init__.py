@@ -1,4 +1,4 @@
-__version__ = "0.2.dev0"
+__version__ = "0.2.dev1"
 
 import stav.eu.aia
 
@@ -49,6 +49,8 @@ METRICS_R2 = "MetricsR2"
 METRICS_RMSE = "MetricsRMSE"
 METRICS_MAE = "MetricsMAE"
 
+METRICS_ENERGY = "MetricsEnergy"
+
 DATASET_SIZE = "DataSetSize"
 
 __all__ = [
@@ -89,6 +91,5 @@ __all__ = [
     "METRICS_R2",
     "METRICS_RMSE",
     "METRICS_MAE",
+    "METRICS_ENERGY",
 ]
-
-stav.eu.aia.LogRecord
