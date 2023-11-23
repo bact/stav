@@ -1,0 +1,169 @@
+@prefix : <https://w3id.org/stav-us-aaa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <https://w3id.org/stav-us-aaa#> .
+
+<https://w3id.org/stav-us-aaa> rdf:type owl:Ontology ;
+                                owl:versionIRI <https://w3id.org/stav-us-aaa/0.1> ;
+                                owl:imports <https://w3id.org/stav/0.2> ;
+                                rdfs:label "STAV for Algorithmic Accountability Act"@en ;
+                                owl:versionInfo 0.1 .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/stav-us-aaa#USAAABaselineProcessDescription
+:USAAABaselineProcessDescription rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/stav#BaselineProcessDescription> ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty odrl:partOf ;
+                                                   owl:someValuesFrom :USAAAPreviouslyExistingProcessEvaluationDocumentation
+                                                 ] .
+
+
+###  https://w3id.org/stav-us-aaa#USAAACurrentAndPotentialFutureImpacts
+:USAAACurrentAndPotentialFutureImpacts rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/stav#CurrentAndPotentialFutureImpacts> ;
+                                       rdfs:label "Current and Potential Future Impacts (US AI Accountability Act)"@en ;
+                                       odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_3_C" .
+
+
+###  https://w3id.org/stav-us-aaa#USAAADataMinimizationPractices
+:USAAADataMinimizationPractices rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/stav#DataMinimizationPractices> ;
+                                rdfs:label "Data Minimization Practices (US AI Accountability Act)"@en ;
+                                odrl:source "Sec. 4. (a) (3)"@en ,
+                                            "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_3_A" .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAImpactAssessmentDocumentation
+:USAAAImpactAssessmentDocumentation rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/stav#ImpactAssessmentDocumentation> ;
+                                    rdfs:comment "Sec. 2. (12)"@en ;
+                                    rdfs:label "Impact Assessment Documentation (US Algorithmic Accountability Act)"@en ;
+                                    skos:definition "The term impact assessment means the ongoing study and evaluation of an automated decision system or augmented critical decision process and its impact on consumers."@en ;
+                                    odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=2_12" .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAInformationSecurityMeasures
+:USAAAInformationSecurityMeasures rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/stav#InformationSecurityMeasures> ;
+                                  rdfs:label "Information Security Measures (US AI Accountability Act)"@en ;
+                                  odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_3_B"@en .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAIntendedBenefitsOverPreviouslyExistingProcess
+:USAAAIntendedBenefitsOverPreviouslyExistingProcess rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess> .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAIntendedPurpose
+:USAAAIntendedPurpose rdf:type owl:Class ;
+                      rdfs:subClassOf <https://w3id.org/stav#IntendedPurposes> .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAPreviouslyExistingProcessEvaluationDocumentation
+:USAAAPreviouslyExistingProcessEvaluationDocumentation rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation> .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAPreviouslyExistingProcessKnownNegativeImpactInformation
+:USAAAPreviouslyExistingProcessKnownNegativeImpactInformation rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation> .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAPrivacyRisksAndPrivacyMeasuresEvaluationDocumentation
+:USAAAPrivacyRisksAndPrivacyMeasuresEvaluationDocumentation rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation> ;
+                                                            rdfs:comment "Sec. 4. (a) (3)"@en ;
+                                                            rdfs:label "Privacy Risks and Privacy-enhancing Measures Evaluation Documentation (US AI Accountability Act)"@en ;
+                                                            skos:member <https://w3id.org/stav#CurrentAndPotentialFutureImpacts> ,
+                                                                        <https://w3id.org/stav#DataMinimizationPractices> ,
+                                                                        <https://w3id.org/stav#InformationSecurityMeasures> ;
+                                                            odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_3" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/stav-us-aaa#USAAABaselineProcessDescription
+:USAAABaselineProcessDescription rdf:type owl:NamedIndividual ;
+                                 odrl:partOf :USAAAPreviouslyExistingProcessEvaluationDocumentation .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAIntendedBenefitsOverPreviouslyExistingProcess
+:USAAAIntendedBenefitsOverPreviouslyExistingProcess rdf:type owl:NamedIndividual ;
+                                                    odrl:partOf :USAAAPreviouslyExistingProcessEvaluationDocumentation .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAIntendedPurpose
+:USAAAIntendedPurpose rdf:type owl:NamedIndividual ;
+                      odrl:partOf :USAAAPreviouslyExistingProcessEvaluationDocumentation .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAPreviouslyExistingProcessEvaluationDocumentation
+:USAAAPreviouslyExistingProcessEvaluationDocumentation rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/stav-us-aaa#USAAAPreviouslyExistingProcessKnownNegativeImpactInformation
+:USAAAPreviouslyExistingProcessKnownNegativeImpactInformation rdf:type owl:NamedIndividual ;
+                                                              odrl:partOf :USAAAPreviouslyExistingProcessEvaluationDocumentation .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://w3id.org/stav#PreviouslyExistingProcessInformation> rdfs:comment "Sec. 4. (a) (1)"@en .
+
+
+:USAAABaselineProcessDescription rdfs:comment "Sec. 4. (a) (1) (A)"@en ;
+                                 rdfs:label "Baseline Process Description (US Algorithmic Accountability Act)"@en ;
+                                 skos:definition "A description of the baseline process being enhanced or replaced by the augmented critical decision process."@en ;
+                                 odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_A" .
+
+
+:USAAAIntendedBenefitsOverPreviouslyExistingProcess rdfs:comment "Sec. 4. (a) (1) (C)"@en ;
+                                                    rdfs:label "Intended Benefits Over Previously Existing Process (US Algorithmic Accountability Act)"@en ;
+                                                    skos:definition "The intended benefits of and need for the augmented critical decision process."@en ;
+                                                    odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_C" .
+
+
+:USAAAIntendedPurpose rdfs:comment "Sec. 4. (a) (1) (D)"@en ;
+                      rdfs:label "Intended Purposes (US Algorithmic Accountability Act)"@en ;
+                      skos:definition "The intended purpose of the automated decision system or augmented critical decision process."@en ;
+                      odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_D" .
+
+
+:USAAAPreviouslyExistingProcessEvaluationDocumentation rdfs:comment "Sec. 4. (a) (1)"@en ;
+                                                       rdfs:label "Previously Existing Process Evaluation Documentation (US Algorithmic Accountability Act)"@en ;
+                                                       skos:definition """In the case of a new augmented critical decision process, evaluate any previously existing critical decision-making process used for the same critical decision prior to the deployment of the new augmented critical decision process, along with any related documentation or information, such as—
+
+(A) a description of the baseline process being enhanced or replaced by the augmented critical decision process;
+
+(B) any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make the critical decision;
+
+(C) the intended benefits of and need for the augmented critical decision process; and
+
+(D) the intended purpose of the automated decision system or augmented critical decision process."""@en ;
+                                                       skos:member :USAAABaselineProcessDescription ,
+                                                                   :USAAAIntendedBenefitsOverPreviouslyExistingProcess ,
+                                                                   :USAAAIntendedPurpose ,
+                                                                   :USAAAPreviouslyExistingProcessKnownNegativeImpactInformation ;
+                                                       odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1" .
+
+
+:USAAAPreviouslyExistingProcessKnownNegativeImpactInformation rdfs:comment "Sec. 4. (a) (1) (B)"@en ;
+                                                              rdfs:label "Previously Existing Process Known Negative Impact Information (US Algorithmic Accountability Act)"@en ;
+                                                              skos:definition "Any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make the critical decision."@en ;
+                                                              odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_B" .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

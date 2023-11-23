@@ -10,15 +10,15 @@
 @prefix stav-th-aisbd: <https://w3id.org/stav-th-aisbd#> .
 @base <https://w3id.org/stav-th-aisbd#> .
 
-<https://w3id.org/stav-th-aisbd/> rdf:type owl:Ontology ;
+<https://w3id.org/stav-th-aisbd> rdf:type owl:Ontology ;
                                    owl:versionIRI <https://w3id.org/stav-th-aisbd/0.1> ;
                                    owl:imports <https://w3id.org/stav/0.1> ;
                                    dct:creator "Arthit Suriyawongkul" ;
                                    dct:description "STAV-TH-AISBD represents AI system accountability concepts and relations based on Thailand AI Service Business Decree proposal."@en ;
                                    dct:issued "2023-09-26T04:00:00"^^xsd:dateTime ;
-                                   dct:license "<https://creativecommons.org/licenses/by/4.0/>" ;
+                                   dct:license "https://creativecommons.org/licenses/by/4.0/" ;
                                    dct:modified "2021-09-26T04:40:00"^^xsd:dateTime ;
-                                   dct:publisher "ADAPT Centre, Trinity College Dublin" ;
+                                   dct:publisher "ADAPT Centre, Trinity College Dublin"@en ;
                                    dct:title "STAV-TH-AISBD" ;
                                    rdfs:label "STAV for Thailand AI Service Business Decree"@en ;
                                    owl:versionInfo 0.1 .
