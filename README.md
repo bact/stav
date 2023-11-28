@@ -47,8 +47,9 @@ log_artifact("use_intructions.txt", artifact_path=stav.INSTRUCTIONS_OF_USE)
 
 STA*V* (a *V*ocabulary) and STA*P* (an ODRL *P*rofile) are sisters for system trustworthiness and accountability.
 
-- **STAV** provides a vocabulary (with focus on *informational items*) extracted from regulations and policy documents, mostly AI safety-related. Its IRI is [https://w3id.org/stav](https://w3id.org/stav).
-- **STAP** provides a set of core accountability relationships, based on [Open Digital Rights Language](https://www.w3.org/TR/odrl-model/). They are trying not to be AI-specific. Its IRI is [https://w3id.org/stap](https://w3id.org/stap).
+- **STAV** provides a vocabulary (with focus on *informational items*) extracted from regulations and policy documents, mostly AI safety-related. Its IRI is [https://w3id.org/stav](https://w3id.org/stav). Its code repository is at [https://github.com/bact/stav/](https://github.com/bact/stav/).
+
+- **STAP** provides a set of core accountability relationships, based on [Open Digital Rights Language](https://www.w3.org/TR/odrl-model/). They are trying not to be AI-specific. Its IRI is [https://w3id.org/stap](https://w3id.org/stap). Its code repository is at [https://github.com/bact/stav/](https://github.com/bact/stav/).
 
 
 ## Author
