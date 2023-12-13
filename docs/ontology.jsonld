@@ -17,33 +17,6 @@
     "@id" : "https://w3id.org/stav#SystemGeneralDescription"
   } ]
 }, {
-  "@id" : "_:genid3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/partOf"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/stav#SystemGeneralDescription"
-  } ]
-}, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/partOf"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/stav#TechnicalDocumentation"
-  } ]
-}, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/duty"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/stav#TechnicalDocumentationObligation"
-  } ]
-}, {
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -77,6 +50,9 @@
   "@id" : "http://www.w3.org/ns/odrl/2/Asset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://www.w3.org/ns/odrl/2/Party",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -89,10 +65,10 @@
   "@id" : "http://www.w3.org/ns/odrl/2/source",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/odrl-account#InformationCreationObligation",
+  "@id" : "https://w3id.org/stap#InformationCreationObligation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/odrl-account#InformationSubmissionObligation",
+  "@id" : "https://w3id.org/stap#InformationSubmissionObligation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/stav",
@@ -109,10 +85,10 @@
     "@value" : "2023-09-26T04:00:00"
   } ],
   "http://purl.org/dc/terms/license" : [ {
-    "@value" : "<https://creativecommons.org/licenses/by/4.0/>"
+    "@value" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2021-09-26T08:25:00"
+    "@value" : "2023-09-26T08:25:00"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ADAPT Centre, Trinity College Dublin"
@@ -125,14 +101,16 @@
     "@value" : "System Trustworthiness and Accountability Vocabulary"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "https://w3id.org/odrl-account/0.1"
+    "@id" : "http://spdx.org/rdf/terms/2.3"
+  }, {
+    "@id" : "https://w3id.org/stap/0.1"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/stav/0.1"
+    "@id" : "https://w3id.org/stav/0.2"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.1"
+    "@value" : "0.2"
   } ]
 }, {
   "@id" : "https://w3id.org/stav#AIDeployer",
@@ -165,6 +143,85 @@
   } ],
   "http://www.w3.org/ns/odrl/2/source" : [ {
     "@value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#BaselineProcessDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Baseline Process Description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#ConsumerRightsEvaluationInformation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Consumer Rights Evaluation Information"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Evaluation of the rights of consumers."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#CurrentAndPotentialFutureImpacts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Current and Potential Future Impacts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Assessment and documentation of the current and potential future or downstream positive and negative impacts of a system or process."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#DataMinimizationPractices",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data Minimization Practices"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Assessment and documentation of the data minimization practices of a system or process and the duration for which the relevant identifying information and any resulting critical decision is stored."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#ImpactAssessmentDocumentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Impact Assessment Documentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#InformationSecurityMeasures",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Information Security Measures"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Assessment of information security measures with respect to a system or process."
   } ]
 }, {
   "@id" : "https://w3id.org/stav#InstallationInstructions",
@@ -201,16 +258,28 @@
     "@value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN"
   } ]
 }, {
-  "@id" : "https://w3id.org/stav#IntendedPurpose",
+  "@id" : "https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Intended Purpose"
+    "@value" : "Intended Benefits Over Previously Existing Process"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Asset"
-  }, {
-    "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Intended benefits of and need for the new process."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#IntendedPurposes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intended Purposes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
   } ]
 }, {
   "@id" : "https://w3id.org/stav#Log",
@@ -235,6 +304,10 @@
 }, {
   "@id" : "https://w3id.org/stav#MakingAvailableOnTheMarket",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "making available on the market"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
@@ -267,6 +340,10 @@
 }, {
   "@id" : "https://w3id.org/stav#PlacingOnTheMarket",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "placing on the market"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
@@ -281,8 +358,60 @@
     "@value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN"
   } ]
 }, {
-  "@id" : "https://w3id.org/stav#PutIntoService",
+  "@id" : "https://w3id.org/stav#PreviouslyExistingProcessDocumentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Previously Existing Process Documentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Previously Existing Process Evaluation Documentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Previously Existing Process Known Negative Impact Information"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make a decision."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Privacy Risks and Privacy Measures Evaluation Documentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#PuttingIntoService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "putting into service"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Action"
   } ],
@@ -305,7 +434,7 @@
     "@value" : "Quality Management System Documentation Obligation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/odrl-account#InformationCreationObligation"
+    "@id" : "https://w3id.org/stap#InformationCreationObligation"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -319,11 +448,20 @@
     "@value" : "Registeration Obligation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/odrl-account#InformationSubmissionObligation"
+    "@id" : "https://w3id.org/stap#InformationSubmissionObligation"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "A registration to a database containing information about AI systems."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#SystemEvaluationDocumentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "System Evaluation Documentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
   } ]
 }, {
   "@id" : "https://w3id.org/stav#SystemGeneralDescription",
@@ -334,8 +472,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Asset"
-  }, {
-    "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -349,9 +485,7 @@
     "@value" : "Technical Documentation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
-  }, {
-    "@id" : "_:genid5"
+    "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -371,7 +505,7 @@
     "@value" : "Technical Documentation Obligation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/odrl-account#InformationCreationObligation"
+    "@id" : "https://w3id.org/stap#InformationCreationObligation"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",

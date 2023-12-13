@@ -10,17 +10,18 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/stav">
-        <owl:versionIRI rdf:resource="https://w3id.org/stav/0.1"/>
-        <owl:imports rdf:resource="https://w3id.org/odrl-account/0.1"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/stav/0.2"/>
+        <owl:imports rdf:resource="http://spdx.org/rdf/terms/2.3"/>
+        <owl:imports rdf:resource="https://w3id.org/stap/0.1"/>
         <terms:creator>Arthit Suriyawongkul</terms:creator>
         <terms:description xml:lang="en">STAV represents AI system accountability concepts and relations.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-26T04:00:00</terms:issued>
-        <terms:license>&lt;https://creativecommons.org/licenses/by/4.0/&gt;</terms:license>
-        <terms:modified>2021-09-26T08:25:00</terms:modified>
+        <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
+        <terms:modified>2023-09-26T08:25:00</terms:modified>
         <terms:publisher>ADAPT Centre, Trinity College Dublin</terms:publisher>
         <terms:title>STAV</terms:title>
         <rdfs:label xml:lang="en">System Trustworthiness and Accountability Vocabulary</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -159,6 +160,13 @@
     
 
 
+    <!-- http://www.w3.org/ns/odrl/2/AssetCollection -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+    
+
+
     <!-- http://www.w3.org/ns/odrl/2/Party -->
 
 
@@ -166,17 +174,17 @@
     
 
 
-    <!-- https://w3id.org/odrl-account#InformationCreationObligation -->
+    <!-- https://w3id.org/stap#InformationCreationObligation -->
 
 
-    <owl:Class rdf:about="https://w3id.org/odrl-account#InformationCreationObligation"/>
+    <owl:Class rdf:about="https://w3id.org/stap#InformationCreationObligation"/>
     
 
 
-    <!-- https://w3id.org/odrl-account#InformationSubmissionObligation -->
+    <!-- https://w3id.org/stap#InformationSubmissionObligation -->
 
 
-    <owl:Class rdf:about="https://w3id.org/odrl-account#InformationSubmissionObligation"/>
+    <owl:Class rdf:about="https://w3id.org/stap#InformationSubmissionObligation"/>
     
 
 
@@ -200,6 +208,71 @@
         <rdfs:label xml:lang="en">AI Provider</rdfs:label>
         <skos:note>Article 3 (2)</skos:note>
         <odrl:source>https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&amp;from=EN</odrl:source>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#BaselineProcessDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#BaselineProcessDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">Baseline Process Description</rdfs:label>
+        <skos:definition xml:lang="en">Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#ConsumerRightsEvaluationInformation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#ConsumerRightsEvaluationInformation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">Consumer Rights Evaluation Information</rdfs:label>
+        <skos:definition xml:lang="en">Evaluation of the rights of consumers.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#CurrentAndPotentialFutureImpacts -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#CurrentAndPotentialFutureImpacts">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">Current and Potential Future Impacts</rdfs:label>
+        <skos:definition xml:lang="en">Assessment and documentation of the current and potential future or downstream positive and negative impacts of a system or process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#DataMinimizationPractices -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#DataMinimizationPractices">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">Data Minimization Practices</rdfs:label>
+        <skos:definition xml:lang="en">Assessment and documentation of the data minimization practices of a system or process and the duration for which the relevant identifying information and any resulting critical decision is stored.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#ImpactAssessmentDocumentation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#ImpactAssessmentDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:label>Impact Assessment Documentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#InformationSecurityMeasures -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#InformationSecurityMeasures">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">Information Security Measures</rdfs:label>
+        <skos:definition xml:lang="en">Assessment of information security measures with respect to a system or process.</skos:definition>
     </owl:Class>
     
 
@@ -239,18 +312,23 @@
     
 
 
-    <!-- https://w3id.org/stav#IntendedPurpose -->
+    <!-- https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess -->
 
 
-    <owl:Class rdf:about="https://w3id.org/stav#IntendedPurpose">
+    <owl:Class rdf:about="https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/odrl/2/partOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/stav#SystemGeneralDescription"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Intended Purpose</rdfs:label>
+        <rdfs:label xml:lang="en">Intended Benefits Over Previously Existing Process</rdfs:label>
+        <skos:definition xml:lang="en">Intended benefits of and need for the new process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#IntendedPurposes -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#IntendedPurposes">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">Intended Purposes</rdfs:label>
     </owl:Class>
     
 
@@ -273,6 +351,7 @@
 
     <owl:Class rdf:about="https://w3id.org/stav#MakingAvailableOnTheMarket">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <rdfs:label xml:lang="en">making available on the market</rdfs:label>
         <skos:definition xml:lang="en">‘making available on the market’ means any supply of an AI system for distribution or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge.</skos:definition>
         <skos:note>Article 3 (10)</skos:note>
         <odrl:source>https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&amp;from=EN</odrl:source>
@@ -297,6 +376,7 @@
 
     <owl:Class rdf:about="https://w3id.org/stav#PlacingOnTheMarket">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <rdfs:label xml:lang="en">placing on the market</rdfs:label>
         <skos:definition xml:lang="en">‘placing on the market’ means the first making available of an AI system on the Union market.</skos:definition>
         <skos:note>Article 3 (9)</skos:note>
         <odrl:source>https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&amp;from=EN</odrl:source>
@@ -304,11 +384,54 @@
     
 
 
-    <!-- https://w3id.org/stav#PutIntoService -->
+    <!-- https://w3id.org/stav#PreviouslyExistingProcessDocumentation -->
 
 
-    <owl:Class rdf:about="https://w3id.org/stav#PutIntoService">
+    <owl:Class rdf:about="https://w3id.org/stav#PreviouslyExistingProcessDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:label xml:lang="en">Previously Existing Process Documentation</rdfs:label>
+        <skos:definition xml:lang="en">Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:label xml:lang="en">Previously Existing Process Evaluation Documentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">Previously Existing Process Known Negative Impact Information</rdfs:label>
+        <skos:definition xml:lang="en">Any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make a decision.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:label xml:lang="en">Privacy Risks and Privacy Measures Evaluation Documentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#PuttingIntoService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#PuttingIntoService">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <rdfs:label xml:lang="en">putting into service</rdfs:label>
         <skos:definition xml:lang="en">‘putting into service’ means the supply of an AI system for first use directly to the user or for own use on the Union market for its intended purpose.</skos:definition>
         <skos:note xml:lang="en">Article 3 (11)</skos:note>
         <odrl:source>https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&amp;from=EN</odrl:source>
@@ -320,7 +443,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/stav#QualityManagementSystemDocumentationObligation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/odrl-account#InformationCreationObligation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/stap#InformationCreationObligation"/>
         <rdfs:label xml:lang="en">Quality Management System Documentation Obligation</rdfs:label>
         <skos:definition xml:lang="en">A quality management system ensures compliance of an AI system. A quality management system documentation shall be in the form of written policies, procedures and instructions. It shall include a strategy for regulatory compliance; techniques, procedures and systematic actions to be used for the design, development, and examination of the AI system, etc.</skos:definition>
     </owl:Class>
@@ -331,9 +454,19 @@
 
 
     <owl:Class rdf:about="https://w3id.org/stav#RegisterationObligation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/odrl-account#InformationSubmissionObligation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/stap#InformationSubmissionObligation"/>
         <rdfs:label xml:lang="en">Registeration Obligation</rdfs:label>
         <skos:definition xml:lang="en">A registration to a database containing information about AI systems.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#SystemEvaluationDocumentation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#SystemEvaluationDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:label>System Evaluation Documentation</rdfs:label>
     </owl:Class>
     
 
@@ -343,12 +476,6 @@
 
     <owl:Class rdf:about="https://w3id.org/stav#SystemGeneralDescription">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/odrl/2/partOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/stav#TechnicalDocumentation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">System General Description</rdfs:label>
         <skos:definition xml:lang="en">A general description of the AI system.</skos:definition>
     </owl:Class>
@@ -359,13 +486,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/stav#TechnicalDocumentation">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/odrl/2/duty"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/stav#TechnicalDocumentationObligation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
         <rdfs:label xml:lang="en">Technical Documentation</rdfs:label>
         <skos:definition xml:lang="en">The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system complies with the requirements set out in Title III Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV.</skos:definition>
         <skos:note>Article 11</skos:note>
@@ -378,7 +499,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/stav#TechnicalDocumentationObligation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/odrl-account#InformationCreationObligation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/stap#InformationCreationObligation"/>
         <rdfs:label xml:lang="en">Technical Documentation Obligation</rdfs:label>
         <skos:definition xml:lang="en">The technical documentation of an AI system contains information including its intended purpose and limitations, risk management process, data governance, and instructions of use.</skos:definition>
     </owl:Class>

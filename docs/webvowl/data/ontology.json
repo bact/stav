@@ -2,12 +2,12 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "https://w3id.org/stav", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/ns/odrl/2", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/odrl-account", "http://www.w3.org/2001/XMLSchema" ],
+    "baseIris" : [ "https://w3id.org/stav", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/ns/odrl/2", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/stap" ],
     "title" : {
       "undefined" : "STAV"
     },
     "iri" : "https://w3id.org/stav",
-    "version" : "0.1",
+    "version" : "0.2",
     "author" : [ "Arthit Suriyawongkul" ],
     "description" : {
       "en" : "STAV represents AI system accountability concepts and relations."
@@ -19,7 +19,7 @@
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "<https://creativecommons.org/licenses/by/4.0/>",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "label"
       } ],
       "creator" : [ {
@@ -31,7 +31,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2021-09-26T08:25:00",
+        "value" : "2023-09-26T08:25:00",
         "type" : "label"
       } ],
       "publisher" : [ {
@@ -43,19 +43,19 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "0.1",
-        "type" : "label"
-      } ],
-      "issued" : [ {
-        "identifier" : "issued",
-        "language" : "undefined",
-        "value" : "2023-09-26T04:00:00",
+        "value" : "0.2",
         "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "undefined",
         "value" : "STAV",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2023-09-26T04:00:00",
         "type" : "label"
       } ]
     }
@@ -68,85 +68,103 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
-    "id" : "17",
-    "type" : "owl:Class"
-  }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "27",
-    "type" : "owl:Class"
-  }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
     "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "28",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
-    "type" : "owl:Class"
-  }, {
-    "id" : "14",
-    "type" : "owl:Class"
-  }, {
-    "id" : "29",
     "type" : "owl:Class"
   }, {
     "id" : "11",
     "type" : "owl:Class"
   }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
     "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "26",
     "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "https://w3id.org/stav#AIDeployer",
-    "baseIri" : "https://w3id.org/stav",
-    "instances" : 0,
-    "annotations" : {
-      "note" : [ {
-        "identifier" : "note",
-        "language" : "undefined",
-        "value" : "Article 3 (4)",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "AIDeployer",
-      "en" : "AI Deployer"
-    },
-    "id" : "0",
-    "superClasses" : [ "1" ]
-  }, {
     "iri" : "https://w3id.org/stav#MakingAvailableOnTheMarket",
     "baseIri" : "https://w3id.org/stav",
     "instances" : 0,
@@ -171,10 +189,21 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "MakingAvailableOnTheMarket"
+      "IRI-based" : "MakingAvailableOnTheMarket",
+      "en" : "making available on the market"
     },
-    "id" : "2",
-    "superClasses" : [ "3" ]
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/odrl/2/AssetCollection",
+    "baseIri" : "http://www.w3.org/ns/odrl/2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AssetCollection"
+    },
+    "subClasses" : [ "3", "4", "5", "6", "7", "8" ],
+    "attributes" : [ "external" ],
+    "id" : "2"
   }, {
     "iri" : "https://w3id.org/stav#TechnicalDocumentation",
     "baseIri" : "https://w3id.org/stav",
@@ -203,8 +232,329 @@
       "IRI-based" : "TechnicalDocumentation",
       "en" : "Technical Documentation"
     },
+    "id" : "7",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/stav#InformationSecurityMeasures",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Assessment of information security measures with respect to a system or process.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InformationSecurityMeasures",
+      "en" : "Information Security Measures"
+    },
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/stav#InstallationInstructions",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InstallationInstructions",
+      "en" : "Installation Instructions"
+    },
+    "id" : "20",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/stav#RegisterationObligation",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A registration to a database containing information about AI systems.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RegisterationObligation",
+      "en" : "Registeration Obligation"
+    },
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://w3id.org/stap#InformationCreationObligation",
+    "baseIri" : "https://w3id.org/stap",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InformationCreationObligation"
+    },
+    "subClasses" : [ "31", "32" ],
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/stav#ImpactAssessmentDocumentation",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactAssessmentDocumentation",
+      "undefined" : "Impact Assessment Documentation"
+    },
+    "id" : "3",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/stav#TechnicalDocumentationObligation",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The technical documentation of an AI system contains information including its intended purpose and limitations, risk management process, data governance, and instructions of use.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TechnicalDocumentationObligation",
+      "en" : "Technical Documentation Obligation"
+    },
+    "id" : "31",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/stav#PreviouslyExistingProcessDocumentation",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PreviouslyExistingProcessDocumentation",
+      "en" : "Previously Existing Process Documentation"
+    },
     "id" : "4",
-    "superClasses" : [ "5" ]
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/odrl/2/Action",
+    "baseIri" : "http://www.w3.org/ns/odrl/2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Action"
+    },
+    "subClasses" : [ "0", "37", "38" ],
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation",
+      "en" : "Privacy Risks and Privacy Measures Evaluation Documentation"
+    },
+    "id" : "6",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/stav#BaselineProcessDescription",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BaselineProcessDescription",
+      "en" : "Baseline Process Description"
+    },
+    "id" : "17",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/stav#CurrentAndPotentialFutureImpacts",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Assessment and documentation of the current and potential future or downstream positive and negative impacts of a system or process.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CurrentAndPotentialFutureImpacts",
+      "en" : "Current and Potential Future Impacts"
+    },
+    "id" : "39",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/stav#SystemGeneralDescription",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A general description of the AI system.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SystemGeneralDescription",
+      "en" : "System General Description"
+    },
+    "id" : "40",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/odrl/2/Party",
+    "baseIri" : "http://www.w3.org/ns/odrl/2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Party"
+    },
+    "subClasses" : [ "42", "43", "44" ],
+    "attributes" : [ "external" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/stav#PuttingIntoService",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "Article 3 (11)",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "‘putting into service’ means the supply of an AI system for first use directly to the user or for own use on the Union market for its intended purpose.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PuttingIntoService",
+      "en" : "putting into service"
+    },
+    "id" : "38",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/stav#DataMinimizationPractices",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Assessment and documentation of the data minimization practices of a system or process and the duration for which the relevant identifying information and any resulting critical decision is stored.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataMinimizationPractices",
+      "en" : "Data Minimization Practices"
+    },
+    "id" : "36",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make a decision.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PreviouslyExistingProcessKnownNegativeImpactInformation",
+      "en" : "Previously Existing Process Known Negative Impact Information"
+    },
+    "id" : "19",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PreviouslyExistingProcessEvaluationDocumentation",
+      "en" : "Previously Existing Process Evaluation Documentation"
+    },
+    "id" : "8",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/stav#AIDeployer",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "Article 3 (4)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AIDeployer",
+      "en" : "AI Deployer"
+    },
+    "id" : "42",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "https://w3id.org/stav#ConsumerRightsEvaluationInformation",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Evaluation of the rights of consumers.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConsumerRightsEvaluationInformation",
+      "en" : "Consumer Rights Evaluation Information"
+    },
+    "id" : "29",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "10",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/stav#IntendedPurposes",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntendedPurposes",
+      "en" : "Intended Purposes"
+    },
+    "id" : "22",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://w3id.org/stav#PlacingOnTheMarket",
     "baseIri" : "https://w3id.org/stav",
@@ -230,10 +580,11 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "PlacingOnTheMarket"
+      "IRI-based" : "PlacingOnTheMarket",
+      "en" : "placing on the market"
     },
-    "id" : "17",
-    "superClasses" : [ "3" ]
+    "id" : "37",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "https://w3id.org/stav#QualityManagementSystemDocumentationObligation",
     "baseIri" : "https://w3id.org/stav",
@@ -250,18 +601,8 @@
       "IRI-based" : "QualityManagementSystemDocumentationObligation",
       "en" : "Quality Management System Documentation Obligation"
     },
-    "id" : "22",
-    "superClasses" : [ "21" ]
-  }, {
-    "iri" : "https://w3id.org/stav#InstallationInstructions",
-    "baseIri" : "https://w3id.org/stav",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "InstallationInstructions",
-      "en" : "Installation Instructions"
-    },
-    "id" : "24",
-    "superClasses" : [ "5" ]
+    "id" : "32",
+    "superClasses" : [ "30" ]
   }, {
     "iri" : "https://w3id.org/stav#AIProvider",
     "baseIri" : "https://w3id.org/stav",
@@ -284,47 +625,8 @@
       "IRI-based" : "AIProvider",
       "en" : "AI Provider"
     },
-    "id" : "27",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "https://w3id.org/stav#PutIntoService",
-    "baseIri" : "https://w3id.org/stav",
-    "instances" : 0,
-    "annotations" : {
-      "note" : [ {
-        "identifier" : "note",
-        "language" : "en",
-        "value" : "Article 3 (11)",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "‘putting into service’ means the supply of an AI system for first use directly to the user or for own use on the Union market for its intended purpose.",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "PutIntoService"
-    },
-    "id" : "19",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "https://w3id.org/stav#IntendedPurpose",
-    "baseIri" : "https://w3id.org/stav",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IntendedPurpose",
-      "en" : "Intended Purpose"
-    },
-    "id" : "7",
-    "superClasses" : [ "5" ]
+    "id" : "44",
+    "superClasses" : [ "41" ]
   }, {
     "iri" : "https://w3id.org/stav#Log",
     "baseIri" : "https://w3id.org/stav",
@@ -353,36 +655,8 @@
       "IRI-based" : "Log",
       "en" : "Log"
     },
-    "id" : "28",
-    "superClasses" : [ "5" ]
-  }, {
-    "iri" : "https://w3id.org/stav#RegisterationObligation",
-    "baseIri" : "https://w3id.org/stav",
-    "instances" : 0,
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A registration to a database containing information about AI systems.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "RegisterationObligation",
-      "en" : "Registeration Obligation"
-    },
-    "id" : "13",
-    "superClasses" : [ "14" ]
-  }, {
-    "iri" : "https://w3id.org/odrl-account#InformationSubmissionObligation",
-    "baseIri" : "https://w3id.org/odrl-account",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "InformationSubmissionObligation"
-    },
-    "subClasses" : [ "13" ],
-    "attributes" : [ "external" ],
-    "id" : "14"
+    "id" : "24",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://w3id.org/stav#MarketSurveillenceAuthority",
     "baseIri" : "https://w3id.org/stav",
@@ -405,74 +679,36 @@
       "IRI-based" : "MarketSurveillenceAuthority",
       "en" : "Market Surveillence Authority"
     },
-    "id" : "29",
-    "superClasses" : [ "1" ]
+    "id" : "43",
+    "superClasses" : [ "41" ]
   }, {
-    "iri" : "https://w3id.org/stav#TechnicalDocumentationObligation",
+    "iri" : "https://w3id.org/stav#SystemEvaluationDocumentation",
+    "baseIri" : "https://w3id.org/stav",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SystemEvaluationDocumentation",
+      "undefined" : "System Evaluation Documentation"
+    },
+    "id" : "5",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess",
     "baseIri" : "https://w3id.org/stav",
     "instances" : 0,
     "annotations" : {
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "The technical documentation of an AI system contains information including its intended purpose and limitations, risk management process, data governance, and instructions of use.",
+        "value" : "Intended benefits of and need for the new process.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "TechnicalDocumentationObligation",
-      "en" : "Technical Documentation Obligation"
+      "IRI-based" : "IntendedBenefitsOverPreviouslyExistingProcess",
+      "en" : "Intended Benefits Over Previously Existing Process"
     },
-    "id" : "11",
-    "superClasses" : [ "21" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/odrl/2/Action",
-    "baseIri" : "http://www.w3.org/ns/odrl/2",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Action"
-    },
-    "subClasses" : [ "2", "17", "19" ],
-    "attributes" : [ "external" ],
-    "id" : "3"
-  }, {
-    "iri" : "https://w3id.org/odrl-account#InformationCreationObligation",
-    "baseIri" : "https://w3id.org/odrl-account",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "InformationCreationObligation"
-    },
-    "subClasses" : [ "11", "22" ],
-    "attributes" : [ "external" ],
-    "id" : "21"
-  }, {
-    "iri" : "https://w3id.org/stav#SystemGeneralDescription",
-    "baseIri" : "https://w3id.org/stav",
-    "instances" : 0,
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A general description of the AI system.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "SystemGeneralDescription",
-      "en" : "System General Description"
-    },
-    "id" : "8",
-    "superClasses" : [ "5" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/odrl/2/Party",
-    "baseIri" : "http://www.w3.org/ns/odrl/2",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Party"
-    },
-    "subClasses" : [ "0", "29", "27" ],
-    "attributes" : [ "external" ],
-    "id" : "1"
+    "id" : "34",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://www.w3.org/ns/odrl/2/Asset",
     "baseIri" : "http://www.w3.org/ns/odrl/2",
@@ -480,9 +716,9 @@
     "label" : {
       "IRI-based" : "Asset"
     },
-    "subClasses" : [ "8", "4", "24", "7", "26", "28" ],
+    "subClasses" : [ "39", "11", "40", "29", "20", "36", "34", "22", "19", "26", "24", "17" ],
     "attributes" : [ "external" ],
-    "id" : "5"
+    "id" : "12"
   }, {
     "iri" : "https://w3id.org/stav#InstructionsOfUse",
     "baseIri" : "https://w3id.org/stav",
@@ -512,22 +748,23 @@
       "en" : "Instructions of Use"
     },
     "id" : "26",
-    "superClasses" : [ "5" ]
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/stap#InformationSubmissionObligation",
+    "baseIri" : "https://w3id.org/stap",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InformationSubmissionObligation"
+    },
+    "subClasses" : [ "14" ],
+    "attributes" : [ "external" ],
+    "id" : "15"
   } ],
   "property" : [ {
-    "id" : "6",
-    "type" : "owl:someValuesFrom"
-  }, {
     "id" : "9",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "10",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "12",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "15",
+    "id" : "13",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "16",
@@ -536,169 +773,248 @@
     "id" : "18",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "20",
+    "id" : "21",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "23",
-    "type" : "owl:someValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "25",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "30",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "31",
+    "id" : "27",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "32",
+    "id" : "28",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "33",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "34",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "35",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "36",
+    "id" : "45",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "37",
+    "id" : "46",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "38",
+    "id" : "47",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "39",
+    "id" : "48",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "63",
+    "type" : "owl:someValuesFrom"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "http://www.w3.org/ns/odrl/2/partOf",
-    "baseIri" : "http://www.w3.org/ns/odrl/2",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "partOf"
-    },
-    "domain" : "7",
-    "attributes" : [ "external", "someValues", "object" ],
-    "id" : "6"
-  }, {
-    "iri" : "http://www.w3.org/ns/odrl/2/partOf",
-    "baseIri" : "http://www.w3.org/ns/odrl/2",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "partOf"
-    },
-    "domain" : "8",
-    "attributes" : [ "external", "someValues", "object" ],
-    "id" : "9"
-  }, {
     "iri" : "http://www.w3.org/ns/odrl/2/duty",
     "baseIri" : "http://www.w3.org/ns/odrl/2",
-    "range" : "11",
+    "range" : "10",
     "label" : {
       "IRI-based" : "duty"
     },
-    "domain" : "4",
-    "attributes" : [ "external", "someValues", "object" ],
-    "id" : "10"
+    "domain" : "10",
+    "attributes" : [ "object", "external" ],
+    "id" : "9"
   }, {
-    "range" : "14",
-    "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "12"
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
   }, {
-    "range" : "3",
-    "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "15"
-  }, {
-    "range" : "3",
+    "range" : "12",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "16"
   }, {
-    "range" : "3",
+    "range" : "12",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "18"
   }, {
-    "range" : "21",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "20"
+    "range" : "12",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
   }, {
-    "iri" : "http://www.w3.org/ns/odrl/2/partOf",
-    "baseIri" : "http://www.w3.org/ns/odrl/2",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "partOf"
-    },
+    "range" : "12",
     "domain" : "24",
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "23"
   }, {
-    "iri" : "http://www.w3.org/ns/odrl/2/partOf",
-    "baseIri" : "http://www.w3.org/ns/odrl/2",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "partOf"
-    },
+    "range" : "12",
     "domain" : "26",
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "25"
   }, {
-    "range" : "5",
-    "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "30"
+    "range" : "12",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
   }, {
-    "range" : "5",
-    "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "31"
+    "range" : "12",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
   }, {
-    "range" : "5",
-    "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "32"
-  }, {
-    "range" : "5",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "12",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "33"
   }, {
-    "range" : "1",
-    "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "34"
-  }, {
-    "range" : "5",
-    "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "12",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
-    "range" : "5",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "36"
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
   }, {
-    "range" : "21",
-    "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "37"
+    "range" : "12",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "12",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "41",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
   }, {
     "range" : "1",
-    "domain" : "29",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "38"
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "41",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "range" : "41",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "30",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "1",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "39"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "2",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "2",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "range" : "2",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "range" : "30",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.w3.org/ns/odrl/2/partOf",
+    "baseIri" : "http://www.w3.org/ns/odrl/2",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "partOf"
+    },
+    "domain" : "20",
+    "attributes" : [ "someValues", "object", "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.w3.org/ns/odrl/2/partOf",
+    "baseIri" : "http://www.w3.org/ns/odrl/2",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "partOf"
+    },
+    "domain" : "26",
+    "attributes" : [ "someValues", "object", "external" ],
+    "id" : "63"
   } ]
 }
