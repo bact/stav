@@ -70,4 +70,4 @@ Members of [RegTech group at ADAPT Centre](https://regtech.adaptcentre.ie/) cont
 - [Trustworthy AI Requirements Ontology (TAIR)](https://tair.adaptcentre.ie/)
 - [AI Risk Ontology (AIRO)](https://w3id.org/airo)
 - [Vocabulary of AI Risks (VAIR)](https://w3id.org/vair)
-- [Data Privacy Vocabulary (DPV)](https://w3id.org/dpv)
+- [Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) - [AI Extenstion](https://github.com/w3c/dpv/issues/126) (under development)
