@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2023 Arthit Suriyawongkul <suriyawa@tcd.ie>
+# SPDX-License-Identifier: MIT
 """
 Setup script for STAV
 

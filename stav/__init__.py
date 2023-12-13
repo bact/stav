@@ -1,6 +1,10 @@
-__version__ = "0.2.dev1"
+# SPDX-FileCopyrightText: 2023 Arthit Suriyawongkul <suriyawa@tcd.ie>
+# SPDX-License-Identifier: MIT
 
-import stav.eu.aia
+__version__ = "0.2.dev2"
+__stav_namespace__ = ""
+
+from stav.eu.aia import TechnicalDocumentation, LogRecord
 
 AI_PROVIDER = "AIProvider"
 PREVIOUSLY_EXISTING_PROCESS_EVALUATION_DOCUMENTATION = (
@@ -51,9 +55,14 @@ METRICS_MAE = "MetricsMAE"
 
 METRICS_ENERGY = "MetricsEnergy"
 
-DATASET_SIZE = "DataSetSize"
+DATASET_SIZE = "DatasetSize"
+
+ENERY_CONSUMPTION = "EnergyConsumption"  # SPDX AI Profile
+AUTONOMY_TYPE = "AutonomyType"  # SPDX AI Profile
 
 __all__ = [
+    TechnicalDocumentation,
+    LogRecord,
     "AI_PROVIDER",
     "PREVIOUSLY_EXISTING_PROCESS_EVALUATION_DOCUMENTATION",
     "TECHNICAL_DOCUMENTATION_OBLIGATION",
@@ -92,4 +101,7 @@ __all__ = [
     "METRICS_RMSE",
     "METRICS_MAE",
     "METRICS_ENERGY",
+    "DATASET_SIZE",
+    "ENERY_CONSUMPTION",
+    "AUTONOMY_TYPE",
 ]
