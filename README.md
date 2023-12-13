@@ -17,8 +17,9 @@ STAV class names are accessible through constants in the `stav` module. These cl
 Values of these constants are simply a STAV class name, a string in `CamelCase`.
 
 For example, `stav.INSTRUCTIONS_OF_USE` is a string with value of "InstructionsOfUse".
+(In the future, it should be able to configure the casing to "instructions_of_use", etc.)
 
-With this, it will make the standardization of documentation easier and can facilitate the use of the terms in MLOps settings, where data scientists and data engineers can use STAV terms as keys in their model logging and registration.
+With this, it will make the standardization of documentation within an organization, or across organizations, easier and can facilitate the use of the terms in MLOps settings, where data scientists and data engineers can use STAV terms as keys in their model logging and registration.
 
 ### Install
 
@@ -29,7 +30,7 @@ pip install stav
 ### Use with MLflow
 
 ```python
-from mlflow import log_metric, log_param, log_artifact
+from mlflow import log_artifact, log_metric, log_param
 import stav
 
 metric_names = [
@@ -37,6 +38,8 @@ metric_names = [
     stav.METRICS_PRECISION,
     stav.METRICS_RMSE,
 ]
+
+log_param(stav.ENERY_CONSUMPTION, "3.3M GPU")
 
 log_param(stav.AI_PROVIDER, "Acme Corporation")
 log_param(stav.AI_DEPLOYER, "Sirius Cybernetics")
