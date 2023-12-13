@@ -39,7 +39,7 @@ metric_names = [
     stav.METRICS_RMSE,
 ]
 
-log_param(stav.ENERY_CONSUMPTION, "3.3M GPU")
+log_param(stav.ENERGY_CONSUMPTION, "3.3M GPU")
 
 log_param(stav.AI_PROVIDER, "Acme Corporation")
 log_param(stav.AI_DEPLOYER, "Sirius Cybernetics")
