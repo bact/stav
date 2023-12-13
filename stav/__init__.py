@@ -57,7 +57,7 @@ METRICS_ENERGY = "MetricsEnergy"
 
 DATASET_SIZE = "DatasetSize"
 
-ENERY_CONSUMPTION = "EnergyConsumption"  # SPDX AI Profile
+ENERGY_CONSUMPTION = "EnergyConsumption"  # SPDX AI Profile
 AUTONOMY_TYPE = "AutonomyType"  # SPDX AI Profile
 
 __all__ = [
@@ -102,6 +102,6 @@ __all__ = [
     "METRICS_MAE",
     "METRICS_ENERGY",
     "DATASET_SIZE",
-    "ENERY_CONSUMPTION",
+    "ENERGY_CONSUMPTION",
     "AUTONOMY_TYPE",
 ]
