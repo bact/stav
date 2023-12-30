@@ -1,5 +1,10 @@
 # STAV: System Trustworthiness and Accountability Vocabulary
 
+[![PyPI - Version](https://img.shields.io/pypi/v/stav.svg)](https://pypi.org/project/stav)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/stav.svg)](https://pypi.org/project/stav)
+
+-----
+
 `This work is still under development.`
 
 **stav**:
@@ -8,6 +13,16 @@
 - Slovak: *state (condition)*
 - Czech: *stance*
 
+<!--
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+-->
+
+## STAV Taxonomy
+
+Available at [https://w3id.org/stav](https://w3id.org/stav.)
 
 ## STAV Python module
 
@@ -21,9 +36,9 @@ For example, `stav.INSTRUCTIONS_OF_USE` is a string with value of "InstructionsO
 
 With this, it will make the standardization of documentation within an organization, or across organizations, easier and can facilitate the use of the terms in MLOps settings, where data scientists and data engineers can use STAV terms as keys in their model logging and registration.
 
-### Install
+### Installation
 
-```sh
+```console
 pip install stav
 ```
 
@@ -55,13 +70,16 @@ STA*V* (a *V*ocabulary) and STA*P* (an ODRL *P*rofile) are sisters for system tr
 - **STAP** provides a set of core accountability relationships, based on [Open Digital Rights Language](https://www.w3.org/TR/odrl-model/). They are trying not to be AI-specific. Its IRI is [https://w3id.org/stap](https://w3id.org/stap). Its code repository is at [https://github.com/bact/stap/](https://github.com/bact/stap/).
 
 
-## Author
-STAV is developed and maintained by Arthit Suriyawongkul ([@bact](https://github.com/bact/)) with supports from members of these research groups:
+## License
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/bact/stav">STAV: System Trustworthiness and Accountability Vocabulary</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://orcid.org/0000-0002-9698-1899">Arthit Suriyawongkul</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+
+The `stav` Python module is distributed under the terms of the [Apache License 2.0](https://spdx.org/licenses/Apache-2.0.html).
+
+This work is conducted with the financial support of the [Science Foundation Ireland Centre for Research Training in Digitally-Enhanced Reality (d-real)](https://d-real.ie/) under Grant No. 18/CRT/6224 and with the organizational support from members of these research groups:
 
 - [Knowledge and Data Engineering Group](https://www.tcd.ie/scss/research/research-groups/kdeg/), [Trinity College Dublin](https://www.tcd.ie/scss/)
 - [Transparent Digital Governance strand](https://www.adaptcentre.ie/case-studies/transparent-digital-governance/), [ADAPT Centre](https://www.adaptcentre.ie/)
-
-This work is conducted with the financial support of the [Science Foundation Ireland Centre for Research Training in Digitally-Enhanced Reality (d-real)](https://d-real.ie/) under Grant No. 18/CRT/6224.
 
 
 ## Related works

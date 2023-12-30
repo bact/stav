@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: 2023 Arthit Suriyawongkul <suriyawa@tcd.ie>
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 """
 Vocabulary for accountability artifacts from EU AI Act (draft)
 """

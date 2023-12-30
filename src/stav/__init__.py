@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2023 Arthit Suriyawongkul <suriyawa@tcd.ie>
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 
-__version__ = "0.2.dev2"
 __stav_namespace__ = ""
 
 from stav.eu.aia import TechnicalDocumentation, LogRecord
