@@ -13,12 +13,12 @@
 
 <https://w3id.org/stav-eu-aia> rdf:type owl:Ontology ;
                                 owl:versionIRI <https://w3id.org/stav-eu-aia/0.1> ;
-                                owl:imports <https://w3id.org/stav/0.1> ;
+                                owl:imports <https://w3id.org/stav/0.2> ;
                                 dct:creator "Arthit Suriyawongkul" ;
                                 dct:description "STAV-EU-AIA represents AI system accountability concepts and relations based on the EU AI Act proposal."@en ;
                                 dct:issued "2023-09-26T04:00:00"^^xsd:dateTime ;
                                 dct:license "https://creativecommons.org/licenses/by/4.0/" ;
-                                dct:modified "2021-09-26T04:40:00"^^xsd:dateTime ;
+                                dct:modified "2023-09-26T04:40:00" ;
                                 dct:publisher "ADAPT Centre, Trinity College Dublin" ;
                                 dct:title "STAV-EU-AIA" ;
                                 rdfs:label "STAV for European Union AI Act"@en ;

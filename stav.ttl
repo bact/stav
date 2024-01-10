@@ -1,3 +1,4 @@
+@base <https://w3id.org/stav#> .
 @prefix : <https://w3id.org/stav#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,302 +10,451 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix spdx: <https://spdx.org/rdf/terms#> .
 @prefix stap: <https://w3id.org/stap#> .
-@base <https://w3id.org/stav#> .
-
-<https://w3id.org/stav> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/stav/0.2> ;
-                         owl:imports <http://spdx.org/rdf/terms/2.3> ,
-                                     <https://w3id.org/stap/0.1> ;
-                         dct:creator "Arthit Suriyawongkul" ;
-                         dct:description "STAV represents AI system accountability concepts and relations."@en ;
-                         dct:issued "2023-09-26T04:00:00"^^xsd:dateTime ;
-                         dct:license "https://creativecommons.org/licenses/by/4.0/" ;
-                         dct:modified "2023-09-26T08:25:00" ;
-                         dct:publisher "ADAPT Centre, Trinity College Dublin" ;
-                         dct:title "STAV" ;
-                         rdfs:label "System Trustworthiness and Accountability Vocabulary"@en ;
-                         owl:versionInfo 0.2 .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/terms/creator
-dct:creator rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/description
-dct:description rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/issued
-dct:issued rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/license
-dct:license rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/modified
-dct:modified rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/publisher
-dct:publisher rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#definition
-skos:definition rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#note
-skos:note rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/ns/odrl/2/source
-odrl:source rdf:type owl:AnnotationProperty .
-
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://www.w3.org/ns/odrl/2/duty
-odrl:duty rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/ns/odrl/2/partOf
-odrl:partOf rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://www.w3.org/ns/odrl/2/Action
-odrl:Action rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/odrl/2/Asset
-odrl:Asset rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/odrl/2/AssetCollection
-odrl:AssetCollection rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/odrl/2/Party
-odrl:Party rdf:type owl:Class .
-
-
-###  https://w3id.org/stav#AIDeployer
-:AIDeployer rdf:type owl:Class ;
-            rdfs:subClassOf odrl:Party ;
-            rdfs:label "AI Deployer"@en ;
-            skos:note "Article 3 (4)" ;
-            odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav#AIProvider
-:AIProvider rdf:type owl:Class ;
-            rdfs:subClassOf odrl:Party ;
-            rdfs:label "AI Provider"@en ;
-            skos:note "Article 3 (2)" ;
-            odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav#BaselineProcessDescription
-:BaselineProcessDescription rdf:type owl:Class ;
-                            rdfs:subClassOf odrl:Asset ;
-                            rdfs:label "Baseline Process Description"@en ;
-                            skos:definition "Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process."@en .
-
-
-###  https://w3id.org/stav#ConsumerRightsEvaluationInformation
-:ConsumerRightsEvaluationInformation rdf:type owl:Class ;
-                                     rdfs:subClassOf odrl:Asset ;
-                                     rdfs:label "Consumer Rights Evaluation Information"@en ;
-                                     skos:definition "Evaluation of the rights of consumers."@en .
-
-
-###  https://w3id.org/stav#CurrentAndPotentialFutureImpacts
-:CurrentAndPotentialFutureImpacts rdf:type owl:Class ;
-                                  rdfs:subClassOf odrl:Asset ;
-                                  rdfs:label "Current and Potential Future Impacts"@en ;
-                                  skos:definition "Assessment and documentation of the current and potential future or downstream positive and negative impacts of a system or process."@en .
-
-
-###  https://w3id.org/stav#DataMinimizationPractices
-:DataMinimizationPractices rdf:type owl:Class ;
-                           rdfs:subClassOf odrl:Asset ;
-                           rdfs:label "Data Minimization Practices"@en ;
-                           skos:definition "Assessment and documentation of the data minimization practices of a system or process and the duration for which the relevant identifying information and any resulting critical decision is stored."@en .
-
-
-###  https://w3id.org/stav#ImpactAssessmentDocumentation
-:ImpactAssessmentDocumentation rdf:type owl:Class ;
-                               rdfs:subClassOf odrl:AssetCollection ;
-                               rdfs:label "Impact Assessment Documentation" .
-
-
-###  https://w3id.org/stav#InformationSecurityMeasures
-:InformationSecurityMeasures rdf:type owl:Class ;
-                             rdfs:subClassOf odrl:Asset ;
-                             rdfs:label "Information Security Measures"@en ;
-                             skos:definition "Assessment of information security measures with respect to a system or process."@en .
-
-
-###  https://w3id.org/stav#InstallationInstructions
-:InstallationInstructions rdf:type owl:Class ;
-                          rdfs:subClassOf odrl:Asset ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty odrl:partOf ;
-                                            owl:someValuesFrom :SystemGeneralDescription
-                                          ] ;
-                          rdfs:label "Installation Instructions"@en .
-
-
-###  https://w3id.org/stav#InstructionsOfUse
-:InstructionsOfUse rdf:type owl:Class ;
-                   rdfs:subClassOf odrl:Asset ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty odrl:partOf ;
-                                     owl:someValuesFrom :SystemGeneralDescription
-                                   ] ;
-                   rdfs:label "Instructions of Use"@en ;
-                   skos:definition "‘instructions for use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used."@en ;
-                   skos:note "Article 3 (15)" ;
-                   odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess
-:IntendedBenefitsOverPreviouslyExistingProcess rdf:type owl:Class ;
-                                               rdfs:subClassOf odrl:Asset ;
-                                               rdfs:label "Intended Benefits Over Previously Existing Process"@en ;
-                                               skos:definition "Intended benefits of and need for the new process."@en .
-
-
-###  https://w3id.org/stav#IntendedPurposes
-:IntendedPurposes rdf:type owl:Class ;
-                  rdfs:subClassOf odrl:Asset ;
-                  rdfs:label "Intended Purposes"@en .
-
-
-###  https://w3id.org/stav#Log
-:Log rdf:type owl:Class ;
-     rdfs:subClassOf odrl:Asset ;
-     rdfs:label "Log"@en ;
-     skos:definition "Automatic recording of events while the high-risk AI systems is operating. Those logging capabilities shall conform to recognised standards or common specifications. The logging capabilities shall ensure a level of traceability of the AI system’s functioning throughout its lifecycle that is appropriate to the intended purpose of the system."@en ;
-     skos:note "Article 12" ;
-     odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav#MakingAvailableOnTheMarket
-:MakingAvailableOnTheMarket rdf:type owl:Class ;
-                            rdfs:subClassOf odrl:Action ;
-                            rdfs:label "making available on the market"@en ;
-                            skos:definition "‘making available on the market’ means any supply of an AI system for distribution or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge."@en ;
-                            skos:note "Article 3 (10)" ;
-                            odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav#MarketSurveillenceAuthority
-:MarketSurveillenceAuthority rdf:type owl:Class ;
-                             rdfs:subClassOf odrl:Party ;
-                             rdfs:label "Market Surveillence Authority"@en ;
-                             skos:note "Article 3 (26)" ;
-                             odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav#PlacingOnTheMarket
-:PlacingOnTheMarket rdf:type owl:Class ;
-                    rdfs:subClassOf odrl:Action ;
-                    rdfs:label "placing on the market"@en ;
-                    skos:definition "‘placing on the market’ means the first making available of an AI system on the Union market."@en ;
-                    skos:note "Article 3 (9)" ;
-                    odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav#PreviouslyExistingProcessDocumentation
-:PreviouslyExistingProcessDocumentation rdf:type owl:Class ;
-                                        rdfs:subClassOf odrl:AssetCollection ;
-                                        rdfs:label "Previously Existing Process Documentation"@en ;
-                                        skos:definition "Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process."@en .
-
-
-###  https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation
-:PreviouslyExistingProcessEvaluationDocumentation rdf:type owl:Class ;
-                                                  rdfs:subClassOf odrl:AssetCollection ;
-                                                  rdfs:label "Previously Existing Process Evaluation Documentation"@en .
-
-
-###  https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation
-:PreviouslyExistingProcessKnownNegativeImpactInformation rdf:type owl:Class ;
-                                                         rdfs:subClassOf odrl:Asset ;
-                                                         rdfs:label "Previously Existing Process Known Negative Impact Information"@en ;
-                                                         skos:definition "Any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make a decision."@en .
-
-
-###  https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation
-:PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation rdf:type owl:Class ;
-                                                       rdfs:subClassOf odrl:AssetCollection ;
-                                                       rdfs:label "Privacy Risks and Privacy Measures Evaluation Documentation"@en .
-
-
-###  https://w3id.org/stav#PuttingIntoService
-:PuttingIntoService rdf:type owl:Class ;
-                    rdfs:subClassOf odrl:Action ;
-                    rdfs:label "putting into service"@en ;
-                    skos:definition "‘putting into service’ means the supply of an AI system for first use directly to the user or for own use on the Union market for its intended purpose."@en ;
-                    skos:note "Article 3 (11)"@en ;
-                    odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav#QualityManagementSystemDocumentationObligation
-:QualityManagementSystemDocumentationObligation rdf:type owl:Class ;
-                                                rdfs:subClassOf stap:InformationCreationObligation ;
-                                                rdfs:label "Quality Management System Documentation Obligation"@en ;
-                                                skos:definition "A quality management system ensures compliance of an AI system. A quality management system documentation shall be in the form of written policies, procedures and instructions. It shall include a strategy for regulatory compliance; techniques, procedures and systematic actions to be used for the design, development, and examination of the AI system, etc."@en .
-
-
-###  https://w3id.org/stav#RegisterationObligation
-:RegisterationObligation rdf:type owl:Class ;
-                         rdfs:subClassOf stap:InformationSubmissionObligation ;
-                         rdfs:label "Registeration Obligation"@en ;
-                         skos:definition "A registration to a database containing information about AI systems."@en .
-
-
-###  https://w3id.org/stav#SystemEvaluationDocumentation
-:SystemEvaluationDocumentation rdf:type owl:Class ;
-                               rdfs:subClassOf odrl:AssetCollection ;
-                               rdfs:label "System Evaluation Documentation" .
-
-
-###  https://w3id.org/stav#SystemGeneralDescription
-:SystemGeneralDescription rdf:type owl:Class ;
-                          rdfs:subClassOf odrl:Asset ;
-                          rdfs:label "System General Description"@en ;
-                          skos:definition "A general description of the AI system."@en .
-
-
-###  https://w3id.org/stav#TechnicalDocumentation
-:TechnicalDocumentation rdf:type owl:Class ;
-                        rdfs:subClassOf odrl:AssetCollection ;
-                        rdfs:label "Technical Documentation"@en ;
-                        skos:definition "The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system complies with the requirements set out in Title III Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV."@en ;
-                        skos:note "Article 11" ;
-                        odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
-
-
-###  https://w3id.org/stav#TechnicalDocumentationObligation
-:TechnicalDocumentationObligation rdf:type owl:Class ;
-                                  rdfs:subClassOf stap:InformationCreationObligation ;
-                                  rdfs:label "Technical Documentation Obligation"@en ;
-                                  skos:definition "The technical documentation of an AI system contains information including its intended purpose and limitations, risk management process, data governance, and instructions of use."@en .
-
-
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+# 
+# http://purl.org/dc/terms/description
+# 
+# http://purl.org/dc/terms/issued
+# 
+# http://purl.org/dc/terms/license
+# 
+# http://purl.org/dc/terms/modified
+# 
+# http://purl.org/dc/terms/publisher
+# 
+# http://purl.org/dc/terms/title
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+# 
+# http://www.w3.org/2004/02/skos/core#note
+# 
+# http://www.w3.org/ns/odrl/2/source
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/odrl/2/duty
+# 
+# http://www.w3.org/ns/odrl/2/partOf
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/odrl/2/Action
+# 
+# http://www.w3.org/ns/odrl/2/Asset
+# 
+# http://www.w3.org/ns/odrl/2/AssetCollection
+# 
+# http://www.w3.org/ns/odrl/2/Party
+# 
+# https://w3id.org/stav#AIDeployer
+# 
+# https://w3id.org/stav#AIProvider
+# 
+# https://w3id.org/stav#AppliedStandards
+# 
+# https://w3id.org/stav#BaselineProcessDescription
+# 
+# https://w3id.org/stav#ConformityDeclaration
+# 
+# https://w3id.org/stav#CurrentAndPotentialFutureImpacts
+# 
+# https://w3id.org/stav#DataMinimizationPractices
+# 
+# https://w3id.org/stav#DeploymentContext
+# 
+# https://w3id.org/stav#ExternalInteractionDescription
+# 
+# https://w3id.org/stav#ImpactAssessmentDocumentation
+# 
+# https://w3id.org/stav#InformationSecurityMeasures
+# 
+# https://w3id.org/stav#InstallationInstructions
+# 
+# https://w3id.org/stav#InstructionsOfUse
+# 
+# https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess
+# 
+# https://w3id.org/stav#IntendedHardwareDescription
+# 
+# https://w3id.org/stav#IntendedPurposes
+# 
+# https://w3id.org/stav#Log
+# 
+# https://w3id.org/stav#MakingAvailableOnTheMarket
+# 
+# https://w3id.org/stav#MarketSurveillenceAuthority
+# 
+# https://w3id.org/stav#PlacingOnTheMarket
+# 
+# https://w3id.org/stav#PostMarketEvaluationSystemDescription
+# 
+# https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation
+# 
+# https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation
+# 
+# https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation
+# 
+# https://w3id.org/stav#ProductServiceDescription
+# 
+# https://w3id.org/stav#ProductVisualImage
+# 
+# https://w3id.org/stav#PuttingIntoService
+# 
+# https://w3id.org/stav#QualityManagementSystemDocumentationObligation
+# 
+# https://w3id.org/stav#RegisterationObligation
+# 
+# https://w3id.org/stav#RiskManagementSystemDescription
+# 
+# https://w3id.org/stav#SoftwareDependencies
+# 
+# https://w3id.org/stav#SystemDetailedDescription
+# 
+# https://w3id.org/stav#SystemEvaluationDocumentation
+# 
+# https://w3id.org/stav#SystemGeneralDescription
+# 
+# https://w3id.org/stav#TechnicalDocumentation
+# 
+# https://w3id.org/stav#TechnicalDocumentationObligation
+# 
+# Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+
+<stav> a owl:Ontology;
+  owl:versionIRI <stav/0.3>;
+  owl:imports <http://spdx.org/rdf/terms/2.3>, <stap/0.1>;
+  dct:creator "Arthit Suriyawongkul";
+  dct:description "STAV represents AI system accountability concepts and relations."@en;
+  dct:issued "2023-09-26T04:00:00"^^xsd:dateTime;
+  dct:license "https://creativecommons.org/licenses/by/4.0/";
+  dct:modified "2024-01-10T18:30:00";
+  dct:publisher "ADAPT Centre, Trinity College Dublin";
+  dct:title "STAV";
+  rdfs:label "System Trustworthiness and Accountability Vocabulary"@en;
+  owl:versionInfo 0.3 .
+
+dct:creator a owl:AnnotationProperty .
+
+dct:description a owl:AnnotationProperty .
+
+dct:issued a owl:AnnotationProperty .
+
+dct:license a owl:AnnotationProperty .
+
+dct:modified a owl:AnnotationProperty .
+
+dct:publisher a owl:AnnotationProperty .
+
+dct:title a owl:AnnotationProperty .
+
+skos:definition a owl:AnnotationProperty .
+
+skos:note a owl:AnnotationProperty .
+
+odrl:source a owl:AnnotationProperty .
+
+odrl:duty a owl:ObjectProperty .
+
+odrl:partOf a owl:ObjectProperty .
+
+odrl:Action a owl:Class .
+
+odrl:Asset a owl:Class .
+
+odrl:AssetCollection a owl:Class .
+
+odrl:Party a owl:Class .
+
+:AIDeployer a owl:Class;
+  rdfs:subClassOf odrl:Party;
+  rdfs:label "AI Deployer"@en;
+  skos:note "Article 3 (4)";
+  odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+:AIProvider a owl:Class;
+  rdfs:subClassOf odrl:Party;
+  rdfs:label "AI Provider"@en;
+  skos:note "Article 3 (2)";
+  odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+:AppliedStandards a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment "Annex IV (6)"@en;
+  rdfs:label "Applied Standards"@en .
+
+:BaselineProcessDescription a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment """Sec. 4. (a) (1) (A)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_A"""@en;
+  rdfs:label "Baseline Process Description"@en;
+  skos:definition "Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process."@en .
+
+:ConformityDeclaration a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment """Annex IV (7) EU AI Act
+
+Can a text or an URL"""@en;
+  rdfs:label "Conformity Declaration"@en .
+
+:CurrentAndPotentialFutureImpacts a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:label "Current and Potential Future Impacts"@en;
+  skos:definition "Assessment and documentation of the current and potential future or downstream positive and negative impacts of a system or process."@en .
+
+:DataMinimizationPractices a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:label "Data Minimization Practices"@en;
+  skos:definition "Assessment and documentation of the data minimization practices of a system or process and the duration for which the relevant identifying information and any resulting critical decision is stored."@en .
+
+:DeploymentContext a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment """Sec. 203. (a) (2) (C)
+S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_C&nearest=id07706866948d4dc59792b34859a3afdf"""@en;
+  rdfs:label "Deployment Context"@en .
+
+:ExternalInteractionDescription a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment "EU AI Act Annex IV (1) (b)";
+  rdfs:label "External Interaction Description"@en;
+  skos:definition "How the AI system interacts or can be used to interact with hardware or software that is not part of the AI system itself, where applicable."@en .
+
+:ImpactAssessmentDocumentation a owl:Class;
+  rdfs:subClassOf odrl:AssetCollection;
+  rdfs:comment """S. 2892: Algorithmic Accountability Act of 2023
+Defined in Sec. 2. (12)
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=2_12
+and detailed in Sec. 4. (a)
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a
+
+S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+Title II Sec. 206. (b)
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_206_b"""@en;
+  rdfs:label "Impact Assessment Documentation" .
+
+:InformationSecurityMeasures a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:label "Information Security Measures"@en;
+  skos:definition "Assessment of information security measures with respect to a system or process."@en .
+
+:InstallationInstructions a owl:Class;
+  rdfs:subClassOf odrl:Asset, _:genid1;
+  rdfs:label "Installation Instructions"@en .
+
+_:genid1 a owl:Restriction;
+  owl:someValuesFrom :SystemGeneralDescription;
+  owl:onProperty odrl:partOf .
+
+:InstructionsOfUse a owl:Class;
+  rdfs:subClassOf odrl:Asset, _:genid2;
+  rdfs:label "Instructions of Use"@en;
+  skos:definition "‘instructions for use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used."@en;
+  skos:note "Article 3 (15)";
+  odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+_:genid2 a owl:Restriction;
+  owl:someValuesFrom :SystemGeneralDescription;
+  owl:onProperty odrl:partOf .
+
+:IntendedBenefitsOverPreviouslyExistingProcess a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment """\"intended benefits\"
+Sec. 4. (a) (1) (C)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_C
+
+\"benefits\"
+Sec. 203. (a) (2) (D)
+S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_D&nearest=id18d5fa12eea943a799b7e1075a62e1bf"""@en;
+  rdfs:label "Intended Benefits Over Previously Existing Process"@en;
+  skos:definition "Intended benefits of and need for the new process."@en .
+
+:IntendedHardwareDescription a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment "Annex IV (1) (e) EU AI Act"@en;
+  rdfs:label "Intended Hardware Description"@en;
+  skos:definition "The description of hardware on which the AI system is intended to run."@en .
+
+:IntendedPurposes a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment """\"intended purpose\"
+EU AI Act Annex IV (1) (b)
+
+\"purpose\"
+Sec. 203. (a) (2) (A)
+S.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_A&nearest=id228689ffe9534563b8ce28c344358201
+
+\"intended purpose\"
+Sec. 4 (a) (1) (D)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_D_~T1&nearest=idCD671E7BFB0C45779B5E8802FF584BB4
+
+\"intended purpose\"
+Sec. 5. (1) (C)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=5_1_C_~T1&nearest=idf074706698514621a84859fffa6b6fed"""@en;
+  rdfs:label "Intended Purposes"@en .
+
+:Log a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:label "Log"@en;
+  skos:definition "Automatic recording of events while the high-risk AI systems is operating. Those logging capabilities shall conform to recognised standards or common specifications. The logging capabilities shall ensure a level of traceability of the AI system’s functioning throughout its lifecycle that is appropriate to the intended purpose of the system."@en;
+  skos:note "Article 12";
+  odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+:MakingAvailableOnTheMarket a owl:Class;
+  rdfs:subClassOf odrl:Action;
+  rdfs:label "making available on the market"@en;
+  skos:definition "‘making available on the market’ means any supply of an AI system for distribution or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge."@en;
+  skos:note "Article 3 (10)";
+  odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+:MarketSurveillenceAuthority a owl:Class;
+  rdfs:subClassOf odrl:Party;
+  rdfs:label "Market Surveillence Authority"@en;
+  skos:note "Article 3 (26)";
+  odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+:PlacingOnTheMarket a owl:Class;
+  rdfs:subClassOf odrl:Action;
+  rdfs:label "placing on the market"@en;
+  skos:definition "‘placing on the market’ means the first making available of an AI system on the Union market."@en;
+  skos:note "Article 3 (9)";
+  odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+:PostMarketEvaluationSystemDescription a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment "Annex IV (8) EU AI Act"@en, "Post-Market Evaluation System Description"@en .
+
+:PreviouslyExistingProcessEvaluationDocumentation a owl:Class;
+  rdfs:subClassOf odrl:AssetCollection;
+  rdfs:comment """Sec. 4. (a) (1)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1
+
+\"In the case of a new augmented critical decision process, evaluate any previously existing critical decision-making process used for the same critical decision prior to the deployment of the new augmented critical decision process, along with any related documentation or information, such as—
+
+(A) a description of the baseline process being enhanced or replaced by the augmented critical decision process;
+
+(B) any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make the critical decision;
+
+(C) the intended benefits of and need for the augmented critical decision process; and
+
+(D) the intended purpose of the automated decision system or augmented critical decision process.\""""@en;
+  rdfs:label "Previously Existing Process Evaluation Documentation"@en;
+  skos:definition "Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process."@en .
+
+:PreviouslyExistingProcessKnownNegativeImpactInformation a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:label "Previously Existing Process Known Negative Impact Information"@en;
+  skos:definition "Any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make a decision."@en .
+
+:PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation a owl:Class;
+  rdfs:subClassOf odrl:AssetCollection;
+  rdfs:label "Privacy Risks and Privacy Measures Evaluation Documentation"@en .
+
+:ProductServiceDescription a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment "Annex IV (1) (d) EU AI Act"@en;
+  rdfs:label "Product Service Descriptipn"@en;
+  skos:definition """The description of the form in which the AI system is placed on the market or put into service.
+
+One AI system can has more than one form of product or service."""@en .
+
+:ProductVisualImage a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment """Annex IV (1) (f) EU AI Act
+
+(f) where the AI system is a component of products, photographs or illustrations showing external features, marking and internal layout of those products;"""@en;
+  rdfs:label "Product Visual Image"@en;
+  skos:definition "A photograph or an illustration showing external features, marking, and internal layout of a product that the AI system is part of."@en .
+
+:PuttingIntoService a owl:Class;
+  rdfs:subClassOf odrl:Action;
+  rdfs:label "putting into service"@en;
+  skos:definition "‘putting into service’ means the supply of an AI system for first use directly to the user or for own use on the Union market for its intended purpose."@en;
+  skos:note "Article 3 (11)"@en;
+  odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+:QualityManagementSystemDocumentationObligation a owl:Class;
+  rdfs:subClassOf stap:InformationCreationObligation;
+  rdfs:label "Quality Management System Documentation Obligation"@en;
+  skos:definition "A quality management system ensures compliance of an AI system. A quality management system documentation shall be in the form of written policies, procedures and instructions. It shall include a strategy for regulatory compliance; techniques, procedures and systematic actions to be used for the design, development, and examination of the AI system, etc."@en .
+
+:RegisterationObligation a owl:Class;
+  rdfs:subClassOf stap:InformationSubmissionObligation;
+  rdfs:label "Registeration Obligation"@en;
+  skos:definition "A registration to a database containing information about AI systems."@en .
+
+:RiskManagementSystemDescription a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:label "Risk Management System Description"@en .
+
+:SoftwareDependencies a owl:Class;
+  rdfs:subClassOf odrl:Asset;
+  rdfs:comment """Annex IV (1) (c) EU AI Act
+
+This is the area that Software Bill of Materials can help a lot.
+
+\"versions of relevant software or firmware\" can taken from software metadata that package manager already have.
+
+The \"any requirement related to version update\" could be a narrative one and need further clarification."""@en;
+  rdfs:label "Software Dependencies"@en;
+  skos:definition "The versions of relevant software or firmware and any requirement related to version update."@en .
+
+:SystemDetailedDescription a owl:Class;
+  rdfs:subClassOf odrl:AssetCollection;
+  rdfs:label "System Detailed Description"@en .
+
+:SystemEvaluationDocumentation a owl:Class;
+  rdfs:subClassOf odrl:AssetCollection;
+  rdfs:label "System Evaluation Documentation" .
+
+:SystemGeneralDescription a owl:Class;
+  rdfs:subClassOf odrl:AssetCollection;
+  rdfs:comment """Similar to what defined in Annex IV (1) of EU AI Act,
+as part of the Technical Documentation referred to in Article 11 (1)"""@en;
+  rdfs:label "System General Description"@en;
+  skos:definition "A general description of the AI system."@en .
+
+:TechnicalDocumentation a owl:Class;
+  rdfs:subClassOf odrl:AssetCollection;
+  rdfs:comment """Similar to \"Transparency Report\"
+as defined in Sec. 203. (a) (2) of
+S.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2"""@en;
+  rdfs:label "Technical Documentation"@en;
+  skos:definition "The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system complies with the requirements set out in Title III Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV."@en;
+  skos:note "Article 11";
+  odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+
+:TechnicalDocumentationObligation a owl:Class;
+  rdfs:subClassOf stap:InformationCreationObligation;
+  rdfs:label "Technical Documentation Obligation"@en;
+  skos:definition "The technical documentation of an AI system contains information including its intended purpose and limitations, risk management process, data governance, and instructions of use."@en .

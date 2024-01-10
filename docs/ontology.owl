@@ -10,18 +10,18 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/stav">
-        <owl:versionIRI rdf:resource="https://w3id.org/stav/0.2"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/stav/0.3"/>
         <owl:imports rdf:resource="http://spdx.org/rdf/terms/2.3"/>
         <owl:imports rdf:resource="https://w3id.org/stap/0.1"/>
         <terms:creator>Arthit Suriyawongkul</terms:creator>
         <terms:description xml:lang="en">STAV represents AI system accountability concepts and relations.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-26T04:00:00</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
-        <terms:modified>2023-09-26T08:25:00</terms:modified>
+        <terms:modified>2024-01-10T18:30:00</terms:modified>
         <terms:publisher>ADAPT Centre, Trinity College Dublin</terms:publisher>
         <terms:title>STAV</terms:title>
         <rdfs:label xml:lang="en">System Trustworthiness and Accountability Vocabulary</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -212,24 +212,40 @@
     
 
 
+    <!-- https://w3id.org/stav#AppliedStandards -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#AppliedStandards">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Annex IV (6)</rdfs:comment>
+        <rdfs:label xml:lang="en">Applied Standards</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/stav#BaselineProcessDescription -->
 
 
     <owl:Class rdf:about="https://w3id.org/stav#BaselineProcessDescription">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Sec. 4. (a) (1) (A)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_A</rdfs:comment>
         <rdfs:label xml:lang="en">Baseline Process Description</rdfs:label>
         <skos:definition xml:lang="en">Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process.</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/stav#ConsumerRightsEvaluationInformation -->
+    <!-- https://w3id.org/stav#ConformityDeclaration -->
 
 
-    <owl:Class rdf:about="https://w3id.org/stav#ConsumerRightsEvaluationInformation">
+    <owl:Class rdf:about="https://w3id.org/stav#ConformityDeclaration">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
-        <rdfs:label xml:lang="en">Consumer Rights Evaluation Information</rdfs:label>
-        <skos:definition xml:lang="en">Evaluation of the rights of consumers.</skos:definition>
+        <rdfs:comment xml:lang="en">Annex IV (7) EU AI Act
+
+Can a text or an URL</rdfs:comment>
+        <rdfs:label xml:lang="en">Conformity Declaration</rdfs:label>
     </owl:Class>
     
 
@@ -256,11 +272,45 @@
     
 
 
+    <!-- https://w3id.org/stav#DeploymentContext -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#DeploymentContext">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Sec. 203. (a) (2) (C)
+S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_C&amp;nearest=id07706866948d4dc59792b34859a3afdf</rdfs:comment>
+        <rdfs:label xml:lang="en">Deployment Context</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#ExternalInteractionDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#ExternalInteractionDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment>EU AI Act Annex IV (1) (b)</rdfs:comment>
+        <rdfs:label xml:lang="en">External Interaction Description</rdfs:label>
+        <skos:definition xml:lang="en">How the AI system interacts or can be used to interact with hardware or software that is not part of the AI system itself, where applicable.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/stav#ImpactAssessmentDocumentation -->
 
 
     <owl:Class rdf:about="https://w3id.org/stav#ImpactAssessmentDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:comment xml:lang="en">S. 2892: Algorithmic Accountability Act of 2023
+Defined in Sec. 2. (12)
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=2_12
+and detailed in Sec. 4. (a)
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a
+
+S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+Title II Sec. 206. (b)
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_206_b</rdfs:comment>
         <rdfs:label>Impact Assessment Documentation</rdfs:label>
     </owl:Class>
     
@@ -317,8 +367,29 @@
 
     <owl:Class rdf:about="https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">&quot;intended benefits&quot;
+Sec. 4. (a) (1) (C)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_C
+
+&quot;benefits&quot;
+Sec. 203. (a) (2) (D)
+S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_D&amp;nearest=id18d5fa12eea943a799b7e1075a62e1bf</rdfs:comment>
         <rdfs:label xml:lang="en">Intended Benefits Over Previously Existing Process</rdfs:label>
         <skos:definition xml:lang="en">Intended benefits of and need for the new process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#IntendedHardwareDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#IntendedHardwareDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Annex IV (1) (e) EU AI Act</rdfs:comment>
+        <rdfs:label xml:lang="en">Intended Hardware Description</rdfs:label>
+        <skos:definition xml:lang="en">The description of hardware on which the AI system is intended to run.</skos:definition>
     </owl:Class>
     
 
@@ -328,6 +399,23 @@
 
     <owl:Class rdf:about="https://w3id.org/stav#IntendedPurposes">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">&quot;intended purpose&quot;
+EU AI Act Annex IV (1) (b)
+
+&quot;purpose&quot;
+Sec. 203. (a) (2) (A)
+S.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_A&amp;nearest=id228689ffe9534563b8ce28c344358201
+
+&quot;intended purpose&quot;
+Sec. 4 (a) (1) (D)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_D_~T1&amp;nearest=idCD671E7BFB0C45779B5E8802FF584BB4
+
+&quot;intended purpose&quot;
+Sec. 5. (1) (C)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=5_1_C_~T1&amp;nearest=idf074706698514621a84859fffa6b6fed</rdfs:comment>
         <rdfs:label xml:lang="en">Intended Purposes</rdfs:label>
     </owl:Class>
     
@@ -384,13 +472,13 @@
     
 
 
-    <!-- https://w3id.org/stav#PreviouslyExistingProcessDocumentation -->
+    <!-- https://w3id.org/stav#PostMarketEvaluationSystemDescription -->
 
 
-    <owl:Class rdf:about="https://w3id.org/stav#PreviouslyExistingProcessDocumentation">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
-        <rdfs:label xml:lang="en">Previously Existing Process Documentation</rdfs:label>
-        <skos:definition xml:lang="en">Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process.</skos:definition>
+    <owl:Class rdf:about="https://w3id.org/stav#PostMarketEvaluationSystemDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Annex IV (8) EU AI Act</rdfs:comment>
+        <rdfs:comment xml:lang="en">Post-Market Evaluation System Description</rdfs:comment>
     </owl:Class>
     
 
@@ -400,7 +488,21 @@
 
     <owl:Class rdf:about="https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:comment xml:lang="en">Sec. 4. (a) (1)
+S. 2892: Algorithmic Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1
+
+&quot;In the case of a new augmented critical decision process, evaluate any previously existing critical decision-making process used for the same critical decision prior to the deployment of the new augmented critical decision process, along with any related documentation or information, such as—
+
+(A) a description of the baseline process being enhanced or replaced by the augmented critical decision process;
+
+(B) any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make the critical decision;
+
+(C) the intended benefits of and need for the augmented critical decision process; and
+
+(D) the intended purpose of the automated decision system or augmented critical decision process.&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">Previously Existing Process Evaluation Documentation</rdfs:label>
+        <skos:definition xml:lang="en">Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process.</skos:definition>
     </owl:Class>
     
 
@@ -422,6 +524,34 @@
     <owl:Class rdf:about="https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
         <rdfs:label xml:lang="en">Privacy Risks and Privacy Measures Evaluation Documentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#ProductServiceDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#ProductServiceDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Annex IV (1) (d) EU AI Act</rdfs:comment>
+        <rdfs:label xml:lang="en">Product Service Descriptipn</rdfs:label>
+        <skos:definition xml:lang="en">The description of the form in which the AI system is placed on the market or put into service.
+
+One AI system can has more than one form of product or service.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#ProductVisualImage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#ProductVisualImage">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Annex IV (1) (f) EU AI Act
+
+(f) where the AI system is a component of products, photographs or illustrations showing external features, marking and internal layout of those products;</rdfs:comment>
+        <rdfs:label xml:lang="en">Product Visual Image</rdfs:label>
+        <skos:definition xml:lang="en">A photograph or an illustration showing external features, marking, and internal layout of a product that the AI system is part of.</skos:definition>
     </owl:Class>
     
 
@@ -461,6 +591,44 @@
     
 
 
+    <!-- https://w3id.org/stav#RiskManagementSystemDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#RiskManagementSystemDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">Risk Management System Description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#SoftwareDependencies -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#SoftwareDependencies">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Annex IV (1) (c) EU AI Act
+
+This is the area that Software Bill of Materials can help a lot.
+
+&quot;versions of relevant software or firmware&quot; can taken from software metadata that package manager already have.
+
+The &quot;any requirement related to version update&quot; could be a narrative one and need further clarification.</rdfs:comment>
+        <rdfs:label xml:lang="en">Software Dependencies</rdfs:label>
+        <skos:definition xml:lang="en">The versions of relevant software or firmware and any requirement related to version update.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#SystemDetailedDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#SystemDetailedDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:label xml:lang="en">System Detailed Description</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/stav#SystemEvaluationDocumentation -->
 
 
@@ -475,7 +643,9 @@
 
 
     <owl:Class rdf:about="https://w3id.org/stav#SystemGeneralDescription">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:comment xml:lang="en">Similar to what defined in Annex IV (1) of EU AI Act,
+as part of the Technical Documentation referred to in Article 11 (1)</rdfs:comment>
         <rdfs:label xml:lang="en">System General Description</rdfs:label>
         <skos:definition xml:lang="en">A general description of the AI system.</skos:definition>
     </owl:Class>
@@ -487,6 +657,10 @@
 
     <owl:Class rdf:about="https://w3id.org/stav#TechnicalDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/AssetCollection"/>
+        <rdfs:comment xml:lang="en">Similar to &quot;Transparency Report&quot;
+as defined in Sec. 203. (a) (2) of
+S.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023
+https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2</rdfs:comment>
         <rdfs:label xml:lang="en">Technical Documentation</rdfs:label>
         <skos:definition xml:lang="en">The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system complies with the requirements set out in Title III Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV.</skos:definition>
         <skos:note>Article 11</skos:note>

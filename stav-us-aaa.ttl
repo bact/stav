@@ -45,7 +45,10 @@
 ###  https://w3id.org/stav-us-aaa#USAAAImpactAssessmentDocumentation
 :USAAAImpactAssessmentDocumentation rdf:type owl:Class ;
                                     rdfs:subClassOf <https://w3id.org/stav#ImpactAssessmentDocumentation> ;
-                                    rdfs:comment "Sec. 2. (12)"@en ;
+                                    rdfs:comment """Defined in Sec. 2. (12)
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=2_12
+and detailed in Sec. 4. (a)
+https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a"""@en ;
                                     rdfs:label "Impact Assessment Documentation (US Algorithmic Accountability Act)"@en ;
                                     skos:definition "The term impact assessment means the ongoing study and evaluation of an automated decision system or augmented critical decision process and its impact on consumers."@en ;
                                     odrl:source "https://www.govtrack.us/congress/bills/118/s2892/text/is#link=2_12" .

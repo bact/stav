@@ -88,7 +88,7 @@
     "@value" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2023-09-26T08:25:00"
+    "@value" : "2024-01-10T18:30:00"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ADAPT Centre, Trinity College Dublin"
@@ -106,11 +106,11 @@
     "@id" : "https://w3id.org/stap/0.1"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/stav/0.2"
+    "@id" : "https://w3id.org/stav/0.3"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.2"
+    "@value" : "0.3"
   } ]
 }, {
   "@id" : "https://w3id.org/stav#AIDeployer",
@@ -145,8 +145,26 @@
     "@value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN"
   } ]
 }, {
+  "@id" : "https://w3id.org/stav#AppliedStandards",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Annex IV (6)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Applied Standards"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ]
+}, {
   "@id" : "https://w3id.org/stav#BaselineProcessDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Sec. 4. (a) (1) (A)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_A"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Baseline Process Description"
@@ -159,18 +177,18 @@
     "@value" : "Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process."
   } ]
 }, {
-  "@id" : "https://w3id.org/stav#ConsumerRightsEvaluationInformation",
+  "@id" : "https://w3id.org/stav#ConformityDeclaration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Annex IV (7) EU AI Act\n\nCan a text or an URL"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Consumer Rights Evaluation Information"
+    "@value" : "Conformity Declaration"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/Asset"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Evaluation of the rights of consumers."
   } ]
 }, {
   "@id" : "https://w3id.org/stav#CurrentAndPotentialFutureImpacts",
@@ -201,8 +219,43 @@
     "@value" : "Assessment and documentation of the data minimization practices of a system or process and the duration for which the relevant identifying information and any resulting critical decision is stored."
   } ]
 }, {
+  "@id" : "https://w3id.org/stav#DeploymentContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Sec. 203. (a) (2) (C)\nS. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_C&nearest=id07706866948d4dc59792b34859a3afdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Deployment Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#ExternalInteractionDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "EU AI Act Annex IV (1) (b)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "External Interaction Description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "How the AI system interacts or can be used to interact with hardware or software that is not part of the AI system itself, where applicable."
+  } ]
+}, {
   "@id" : "https://w3id.org/stav#ImpactAssessmentDocumentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "S. 2892: Algorithmic Accountability Act of 2023\nDefined in Sec. 2. (12)\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=2_12\nand detailed in Sec. 4. (a)\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a\n\nS. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023\nTitle II Sec. 206. (b)\nhttps://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_206_b"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Impact Assessment Documentation"
   } ],
@@ -260,6 +313,10 @@
 }, {
   "@id" : "https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\"intended benefits\"\nSec. 4. (a) (1) (C)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_C\n\n\"benefits\"\nSec. 203. (a) (2) (D)\nS. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_D&nearest=id18d5fa12eea943a799b7e1075a62e1bf"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Intended Benefits Over Previously Existing Process"
@@ -272,8 +329,30 @@
     "@value" : "Intended benefits of and need for the new process."
   } ]
 }, {
+  "@id" : "https://w3id.org/stav#IntendedHardwareDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Annex IV (1) (e) EU AI Act"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intended Hardware Description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The description of hardware on which the AI system is intended to run."
+  } ]
+}, {
   "@id" : "https://w3id.org/stav#IntendedPurposes",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\"intended purpose\"\nEU AI Act Annex IV (1) (b)\n\n\"purpose\"\nSec. 203. (a) (2) (A)\nS.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_A&nearest=id228689ffe9534563b8ce28c344358201\n\n\"intended purpose\"\nSec. 4 (a) (1) (D)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_D_~T1&nearest=idCD671E7BFB0C45779B5E8802FF584BB4\n\n\"intended purpose\"\nSec. 5. (1) (C)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=5_1_C_~T1&nearest=idf074706698514621a84859fffa6b6fed"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Intended Purposes"
@@ -358,11 +437,28 @@
     "@value" : "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN"
   } ]
 }, {
-  "@id" : "https://w3id.org/stav#PreviouslyExistingProcessDocumentation",
+  "@id" : "https://w3id.org/stav#PostMarketEvaluationSystemDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Annex IV (8) EU AI Act"
+  }, {
+    "@language" : "en",
+    "@value" : "Post-Market Evaluation System Description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Sec. 4. (a) (1)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1\n\n\"In the case of a new augmented critical decision process, evaluate any previously existing critical decision-making process used for the same critical decision prior to the deployment of the new augmented critical decision process, along with any related documentation or information, such as—\n\n(A) a description of the baseline process being enhanced or replaced by the augmented critical decision process;\n\n(B) any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make the critical decision;\n\n(C) the intended benefits of and need for the augmented critical decision process; and\n\n(D) the intended purpose of the automated decision system or augmented critical decision process.\""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Previously Existing Process Documentation"
+    "@value" : "Previously Existing Process Evaluation Documentation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
@@ -370,16 +466,6 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process."
-  } ]
-}, {
-  "@id" : "https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Previously Existing Process Evaluation Documentation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
   } ]
 }, {
   "@id" : "https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation",
@@ -404,6 +490,42 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#ProductServiceDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Annex IV (1) (d) EU AI Act"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Product Service Descriptipn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The description of the form in which the AI system is placed on the market or put into service.\n\nOne AI system can has more than one form of product or service."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#ProductVisualImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Annex IV (1) (f) EU AI Act\n\n(f) where the AI system is a component of products, photographs or illustrations showing external features, marking and internal layout of those products;"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Product Visual Image"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A photograph or an illustration showing external features, marking, and internal layout of a product that the AI system is part of."
   } ]
 }, {
   "@id" : "https://w3id.org/stav#PuttingIntoService",
@@ -455,6 +577,44 @@
     "@value" : "A registration to a database containing information about AI systems."
   } ]
 }, {
+  "@id" : "https://w3id.org/stav#RiskManagementSystemDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Management System Description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#SoftwareDependencies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Annex IV (1) (c) EU AI Act\n\nThis is the area that Software Bill of Materials can help a lot.\n\n\"versions of relevant software or firmware\" can taken from software metadata that package manager already have.\n\nThe \"any requirement related to version update\" could be a narrative one and need further clarification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Software Dependencies"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The versions of relevant software or firmware and any requirement related to version update."
+  } ]
+}, {
+  "@id" : "https://w3id.org/stav#SystemDetailedDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "System Detailed Description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
+  } ]
+}, {
   "@id" : "https://w3id.org/stav#SystemEvaluationDocumentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -466,12 +626,16 @@
 }, {
   "@id" : "https://w3id.org/stav#SystemGeneralDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Similar to what defined in Annex IV (1) of EU AI Act,\nas part of the Technical Documentation referred to in Article 11 (1)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "System General Description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/odrl/2/Asset"
+    "@id" : "http://www.w3.org/ns/odrl/2/AssetCollection"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -480,6 +644,10 @@
 }, {
   "@id" : "https://w3id.org/stav#TechnicalDocumentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Similar to \"Transparency Report\"\nas defined in Sec. 203. (a) (2) of\nS.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Technical Documentation"
