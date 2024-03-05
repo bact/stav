@@ -1,9 +1,101 @@
-<mxfile host="app.diagrams.net" modified="2024-03-05T08:52:44.092Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0" version="23.1.4" etag="uW3RFtcwTId-TIqS5jjk" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-05T09:11:27.888Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0" etag="WttioekizcrRIlRKbExH" version="23.1.4" type="github">
   <diagram name="หน้า-1" id="FsMO-pj8TltQ22SZ88RI">
-    <mxGraphModel>
+    <mxGraphModel dx="1436" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="net0GfKZKzhhj8EbBAAY-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="net0GfKZKzhhj8EbBAAY-1" target="net0GfKZKzhhj8EbBAAY-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-6" value="Annex IXb information and documentation" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="net0GfKZKzhhj8EbBAAY-5">
+          <mxGeometry x="0.0222" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-1" value="GPAI model provider" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-2" value="AI system provider" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="50" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-7" value="National competent authority" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="334" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="net0GfKZKzhhj8EbBAAY-2" target="net0GfKZKzhhj8EbBAAY-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="380" as="sourcePoint" />
+            <mxPoint x="280" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-12" value="High-risk AI&lt;br&gt;requirements&lt;br&gt;conformity" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="net0GfKZKzhhj8EbBAAY-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-13" value="High-risk&lt;br&gt;AI system&lt;br&gt;provider" style="edgeLabel;resizable=0;html=1;;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="net0GfKZKzhhj8EbBAAY-11">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-14" value="High-risk AI system deployer" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="50" y="505" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="net0GfKZKzhhj8EbBAAY-14" target="net0GfKZKzhhj8EbBAAY-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="380" as="sourcePoint" />
+            <mxPoint x="250" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-16" value="Label" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="net0GfKZKzhhj8EbBAAY-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-17" value="Relevant data from&lt;br&gt;post-market monitoring" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="net0GfKZKzhhj8EbBAAY-15">
+          <mxGeometry x="0.016" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="net0GfKZKzhhj8EbBAAY-2" target="net0GfKZKzhhj8EbBAAY-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="380" as="sourcePoint" />
+            <mxPoint x="250" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="380" />
+              <mxPoint x="190" y="380" />
+              <mxPoint x="190" y="420" />
+              <mxPoint x="290" y="420" />
+              <mxPoint x="290" y="465" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-23" value="Serious&lt;br&gt;incident&lt;br&gt;report" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="net0GfKZKzhhj8EbBAAY-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-26" value="High-risk&lt;br&gt;AI system&lt;br&gt;provider" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="net0GfKZKzhhj8EbBAAY-22">
+          <mxGeometry x="-0.7411" relative="1" as="geometry">
+            <mxPoint x="10" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-25" value="Market surveillance authority" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="334" y="425" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-27" value="National public authority" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="220" y="570" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="net0GfKZKzhhj8EbBAAY-25" target="net0GfKZKzhhj8EbBAAY-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="562" as="sourcePoint" />
+            <mxPoint x="526" y="607" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-32" value="Inform" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="net0GfKZKzhhj8EbBAAY-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-33" value="Serious incident&lt;br&gt;referred to in&lt;br&gt;Article 3(44)(c)" style="edgeLabel;resizable=0;html=1;;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="net0GfKZKzhhj8EbBAAY-31">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="2" y="45" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="net0GfKZKzhhj8EbBAAY-35" value="Commission" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="334" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
