@@ -2,17 +2,28 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>STAV</title>
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>STAV</title>
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/stav","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/stav","name":"STAV", "headline":"Document describing the ontology https://w3id.org/stav", "dateReleased":"Wed Jan 10 19:50:25 GMT 2024", "dateModified":"2024-01-10T18:30:00", "version":"0.3", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Arthit Suriyawongkul"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/stav","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/stav","name":"STAV", "headline":"Document describing the ontology https://w3id.org/stav", "dateReleased":"Tue Apr 16 14:49:55 PDT 2024", "dateModified":"2024-04-16T14:30:00", "version":"0.5", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Arthit Suriyawongkul"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
     <script> 
 function loadHash() {
-  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
 	var hash = location.hash;
 	if($(hash).offset()!=null){
 	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
@@ -58,15 +69,15 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-01-10T18:30:00</dt>
+<dt>Modified on: 2024-04-16T14:30:00</dt>
 <dt>This version:</dt>
-<dd><a href="https://w3id.org/stav/0.3">https://w3id.org/stav/0.3</a></dd>
+<dd><a href="https://w3id.org/stav/0.5">https://w3id.org/stav/0.5</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://w3id.org/stav">https://w3id.org/stav</a></dd>
 <dt>Revision:</dt>
-<dd>0.3</dd>
+<dd>0.5</dd>
 <dt>Issued on:</dt>
-<dd>2023-09-26T04:00:00</dd>
+<dd>2024-01-14T18:30:00</dd>
 <dt>Authors:</dt>
 <dd>Arthit Suriyawongkul</dd>
 
@@ -75,7 +86,7 @@ $(function(){
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Arthit Suriyawongkul. STAV. Revision: 0.3. Retrieved from: https://w3id.org/stav/0.3</dd>
+<dd>Arthit Suriyawongkul. STAV. Revision: 0.5. Retrieved from: https://w3id.org/stav/0.5</dd>
 </dl>
 
 <hr/>
@@ -108,7 +119,6 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
 <tr><td><b>spdx</b></td><td>&lt;https://spdx.org/rdf/terms#&gt;</td></tr>
 <tr><td><b>stap</b></td><td>&lt;https://w3id.org/stap#&gt;</td></tr>
-<tr><td><b>stav</b></td><td>&lt;https://w3id.org/stav&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
 </tbody>
@@ -127,16 +137,37 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#AISystemStatus" title="https://w3id.org/stav#AISystemStatus">
+         <span>A I System Status</span>
+      </a>
+   </li>
+   <li>
       <a href="#AIDeployer" title="https://w3id.org/stav#AIDeployer">AI Deployer</a>
    </li>
    <li>
       <a href="#AIProvider" title="https://w3id.org/stav#AIProvider">AI Provider</a>
    </li>
    <li>
+      <a href="#AISystem" title="https://w3id.org/stav#AISystem">AI System</a>
+   </li>
+   <li>
       <a href="#AppliedStandards" title="https://w3id.org/stav#AppliedStandards">Applied Standards</a>
    </li>
    <li>
+      <a href="#AuthorisedRepresentative" title="https://w3id.org/stav#AuthorisedRepresentative">Authorised Representative</a>
+   </li>
+   <li>
       <a href="#BaselineProcessDescription" title="https://w3id.org/stav#BaselineProcessDescription">Baseline Process Description</a>
+   </li>
+   <li>
+      <a href="#BeingNotHighRiskCriteria" title="https://w3id.org/stav#BeingNotHighRiskCriteria">Being Not High-Risk Criteria</a>
+   </li>
+   <li>
+      <a href="#BeingNotHighRiskGrounds" title="https://w3id.org/stav#BeingNotHighRiskGrounds">Being Not High-Risk Grounds</a>
+   </li>
+   <li>
+      <a href="#ComponentsAndFunctionsSupportedDescription"
+         title="https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription">Components And Functions Supported Description</a>
    </li>
    <li>
       <a href="#ConformityDeclaration" title="https://w3id.org/stav#ConformityDeclaration">Conformity Declaration</a>
@@ -149,11 +180,19 @@ This ontology has the following classes and properties.</span>
       <a href="#DataMinimizationPractices" title="https://w3id.org/stav#DataMinimizationPractices">Data Minimization Practices</a>
    </li>
    <li>
+      <a href="#DataProtectionImpactAssessmentDocumentation"
+         title="https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation">Data Protection Impact Assessment Documentation</a>
+   </li>
+   <li>
       <a href="#DeploymentContext" title="https://w3id.org/stav#DeploymentContext">Deployment Context</a>
    </li>
    <li>
       <a href="#ExternalInteractionDescription"
          title="https://w3id.org/stav#ExternalInteractionDescription">External Interaction Description</a>
+   </li>
+   <li>
+      <a href="#FundamentalRightsImpactAssessmentDocumentation"
+         title="https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation">Fundamental Rights Impact Assessment Documentation</a>
    </li>
    <li>
       <a href="#ImpactAssessmentDocumentation"
@@ -164,10 +203,18 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/stav#InformationSecurityMeasures">Information Security Measures</a>
    </li>
    <li>
+      <a href="#InformationSubmissionRepresentative"
+         title="https://w3id.org/stav#InformationSubmissionRepresentative">Information Submission Representative</a>
+   </li>
+   <li>
+      <a href="#InformationUsedBySystemDescription"
+         title="https://w3id.org/stav#InformationUsedBySystemDescription">Information Used By the System Description</a>
+   </li>
+   <li>
       <a href="#InstallationInstructions" title="https://w3id.org/stav#InstallationInstructions">Installation Instructions</a>
    </li>
    <li>
-      <a href="#InstructionsOfUse" title="https://w3id.org/stav#InstructionsOfUse">Instructions of Use</a>
+      <a href="#InstructionsForUse" title="https://w3id.org/stav#InstructionsForUse">Instructions for Use</a>
    </li>
    <li>
       <a href="#IntendedBenefitsOverPreviouslyExistingProcess"
@@ -195,9 +242,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#PostMarketEvaluationSystemDescription"
-         title="https://w3id.org/stav#PostMarketEvaluationSystemDescription">
-         <span>post market evaluation system description</span>
-      </a>
+         title="https://w3id.org/stav#PostMarketEvaluationSystemDescription">Post-Market Evaluation System Description</a>
    </li>
    <li>
       <a href="#PreviouslyExistingProcessEvaluationDocumentation"
@@ -223,6 +268,18 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#QualityManagementSystemDocumentationObligation"
          title="https://w3id.org/stav#QualityManagementSystemDocumentationObligation">Quality Management System Documentation Obligation</a>
+   </li>
+   <li>
+      <a href="#RealWorldConditionsTestingPlan"
+         title="https://w3id.org/stav#RealWorldConditionsTestingPlan">Real World Conditions Testing Plan</a>
+   </li>
+   <li>
+      <a href="#RealWorldConditionsTestingSuspensionOrTerminationInformation"
+         title="https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation">Real World Conditions Testing Suspension Or Termination Information</a>
+   </li>
+   <li>
+      <a href="#RealWorldConditionsTestingUser"
+         title="https://w3id.org/stav#RealWorldConditionsTestingUser">Real World Conditions Testing User</a>
    </li>
    <li>
       <a href="#RegisterationObligation" title="https://w3id.org/stav#RegisterationObligation">Registeration Obligation</a>
@@ -251,60 +308,30 @@ This ontology has the following classes and properties.</span>
       <a href="#TechnicalDocumentationObligation"
          title="https://w3id.org/stav#TechnicalDocumentationObligation">Technical Documentation Obligation</a>
    </li>
-</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
-         <span>creator</span>
+      <a href="#hasAddress" title="https://w3id.org/stav#hasAddress">
+         <span>has Address</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
-         <span>definition</span>
+      <a href="#hasContactDetails" title="https://w3id.org/stav#hasContactDetails">
+         <span>has Contact Details</span>
       </a>
    </li>
    <li>
-      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
-         <span>description</span>
+      <a href="#hasName" title="https://w3id.org/stav#hasName">
+         <span>has Name</span>
       </a>
    </li>
    <li>
-      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
-         <span>issued</span>
+      <a href="#onBehalfOf" title="https://w3id.org/stav#onBehalfOf">
+         <span>on Behalf Of</span>
       </a>
    </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
-         <span>license</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
-         <span>modified</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note">
-         <span>note</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
-         <span>publisher</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/ns/odrl/2/source" title="http://www.w3.org/ns/odrl/2/source">
-         <span>source</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
-         <span>title</span>
-      </a>
-   </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</ul><iframe src="webvowl/index.html"></iframe> 
 </div>
   
 
@@ -317,1067 +344,932 @@ This ontology has the following classes and properties.</span>
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for System Trustworthiness and Accountability Vocabulary classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by System Trustworthiness and Accountability Vocabulary.
-<div xmlns:widoco="https://w3id.org/widoco/vocab#"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="classes">
-   <h3 id="classes-headline" class="list">Classes</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#AIDeployer" title="https://w3id.org/stav#AIDeployer">AI Deployer</a>
-      </li>
-      <li>
-         <a href="#AIProvider" title="https://w3id.org/stav#AIProvider">AI Provider</a>
-      </li>
-      <li>
-         <a href="#AppliedStandards" title="https://w3id.org/stav#AppliedStandards">Applied Standards</a>
-      </li>
-      <li>
-         <a href="#BaselineProcessDescription" title="https://w3id.org/stav#BaselineProcessDescription">Baseline Process Description</a>
-      </li>
-      <li>
-         <a href="#ConformityDeclaration" title="https://w3id.org/stav#ConformityDeclaration">Conformity Declaration</a>
-      </li>
-      <li>
-         <a href="#CurrentAndPotentialFutureImpacts"
-            title="https://w3id.org/stav#CurrentAndPotentialFutureImpacts">Current and Potential Future Impacts</a>
-      </li>
-      <li>
-         <a href="#DataMinimizationPractices" title="https://w3id.org/stav#DataMinimizationPractices">Data Minimization Practices</a>
-      </li>
-      <li>
-         <a href="#DeploymentContext" title="https://w3id.org/stav#DeploymentContext">Deployment Context</a>
-      </li>
-      <li>
-         <a href="#ExternalInteractionDescription"
-            title="https://w3id.org/stav#ExternalInteractionDescription">External Interaction Description</a>
-      </li>
-      <li>
-         <a href="#ImpactAssessmentDocumentation"
-            title="https://w3id.org/stav#ImpactAssessmentDocumentation">Impact Assessment Documentation</a>
-      </li>
-      <li>
-         <a href="#InformationSecurityMeasures"
-            title="https://w3id.org/stav#InformationSecurityMeasures">Information Security Measures</a>
-      </li>
-      <li>
-         <a href="#InstallationInstructions" title="https://w3id.org/stav#InstallationInstructions">Installation Instructions</a>
-      </li>
-      <li>
-         <a href="#InstructionsOfUse" title="https://w3id.org/stav#InstructionsOfUse">Instructions of Use</a>
-      </li>
-      <li>
-         <a href="#IntendedBenefitsOverPreviouslyExistingProcess"
-            title="https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess">Intended Benefits Over Previously Existing Process</a>
-      </li>
-      <li>
-         <a href="#IntendedHardwareDescription"
-            title="https://w3id.org/stav#IntendedHardwareDescription">Intended Hardware Description</a>
-      </li>
-      <li>
-         <a href="#IntendedPurposes" title="https://w3id.org/stav#IntendedPurposes">Intended Purposes</a>
-      </li>
-      <li>
-         <a href="#Log" title="https://w3id.org/stav#Log">Log</a>
-      </li>
-      <li>
-         <a href="#MakingAvailableOnTheMarket" title="https://w3id.org/stav#MakingAvailableOnTheMarket">making available on the market</a>
-      </li>
-      <li>
-         <a href="#MarketSurveillenceAuthority"
-            title="https://w3id.org/stav#MarketSurveillenceAuthority">Market Surveillence Authority</a>
-      </li>
-      <li>
-         <a href="#PlacingOnTheMarket" title="https://w3id.org/stav#PlacingOnTheMarket">placing on the market</a>
-      </li>
-      <li>
-         <a href="#PostMarketEvaluationSystemDescription"
-            title="https://w3id.org/stav#PostMarketEvaluationSystemDescription">
-            <span>post market evaluation system description</span>
-         </a>
-      </li>
-      <li>
-         <a href="#PreviouslyExistingProcessEvaluationDocumentation"
-            title="https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation">Previously Existing Process Evaluation Documentation</a>
-      </li>
-      <li>
-         <a href="#PreviouslyExistingProcessKnownNegativeImpactInformation"
-            title="https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation">Previously Existing Process Known Negative Impact Information</a>
-      </li>
-      <li>
-         <a href="#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation"
-            title="https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation">Privacy Risks and Privacy Measures Evaluation Documentation</a>
-      </li>
-      <li>
-         <a href="#ProductServiceDescription" title="https://w3id.org/stav#ProductServiceDescription">Product Service Descriptipn</a>
-      </li>
-      <li>
-         <a href="#ProductVisualImage" title="https://w3id.org/stav#ProductVisualImage">Product Visual Image</a>
-      </li>
-      <li>
-         <a href="#PuttingIntoService" title="https://w3id.org/stav#PuttingIntoService">putting into service</a>
-      </li>
-      <li>
-         <a href="#QualityManagementSystemDocumentationObligation"
-            title="https://w3id.org/stav#QualityManagementSystemDocumentationObligation">Quality Management System Documentation Obligation</a>
-      </li>
-      <li>
-         <a href="#RegisterationObligation" title="https://w3id.org/stav#RegisterationObligation">Registeration Obligation</a>
-      </li>
-      <li>
-         <a href="#RiskManagementSystemDescription"
-            title="https://w3id.org/stav#RiskManagementSystemDescription">Risk Management System Description</a>
-      </li>
-      <li>
-         <a href="#SoftwareDependencies" title="https://w3id.org/stav#SoftwareDependencies">Software Dependencies</a>
-      </li>
-      <li>
-         <a href="#SystemDetailedDescription" title="https://w3id.org/stav#SystemDetailedDescription">System Detailed Description</a>
-      </li>
-      <li>
-         <a href="#SystemEvaluationDocumentation"
-            title="https://w3id.org/stav#SystemEvaluationDocumentation">System Evaluation Documentation</a>
-      </li>
-      <li>
-         <a href="#SystemGeneralDescription" title="https://w3id.org/stav#SystemGeneralDescription">System General Description</a>
-      </li>
-      <li>
-         <a href="#TechnicalDocumentation" title="https://w3id.org/stav#TechnicalDocumentation">Technical Documentation</a>
-      </li>
-      <li>
-         <a href="#TechnicalDocumentationObligation"
-            title="https://w3id.org/stav#TechnicalDocumentationObligation">Technical Documentation Obligation</a>
-      </li>
-   </ul>
-   <div class="entity" id="AIDeployer">
-      <h3>AI Deployer<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#AIDeployer</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Party"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Party">party</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="AIProvider">
-      <h3>AI Provider<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#AIProvider</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Party"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Party">party</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="AppliedStandards">
-      <h3>Applied Standards<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#AppliedStandards</p>
-      <div class="comment">
-         <span class="markdown">Annex IV (6)</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="BaselineProcessDescription">
-      <h3>Baseline Process Description<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#BaselineProcessDescription</p>
-      <div class="comment">
-         <span class="markdown">Sec. 4. (a) (1) (A)
-S. 2892: Algorithmic Accountability Act of 2023
-https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_A</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ConformityDeclaration">
-      <h3>Conformity Declaration<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#ConformityDeclaration</p>
-      <div class="comment">
-         <span class="markdown">Annex IV (7) EU AI Act
-
-Can a text or an URL</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="CurrentAndPotentialFutureImpacts">
-      <h3>Current and Potential Future Impacts<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#CurrentAndPotentialFutureImpacts</p>
-      <div class="comment">
-         <span class="markdown">Assessment and documentation of the current and potential future or downstream positive and negative impacts of a system or process.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="DataMinimizationPractices">
-      <h3>Data Minimization Practices<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#DataMinimizationPractices</p>
-      <div class="comment">
-         <span class="markdown">Assessment and documentation of the data minimization practices of a system or process and the duration for which the relevant identifying information and any resulting critical decision is stored.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="DeploymentContext">
-      <h3>Deployment Context<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#DeploymentContext</p>
-      <div class="comment">
-         <span class="markdown">Sec. 203. (a) (2) (C)
-S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023
-https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_C&amp;nearest=id07706866948d4dc59792b34859a3afdf</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ExternalInteractionDescription">
-      <h3>External Interaction Description<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#ExternalInteractionDescription</p>
-      <div class="comment">
-         <span class="markdown">EU AI Act Annex IV (1) (b)</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">How the AI system interacts or can be used to interact with hardware or software that is not part of the AI system itself, where applicable.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ImpactAssessmentDocumentation">
-      <h3>Impact Assessment Documentation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#ImpactAssessmentDocumentation</p>
-      <div class="comment">
-         <span class="markdown">S. 2892: Algorithmic Accountability Act of 2023
-Defined in Sec. 2. (12)
-https://www.govtrack.us/congress/bills/118/s2892/text/is#link=2_12
-and detailed in Sec. 4. (a)
-https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a
-
-S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023
-Title II Sec. 206. (b)
-https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_206_b</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/AssetCollection"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/AssetCollection">asset collection</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="InformationSecurityMeasures">
-      <h3>Information Security Measures<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#InformationSecurityMeasures</p>
-      <div class="comment">
-         <span class="markdown">Assessment of information security measures with respect to a system or process.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="InstallationInstructions">
-      <h3>Installation Instructions<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#InstallationInstructions</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="InstructionsOfUse">
-      <h3>Instructions of Use<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#InstructionsOfUse</p>
-      <div class="comment">
-         <span class="markdown">‘instructions for use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="IntendedBenefitsOverPreviouslyExistingProcess">
-      <h3>Intended Benefits Over Previously Existing Process<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess</p>
-      <div class="comment">
-         <span class="markdown">"intended benefits"
-Sec. 4. (a) (1) (C)
-S. 2892: Algorithmic Accountability Act of 2023
-https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_C
-
-"benefits"
-Sec. 203. (a) (2) (D)
-S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023
-https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_D&amp;nearest=id18d5fa12eea943a799b7e1075a62e1bf</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">Intended benefits of and need for the new process.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="IntendedHardwareDescription">
-      <h3>Intended Hardware Description<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#IntendedHardwareDescription</p>
-      <div class="comment">
-         <span class="markdown">Annex IV (1) (e) EU AI Act</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">The description of hardware on which the AI system is intended to run.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="IntendedPurposes">
-      <h3>Intended Purposes<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#IntendedPurposes</p>
-      <div class="comment">
-         <span class="markdown">"intended purpose"
-EU AI Act Annex IV (1) (b)
-
-"purpose"
-Sec. 203. (a) (2) (A)
-S.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023
-https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_A&amp;nearest=id228689ffe9534563b8ce28c344358201
-
-"intended purpose"
-Sec. 4 (a) (1) (D)
-S. 2892: Algorithmic Accountability Act of 2023
-https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_D_~T1&amp;nearest=idCD671E7BFB0C45779B5E8802FF584BB4
-
-"intended purpose"
-Sec. 5. (1) (C)
-S. 2892: Algorithmic Accountability Act of 2023
-https://www.govtrack.us/congress/bills/118/s2892/text/is#link=5_1_C_~T1&amp;nearest=idf074706698514621a84859fffa6b6fed</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Log">
-      <h3>Log<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#Log</p>
-      <div class="comment">
-         <span class="markdown">Automatic recording of events while the high-risk AI systems is operating. Those logging capabilities shall conform to recognised standards or common specifications. The logging capabilities shall ensure a level of traceability of the AI system’s functioning throughout its lifecycle that is appropriate to the intended purpose of the system.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="MakingAvailableOnTheMarket">
-      <h3>making available on the market<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#MakingAvailableOnTheMarket</p>
-      <div class="comment">
-         <span class="markdown">‘making available on the market’ means any supply of an AI system for distribution or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Action"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Action">action</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="MarketSurveillenceAuthority">
-      <h3>Market Surveillence Authority<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#MarketSurveillenceAuthority</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Party"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Party">party</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="PlacingOnTheMarket">
-      <h3>placing on the market<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#PlacingOnTheMarket</p>
-      <div class="comment">
-         <span class="markdown">‘placing on the market’ means the first making available of an AI system on the Union market.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Action"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Action">action</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="PostMarketEvaluationSystemDescription">
-      <h3>post market evaluation system description<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#PostMarketEvaluationSystemDescription</p>
-      <div class="comment">
-         <span class="markdown">Annex IV (8) EU AI Act</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="PreviouslyExistingProcessEvaluationDocumentation">
-      <h3>Previously Existing Process Evaluation Documentation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation</p>
-      <div class="comment">
-         <span class="markdown">Sec. 4. (a) (1)
-S. 2892: Algorithmic Accountability Act of 2023
-https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1
-
-"In the case of a new augmented critical decision process, evaluate any previously existing critical decision-making process used for the same critical decision prior to the deployment of the new augmented critical decision process, along with any related documentation or information, such as—
-
-(A) a description of the baseline process being enhanced or replaced by the augmented critical decision process;
-
-(B) any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make the critical decision;
-
-(C) the intended benefits of and need for the augmented critical decision process; and
-
-(D) the intended purpose of the automated decision system or augmented critical decision process."</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/AssetCollection"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/AssetCollection">asset collection</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="PreviouslyExistingProcessKnownNegativeImpactInformation">
-      <h3>Previously Existing Process Known Negative Impact Information<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation</p>
-      <div class="comment">
-         <span class="markdown">Any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make a decision.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation">
-      <h3>Privacy Risks and Privacy Measures Evaluation Documentation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/AssetCollection"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/AssetCollection">asset collection</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ProductServiceDescription">
-      <h3>Product Service Descriptipn<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#ProductServiceDescription</p>
-      <div class="comment">
-         <span class="markdown">Annex IV (1) (d) EU AI Act</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">The description of the form in which the AI system is placed on the market or put into service.
-
-One AI system can has more than one form of product or service.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ProductVisualImage">
-      <h3>Product Visual Image<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#ProductVisualImage</p>
-      <div class="comment">
-         <span class="markdown">Annex IV (1) (f) EU AI Act
-
-(f) where the AI system is a component of products, photographs or illustrations showing external features, marking and internal layout of those products;</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">A photograph or an illustration showing external features, marking, and internal layout of a product that the AI system is part of.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="PuttingIntoService">
-      <h3>putting into service<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#PuttingIntoService</p>
-      <div class="comment">
-         <span class="markdown">‘putting into service’ means the supply of an AI system for first use directly to the user or for own use on the Union market for its intended purpose.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Action"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Action">action</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="QualityManagementSystemDocumentationObligation">
-      <h3>Quality Management System Documentation Obligation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#QualityManagementSystemDocumentationObligation</p>
-      <div class="comment">
-         <span class="markdown">A quality management system ensures compliance of an AI system. A quality management system documentation shall be in the form of written policies, procedures and instructions. It shall include a strategy for regulatory compliance; techniques, procedures and systematic actions to be used for the design, development, and examination of the AI system, etc.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="https://w3id.org/stap#InformationCreationObligation"
-               target="_blank"
-               title="https://w3id.org/stap#InformationCreationObligation">information creation obligation</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="RegisterationObligation">
-      <h3>Registeration Obligation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#RegisterationObligation</p>
-      <div class="comment">
-         <span class="markdown">A registration to a database containing information about AI systems.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="https://w3id.org/stap#InformationSubmissionObligation"
-               target="_blank"
-               title="https://w3id.org/stap#InformationSubmissionObligation">information submission obligation</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="RiskManagementSystemDescription">
-      <h3>Risk Management System Description<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#RiskManagementSystemDescription</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="SoftwareDependencies">
-      <h3>Software Dependencies<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#SoftwareDependencies</p>
-      <div class="comment">
-         <span class="markdown">Annex IV (1) (c) EU AI Act
-
-This is the area that Software Bill of Materials can help a lot.
-
-"versions of relevant software or firmware" can taken from software metadata that package manager already have.
-
-The "any requirement related to version update" could be a narrative one and need further clarification.</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">The versions of relevant software or firmware and any requirement related to version update.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/Asset"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/Asset">asset</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="SystemDetailedDescription">
-      <h3>System Detailed Description<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#SystemDetailedDescription</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/AssetCollection"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/AssetCollection">asset collection</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="SystemEvaluationDocumentation">
-      <h3>System Evaluation Documentation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#SystemEvaluationDocumentation</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/AssetCollection"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/AssetCollection">asset collection</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="SystemGeneralDescription">
-      <h3>System General Description<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#SystemGeneralDescription</p>
-      <div class="comment">
-         <span class="markdown">Similar to what defined in Annex IV (1) of EU AI Act,
-as part of the Technical Documentation referred to in Article 11 (1)</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">A general description of the AI system.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/AssetCollection"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/AssetCollection">asset collection</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="TechnicalDocumentation">
-      <h3>Technical Documentation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#TechnicalDocumentation</p>
-      <div class="comment">
-         <span class="markdown">Similar to "Transparency Report"
-as defined in Sec. 203. (a) (2) of
-S.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023
-https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system complies with the requirements set out in Title III Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/odrl/2/AssetCollection"
-               target="_blank"
-               title="http://www.w3.org/ns/odrl/2/AssetCollection">asset collection</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="TechnicalDocumentationObligation">
-      <h3>Technical Documentation Obligation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/stav#TechnicalDocumentationObligation</p>
-      <div class="comment">
-         <span class="markdown">The technical documentation of an AI system contains information including its intended purpose and limitations, risk management process, data governance, and instructions of use.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="https://w3id.org/stap#InformationCreationObligation"
-               target="_blank"
-               title="https://w3id.org/stap#InformationCreationObligation">information creation obligation</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="annotationproperties">
-   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
-            <span>creator</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
-            <span>definition</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
-            <span>description</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
-            <span>issued</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
-            <span>license</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
-            <span>modified</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note">
-            <span>note</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
-            <span>publisher</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://www.w3.org/ns/odrl/2/source" title="http://www.w3.org/ns/odrl/2/source">
-            <span>source</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
-            <span>title</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="http://purl.org/dc/terms/creator">
-      <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
-   </div>
-   <div class="entity" id="http://www.w3.org/2004/02/skos/core#definition">
-      <h3>definition<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#definition</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/description">
-      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/issued">
-      <h3>issued<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/license">
-      <h3>license<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/license</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/modified">
-      <h3>modified<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
-   </div>
-   <div class="entity" id="http://www.w3.org/2004/02/skos/core#note">
-      <h3>note<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#note</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/publisher">
-      <h3>publisher<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
-   </div>
-   <div class="entity" id="http://www.w3.org/ns/odrl/2/source">
-      <h3>source<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/odrl/2/source</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/title">
-      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
-   </div>
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AISystemStatus" title="https://w3id.org/stav#AISystemStatus"> <span>A I System Status</span> </a></li>
+  <li><a href="#AIDeployer" title="https://w3id.org/stav#AIDeployer">AI Deployer</a></li>
+  <li><a href="#AIProvider" title="https://w3id.org/stav#AIProvider">AI Provider</a></li>
+  <li><a href="#AISystem" title="https://w3id.org/stav#AISystem">AI System</a></li>
+  <li><a href="#AppliedStandards" title="https://w3id.org/stav#AppliedStandards">Applied Standards</a></li>
+  <li><a href="#AuthorisedRepresentative" title="https://w3id.org/stav#AuthorisedRepresentative">Authorised Representative</a></li>
+  <li><a href="#BaselineProcessDescription" title="https://w3id.org/stav#BaselineProcessDescription">Baseline Process Description</a></li>
+  <li><a href="#BeingNotHighRiskCriteria" title="https://w3id.org/stav#BeingNotHighRiskCriteria">Being Not High-Risk Criteria</a></li>
+  <li><a href="#BeingNotHighRiskGrounds" title="https://w3id.org/stav#BeingNotHighRiskGrounds">Being Not High-Risk Grounds</a></li>
+  <li><a href="#ComponentsAndFunctionsSupportedDescription" title="https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription">Components And Functions Supported Description</a></li>
+  <li><a href="#ConformityDeclaration" title="https://w3id.org/stav#ConformityDeclaration">Conformity Declaration</a></li>
+  <li><a href="#CurrentAndPotentialFutureImpacts" title="https://w3id.org/stav#CurrentAndPotentialFutureImpacts">Current and Potential Future Impacts</a></li>
+  <li><a href="#DataMinimizationPractices" title="https://w3id.org/stav#DataMinimizationPractices">Data Minimization Practices</a></li>
+  <li><a href="#DataProtectionImpactAssessmentDocumentation" title="https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation">Data Protection Impact Assessment Documentation</a></li>
+  <li><a href="#DeploymentContext" title="https://w3id.org/stav#DeploymentContext">Deployment Context</a></li>
+  <li><a href="#ExternalInteractionDescription" title="https://w3id.org/stav#ExternalInteractionDescription">External Interaction Description</a></li>
+  <li><a href="#FundamentalRightsImpactAssessmentDocumentation" title="https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation">Fundamental Rights Impact Assessment Documentation</a></li>
+  <li><a href="#ImpactAssessmentDocumentation" title="https://w3id.org/stav#ImpactAssessmentDocumentation">Impact Assessment Documentation</a></li>
+  <li><a href="#InformationSecurityMeasures" title="https://w3id.org/stav#InformationSecurityMeasures">Information Security Measures</a></li>
+  <li><a href="#InformationSubmissionRepresentative" title="https://w3id.org/stav#InformationSubmissionRepresentative">Information Submission Representative</a></li>
+  <li><a href="#InformationUsedBySystemDescription" title="https://w3id.org/stav#InformationUsedBySystemDescription">Information Used By the System Description</a></li>
+  <li><a href="#InstallationInstructions" title="https://w3id.org/stav#InstallationInstructions">Installation Instructions</a></li>
+  <li><a href="#InstructionsForUse" title="https://w3id.org/stav#InstructionsForUse">Instructions for Use</a></li>
+  <li><a href="#IntendedBenefitsOverPreviouslyExistingProcess" title="https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess">Intended Benefits Over Previously Existing Process</a></li>
+  <li><a href="#IntendedHardwareDescription" title="https://w3id.org/stav#IntendedHardwareDescription">Intended Hardware Description</a></li>
+  <li><a href="#IntendedPurposes" title="https://w3id.org/stav#IntendedPurposes">Intended Purposes</a></li>
+  <li><a href="#Log" title="https://w3id.org/stav#Log">Log</a></li>
+  <li><a href="#MakingAvailableOnTheMarket" title="https://w3id.org/stav#MakingAvailableOnTheMarket">making available on the market</a></li>
+  <li><a href="#MarketSurveillenceAuthority" title="https://w3id.org/stav#MarketSurveillenceAuthority">Market Surveillence Authority</a></li>
+  <li><a href="#PlacingOnTheMarket" title="https://w3id.org/stav#PlacingOnTheMarket">placing on the market</a></li>
+  <li><a href="#PostMarketEvaluationSystemDescription" title="https://w3id.org/stav#PostMarketEvaluationSystemDescription">Post-Market Evaluation System Description</a></li>
+  <li><a href="#PreviouslyExistingProcessEvaluationDocumentation" title="https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation">Previously Existing Process Evaluation Documentation</a></li>
+  <li><a href="#PreviouslyExistingProcessKnownNegativeImpactInformation" title="https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation">Previously Existing Process Known Negative Impact Information</a></li>
+  <li><a href="#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation" title="https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation">Privacy Risks and Privacy Measures Evaluation Documentation</a></li>
+  <li><a href="#ProductServiceDescription" title="https://w3id.org/stav#ProductServiceDescription">Product Service Descriptipn</a></li>
+  <li><a href="#ProductVisualImage" title="https://w3id.org/stav#ProductVisualImage">Product Visual Image</a></li>
+  <li><a href="#PuttingIntoService" title="https://w3id.org/stav#PuttingIntoService">putting into service</a></li>
+  <li><a href="#QualityManagementSystemDocumentationObligation" title="https://w3id.org/stav#QualityManagementSystemDocumentationObligation">Quality Management System Documentation Obligation</a></li>
+  <li><a href="#RealWorldConditionsTestingPlan" title="https://w3id.org/stav#RealWorldConditionsTestingPlan">Real World Conditions Testing Plan</a></li>
+  <li><a href="#RealWorldConditionsTestingSuspensionOrTerminationInformation" title="https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation">Real World Conditions Testing Suspension Or Termination Information</a></li>
+  <li><a href="#RealWorldConditionsTestingUser" title="https://w3id.org/stav#RealWorldConditionsTestingUser">Real World Conditions Testing User</a></li>
+  <li><a href="#RegisterationObligation" title="https://w3id.org/stav#RegisterationObligation">Registeration Obligation</a></li>
+  <li><a href="#RiskManagementSystemDescription" title="https://w3id.org/stav#RiskManagementSystemDescription">Risk Management System Description</a></li>
+  <li><a href="#SoftwareDependencies" title="https://w3id.org/stav#SoftwareDependencies">Software Dependencies</a></li>
+  <li><a href="#SystemDetailedDescription" title="https://w3id.org/stav#SystemDetailedDescription">System Detailed Description</a></li>
+  <li><a href="#SystemEvaluationDocumentation" title="https://w3id.org/stav#SystemEvaluationDocumentation">System Evaluation Documentation</a></li>
+  <li><a href="#SystemGeneralDescription" title="https://w3id.org/stav#SystemGeneralDescription">System General Description</a></li>
+  <li><a href="#TechnicalDocumentation" title="https://w3id.org/stav#TechnicalDocumentation">Technical Documentation</a></li>
+  <li><a href="#TechnicalDocumentationObligation" title="https://w3id.org/stav#TechnicalDocumentationObligation">Technical Documentation Obligation</a></li>
+ </ul>
+ <div class="entity" id="AISystemStatus">
+  <h3>A I System Status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#AISystemStatus</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AIDeployer">
+  <h3>AI Deployer<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#AIDeployer</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Party" target="_blank" title="http://www.w3.org/ns/odrl/2/Party">Party</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAddress" title="https://w3id.org/stav#hasAddress">has Address</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasContactDetails" title="https://w3id.org/stav#hasContactDetails">has Contact Details</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasName" title="https://w3id.org/stav#hasName">has Name</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AIProvider">
+  <h3>AI Provider<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#AIProvider</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Party" target="_blank" title="http://www.w3.org/ns/odrl/2/Party">Party</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAddress" title="https://w3id.org/stav#hasAddress">has Address</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasContactDetails" title="https://w3id.org/stav#hasContactDetails">has Contact Details</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasName" title="https://w3id.org/stav#hasName">has Name</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AISystem">
+  <h3>AI System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#AISystem</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasName" title="https://w3id.org/stav#hasName">has Name</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AppliedStandards">
+  <h3>Applied Standards<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#AppliedStandards</p>
+  <div class="comment">
+   <span class="markdown">Annex IV (6)</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AuthorisedRepresentative">
+  <h3>Authorised Representative<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#AuthorisedRepresentative</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Party" target="_blank" title="http://www.w3.org/ns/odrl/2/Party">Party</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasName" title="https://w3id.org/stav#hasName">has Name</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BaselineProcessDescription">
+  <h3>Baseline Process Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#BaselineProcessDescription</p>
+  <div class="comment">
+   <span class="markdown">Sec. 4. (a) (1) (A) S. 2892: Algorithmic Accountability Act of 2023 https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_A</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BeingNotHighRiskCriteria">
+  <h3>Being Not High-Risk Criteria<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#BeingNotHighRiskCriteria</p>
+  <div class="comment">
+   <span class="markdown">Based on which criterion or criteria provided in Article 6(2a) the AI system is considered as not high-risk</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BeingNotHighRiskGrounds">
+  <h3>Being Not High-Risk Grounds<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#BeingNotHighRiskGrounds</p>
+  <div class="comment">
+   <span class="markdown">Short summary of the grounds for considering the AI system as not high-risk in application of the procedure under Article 6(2a)</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ComponentsAndFunctionsSupportedDescription">
+  <h3>Components And Functions Supported Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription</p>
+  <div class="comment">
+   <span class="markdown">Description of the components and functions supported through this AI system</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ConformityDeclaration">
+  <h3>Conformity Declaration<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#ConformityDeclaration</p>
+  <div class="comment">
+   <span class="markdown">Annex IV (7) EU AI Act Can a text or an URL</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CurrentAndPotentialFutureImpacts">
+  <h3>Current and Potential Future Impacts<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#CurrentAndPotentialFutureImpacts</p>
+  <div class="comment">
+   <span class="markdown">Assessment and documentation of the current and potential future or downstream positive and negative impacts of a system or process.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataMinimizationPractices">
+  <h3>Data Minimization Practices<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#DataMinimizationPractices</p>
+  <div class="comment">
+   <span class="markdown">Assessment and documentation of the data minimization practices of a system or process and the duration for which the relevant identifying information and any resulting critical decision is stored.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataProtectionImpactAssessmentDocumentation">
+  <h3>Data Protection Impact Assessment Documentation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation</p>
+  <div class="comment">
+   <span class="markdown">A summary of the data protection impact assessment carried out in accordance with Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680 as specified in paragraph 6 of Article 29 of this Regulation, where applicable.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ImpactAssessmentDocumentation" title="https://w3id.org/stav#ImpactAssessmentDocumentation">Impact Assessment Documentation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DeploymentContext">
+  <h3>Deployment Context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#DeploymentContext</p>
+  <div class="comment">
+   <span class="markdown">Sec. 203. (a) (2) (C) S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023 https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_C&amp;nearest=id07706866948d4dc59792b34859a3afdf</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExternalInteractionDescription">
+  <h3>External Interaction Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#ExternalInteractionDescription</p>
+  <div class="comment">
+   <span class="markdown">EU AI Act Annex IV (1) (b)</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">How the AI system interacts or can be used to interact with hardware or software that is not part of the AI system itself, where applicable.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FundamentalRightsImpactAssessmentDocumentation">
+  <h3>Fundamental Rights Impact Assessment Documentation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation</p>
+  <div class="comment">
+   <span class="markdown">A summary of the findings of the fundamental rights impact assessment conducted in accordance with Article 29a.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ImpactAssessmentDocumentation" title="https://w3id.org/stav#ImpactAssessmentDocumentation">Impact Assessment Documentation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ImpactAssessmentDocumentation">
+  <h3>Impact Assessment Documentation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#ImpactAssessmentDocumentation</p>
+  <div class="comment">
+   <span class="markdown">S. 2892: Algorithmic Accountability Act of 2023 Defined in Sec. 2. (12) https://www.govtrack.us/congress/bills/118/s2892/text/is#link=2_12 and detailed in Sec. 4. (a) https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023 Title II Sec. 206. (b) https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_206_b</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/AssetCollection" target="_blank" title="http://www.w3.org/ns/odrl/2/AssetCollection">Asset Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DataProtectionImpactAssessmentDocumentation" title="https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation">Data Protection Impact Assessment Documentation</a> <sup class="type-c" title="class">c</sup>, <a href="#FundamentalRightsImpactAssessmentDocumentation" title="https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation">Fundamental Rights Impact Assessment Documentation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InformationSecurityMeasures">
+  <h3>Information Security Measures<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#InformationSecurityMeasures</p>
+  <div class="comment">
+   <span class="markdown">Assessment of information security measures with respect to a system or process.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InformationSubmissionRepresentative">
+  <h3>Information Submission Representative<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#InformationSubmissionRepresentative</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Party" target="_blank" title="http://www.w3.org/ns/odrl/2/Party">Party</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasName" title="https://w3id.org/stav#hasName">has Name</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InformationUsedBySystemDescription">
+  <h3>Information Used By the System Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#InformationUsedBySystemDescription</p>
+  <div class="comment">
+   <span class="markdown">A basic and concise description of the information used by the system (data, inputs) and its operating logic</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InstallationInstructions">
+  <h3>Installation Instructions<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#InstallationInstructions</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InstructionsForUse">
+  <h3>Instructions for Use<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#InstructionsForUse</p>
+  <div class="comment">
+   <span class="markdown">‘instructions for use’ or ‘instructions of use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntendedBenefitsOverPreviouslyExistingProcess">
+  <h3>Intended Benefits Over Previously Existing Process<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess</p>
+  <div class="comment">
+   <span class="markdown">"intended benefits" Sec. 4. (a) (1) (C) S. 2892: Algorithmic Accountability Act of 2023 https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_C "benefits" Sec. 203. (a) (2) (D) S. 3312: Artificial Intelligence Research, Innovation, and Accountability Act of 2023 https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_D&amp;nearest=id18d5fa12eea943a799b7e1075a62e1bf</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Intended benefits of and need for the new process.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntendedHardwareDescription">
+  <h3>Intended Hardware Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#IntendedHardwareDescription</p>
+  <div class="comment">
+   <span class="markdown">Annex IV (1) (e) EU AI Act</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The description of hardware on which the AI system is intended to run.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntendedPurposes">
+  <h3>Intended Purposes<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#IntendedPurposes</p>
+  <div class="comment">
+   <span class="markdown">"intended purpose" EU AI Act Annex IV (1) (b) Annex VIII Section C (4) Annex VIII Section A (5) Annex VIIIa (3) "purpose" Sec. 203. (a) (2) (A) S.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023 https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_A&amp;nearest=id228689ffe9534563b8ce28c344358201 "intended purpose" Sec. 4 (a) (1) (D) S. 2892: Algorithmic Accountability Act of 2023 https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_D_~T1&amp;nearest=idCD671E7BFB0C45779B5E8802FF584BB4 "intended purpose" Sec. 5. (1) (C) S. 2892: Algorithmic Accountability Act of 2023 https://www.govtrack.us/congress/bills/118/s2892/text/is#link=5_1_C_~T1&amp;nearest=idf074706698514621a84859fffa6b6fed</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Log">
+  <h3>Log<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#Log</p>
+  <div class="comment">
+   <span class="markdown">Automatic recording of events while the high-risk AI systems is operating. Those logging capabilities shall conform to recognised standards or common specifications. The logging capabilities shall ensure a level of traceability of the AI system’s functioning throughout its lifecycle that is appropriate to the intended purpose of the system.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MakingAvailableOnTheMarket">
+  <h3>making available on the market<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#MakingAvailableOnTheMarket</p>
+  <div class="comment">
+   <span class="markdown">‘making available on the market’ means any supply of an AI system for distribution or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Action" target="_blank" title="http://www.w3.org/ns/odrl/2/Action">Action</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MarketSurveillenceAuthority">
+  <h3>Market Surveillence Authority<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#MarketSurveillenceAuthority</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Party" target="_blank" title="http://www.w3.org/ns/odrl/2/Party">Party</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasName" title="https://w3id.org/stav#hasName">has Name</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PlacingOnTheMarket">
+  <h3>placing on the market<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#PlacingOnTheMarket</p>
+  <div class="comment">
+   <span class="markdown">‘placing on the market’ means the first making available of an AI system on the Union market.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Action" target="_blank" title="http://www.w3.org/ns/odrl/2/Action">Action</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PostMarketEvaluationSystemDescription">
+  <h3>Post-Market Evaluation System Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#PostMarketEvaluationSystemDescription</p>
+  <div class="comment">
+   <span class="markdown">Annex IV (8) EU AI Act</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PreviouslyExistingProcessEvaluationDocumentation">
+  <h3>Previously Existing Process Evaluation Documentation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation</p>
+  <div class="comment">
+   <span class="markdown">Sec. 4. (a) (1) S. 2892: Algorithmic Accountability Act of 2023 https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1 "In the case of a new augmented critical decision process, evaluate any previously existing critical decision-making process used for the same critical decision prior to the deployment of the new augmented critical decision process, along with any related documentation or information, such as— (A) a description of the baseline process being enhanced or replaced by the augmented critical decision process; (B) any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make the critical decision; (C) the intended benefits of and need for the augmented critical decision process; and (D) the intended purpose of the automated decision system or augmented critical decision process."</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Any related documentation or information about previously existing process being enhanced or replaced by the new process. This also includes information about the new process for the comparison purpose with the previously existing process.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/AssetCollection" target="_blank" title="http://www.w3.org/ns/odrl/2/AssetCollection">Asset Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PreviouslyExistingProcessKnownNegativeImpactInformation">
+  <h3>Previously Existing Process Known Negative Impact Information<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#PreviouslyExistingProcessKnownNegativeImpactInformation</p>
+  <div class="comment">
+   <span class="markdown">Any known harm, shortcoming, failure case, or material negative impact on consumers of the previously existing process used to make a decision.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation">
+  <h3>Privacy Risks and Privacy Measures Evaluation Documentation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/AssetCollection" target="_blank" title="http://www.w3.org/ns/odrl/2/AssetCollection">Asset Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProductServiceDescription">
+  <h3>Product Service Descriptipn<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#ProductServiceDescription</p>
+  <div class="comment">
+   <span class="markdown">Annex IV (1) (d) EU AI Act</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The description of the form in which the AI system is placed on the market or put into service. One AI system can has more than one form of product or service.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProductVisualImage">
+  <h3>Product Visual Image<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#ProductVisualImage</p>
+  <div class="comment">
+   <span class="markdown">Annex IV (1) (f) EU AI Act (f) where the AI system is a component of products, photographs or illustrations showing external features, marking and internal layout of those products;</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A photograph or an illustration showing external features, marking, and internal layout of a product that the AI system is part of.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PuttingIntoService">
+  <h3>putting into service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#PuttingIntoService</p>
+  <div class="comment">
+   <span class="markdown">‘putting into service’ means the supply of an AI system for first use directly to the user or for own use on the Union market for its intended purpose.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Action" target="_blank" title="http://www.w3.org/ns/odrl/2/Action">Action</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="QualityManagementSystemDocumentationObligation">
+  <h3>Quality Management System Documentation Obligation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#QualityManagementSystemDocumentationObligation</p>
+  <div class="comment">
+   <span class="markdown">A quality management system ensures compliance of an AI system. A quality management system documentation shall be in the form of written policies, procedures and instructions. It shall include a strategy for regulatory compliance; techniques, procedures and systematic actions to be used for the design, development, and examination of the AI system, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/stap#InformationCreationObligation" target="_blank" title="https://w3id.org/stap#InformationCreationObligation">Information Creation Obligation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RealWorldConditionsTestingPlan">
+  <h3>Real World Conditions Testing Plan<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#RealWorldConditionsTestingPlan</p>
+  <div class="comment">
+   <span class="markdown">A summary of the main characteristics of the plan for testing in real world conditions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RealWorldConditionsTestingSuspensionOrTerminationInformation">
+  <h3>Real World Conditions Testing Suspension Or Termination Information<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation</p>
+  <div class="comment">
+   <span class="markdown">Information on the suspension or termination of the testing in real world conditions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RealWorldConditionsTestingUser">
+  <h3>Real World Conditions Testing User<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#RealWorldConditionsTestingUser</p>
+  <div class="comment">
+   <span class="markdown">users involved in the testing in real world conditions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Party" target="_blank" title="http://www.w3.org/ns/odrl/2/Party">Party</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RegisterationObligation">
+  <h3>Registeration Obligation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#RegisterationObligation</p>
+  <div class="comment">
+   <span class="markdown">A registration to a database containing information about AI systems.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/stap#InformationSubmissionObligation" target="_blank" title="https://w3id.org/stap#InformationSubmissionObligation">Information Submission Obligation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RiskManagementSystemDescription">
+  <h3>Risk Management System Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#RiskManagementSystemDescription</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SoftwareDependencies">
+  <h3>Software Dependencies<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#SoftwareDependencies</p>
+  <div class="comment">
+   <span class="markdown">Annex IV (1) (c) EU AI Act This is the area that Software Bill of Materials can help a lot. "versions of relevant software or firmware" can taken from software metadata that package manager already have. The "any requirement related to version update" could be a narrative one and need further clarification.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The versions of relevant software or firmware and any requirement related to version update.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/Asset" target="_blank" title="http://www.w3.org/ns/odrl/2/Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SystemDetailedDescription">
+  <h3>System Detailed Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#SystemDetailedDescription</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/AssetCollection" target="_blank" title="http://www.w3.org/ns/odrl/2/AssetCollection">Asset Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SystemEvaluationDocumentation">
+  <h3>System Evaluation Documentation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#SystemEvaluationDocumentation</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/AssetCollection" target="_blank" title="http://www.w3.org/ns/odrl/2/AssetCollection">Asset Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SystemGeneralDescription">
+  <h3>System General Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#SystemGeneralDescription</p>
+  <div class="comment">
+   <span class="markdown">Similar to what defined in Annex IV (1) of EU AI Act, as part of the Technical Documentation referred to in Article 11 (1)</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A general description of the AI system.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/AssetCollection" target="_blank" title="http://www.w3.org/ns/odrl/2/AssetCollection">Asset Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TechnicalDocumentation">
+  <h3>Technical Documentation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#TechnicalDocumentation</p>
+  <div class="comment">
+   <span class="markdown">Similar to "Transparency Report" as defined in Sec. 203. (a) (2) of S.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023 https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The technical documentation shall be drawn up in such a way to demonstrate that the high-risk AI system complies with the requirements set out in Title III Chapter 2 and provide national competent authorities and notified bodies with all the necessary information to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/odrl/2/AssetCollection" target="_blank" title="http://www.w3.org/ns/odrl/2/AssetCollection">Asset Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TechnicalDocumentationObligation">
+  <h3>Technical Documentation Obligation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#TechnicalDocumentationObligation</p>
+  <div class="comment">
+   <span class="markdown">The technical documentation of an AI system contains information including its intended purpose and limitations, risk management process, data governance, and instructions of use.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/stap#InformationCreationObligation" target="_blank" title="https://w3id.org/stap#InformationCreationObligation">Information Creation Obligation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasAddress" title="https://w3id.org/stav#hasAddress"> <span>has Address</span> </a></li>
+  <li><a href="#hasContactDetails" title="https://w3id.org/stav#hasContactDetails"> <span>has Contact Details</span> </a></li>
+  <li><a href="#hasName" title="https://w3id.org/stav#hasName"> <span>has Name</span> </a></li>
+  <li><a href="#onBehalfOf" title="https://w3id.org/stav#onBehalfOf"> <span>on Behalf Of</span> </a></li>
+ </ul>
+ <div class="entity" id="hasAddress">
+  <h3>has Address<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#hasAddress</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AIDeployer" title="https://w3id.org/stav#AIDeployer">AI Deployer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#AIProvider" title="https://w3id.org/stav#AIProvider">AI Provider</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasContactDetails">
+  <h3>has Contact Details<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#hasContactDetails</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AIDeployer" title="https://w3id.org/stav#AIDeployer">AI Deployer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#AIProvider" title="https://w3id.org/stav#AIProvider">AI Provider</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasName">
+  <h3>has Name<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#hasName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AIDeployer" title="https://w3id.org/stav#AIDeployer">AI Deployer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#AIProvider" title="https://w3id.org/stav#AIProvider">AI Provider</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#AISystem" title="https://w3id.org/stav#AISystem">AI System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#AuthorisedRepresentative" title="https://w3id.org/stav#AuthorisedRepresentative">Authorised Representative</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#InformationSubmissionRepresentative" title="https://w3id.org/stav#InformationSubmissionRepresentative">Information Submission Representative</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#MarketSurveillenceAuthority" title="https://w3id.org/stav#MarketSurveillenceAuthority">Market Surveillence Authority</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="onBehalfOf">
+  <h3>on Behalf Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/stav#onBehalfOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 </div>
 </div>
 </div>

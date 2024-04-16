@@ -1,16 +1,16 @@
 <https://w3id.org/stav> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/stav> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/stav/0.3> .
+<https://w3id.org/stav> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/stav/0.5> .
 <https://w3id.org/stav> <http://www.w3.org/2002/07/owl#imports> <http://spdx.org/rdf/terms/2.3> .
 <https://w3id.org/stav> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/stap/0.1> .
 <https://w3id.org/stav> <http://purl.org/dc/terms/creator> "Arthit Suriyawongkul" .
 <https://w3id.org/stav> <http://purl.org/dc/terms/description> "STAV represents AI system accountability concepts and relations."@en .
-<https://w3id.org/stav> <http://purl.org/dc/terms/issued> "2023-09-26T04:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/stav> <http://purl.org/dc/terms/issued> "2024-01-14T18:30:00" .
 <https://w3id.org/stav> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
-<https://w3id.org/stav> <http://purl.org/dc/terms/modified> "2024-01-10T18:30:00" .
+<https://w3id.org/stav> <http://purl.org/dc/terms/modified> "2024-04-16T14:30:00" .
 <https://w3id.org/stav> <http://purl.org/dc/terms/publisher> "ADAPT Centre, Trinity College Dublin" .
 <https://w3id.org/stav> <http://purl.org/dc/terms/title> "STAV" .
 <https://w3id.org/stav> <http://www.w3.org/2000/01/rdf-schema#label> "System Trustworthiness and Accountability Vocabulary"@en .
-<https://w3id.org/stav> <http://www.w3.org/2002/07/owl#versionInfo> "0.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/stav> <http://www.w3.org/2002/07/owl#versionInfo> "0.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -54,6 +54,33 @@
 # 
 # #################################################################
 # #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/stav#AISystemStatusType
+<https://w3id.org/stav#AISystemStatusType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/stav#AISystemStatusType> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Recalled" .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "On the market" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "No longer placed on the market/in service" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "In service" .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Object Properties
 # #
 # #################################################################
@@ -64,6 +91,31 @@
 # 
 # http://www.w3.org/ns/odrl/2/partOf
 <http://www.w3.org/ns/odrl/2/partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/stav#hasAddress
+<https://w3id.org/stav#hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/stav#hasAddress> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/stav#hasAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#AIDeployer> .
+<https://w3id.org/stav#hasAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#AIProvider> .
+# 
+# https://w3id.org/stav#hasContactDetails
+<https://w3id.org/stav#hasContactDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/stav#hasContactDetails> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/stav#hasContactDetails> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#AIDeployer> .
+<https://w3id.org/stav#hasContactDetails> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#AIProvider> .
+# 
+# https://w3id.org/stav#hasName
+<https://w3id.org/stav#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/stav#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#AIDeployer> .
+<https://w3id.org/stav#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#AIProvider> .
+<https://w3id.org/stav#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#AISystem> .
+<https://w3id.org/stav#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#AuthorisedRepresentative> .
+<https://w3id.org/stav#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#InformationSubmissionRepresentative> .
+<https://w3id.org/stav#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/stav#MarketSurveillenceAuthority> .
+# 
+# https://w3id.org/stav#onBehalfOf
+<https://w3id.org/stav#onBehalfOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/stav#onBehalfOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 # 
 # 
 # 
@@ -106,11 +158,26 @@
 <https://w3id.org/stav#AIProvider> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (2)" .
 <https://w3id.org/stav#AIProvider> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
 # 
+# https://w3id.org/stav#AISystem
+<https://w3id.org/stav#AISystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#AISystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#AISystem> <http://www.w3.org/2000/01/rdf-schema#label> "AI System"@en .
+# 
+# https://w3id.org/stav#AISystemStatus
+<https://w3id.org/stav#AISystemStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#AISystemStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+# 
 # https://w3id.org/stav#AppliedStandards
 <https://w3id.org/stav#AppliedStandards> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/stav#AppliedStandards> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
 <https://w3id.org/stav#AppliedStandards> <http://www.w3.org/2000/01/rdf-schema#comment> "Annex IV (6)"@en .
 <https://w3id.org/stav#AppliedStandards> <http://www.w3.org/2000/01/rdf-schema#label> "Applied Standards"@en .
+# 
+# https://w3id.org/stav#AuthorisedRepresentative
+<https://w3id.org/stav#AuthorisedRepresentative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#AuthorisedRepresentative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<https://w3id.org/stav#AuthorisedRepresentative> <http://www.w3.org/2000/01/rdf-schema#label> "Authorised Representative"@en .
+<https://w3id.org/stav#AuthorisedRepresentative> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIII Section C (2)"@en .
 # 
 # https://w3id.org/stav#BaselineProcessDescription
 <https://w3id.org/stav#BaselineProcessDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -118,6 +185,27 @@
 <https://w3id.org/stav#BaselineProcessDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Sec. 4. (a) (1) (A)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_A"@en .
 <https://w3id.org/stav#BaselineProcessDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Baseline Process Description"@en .
 <https://w3id.org/stav#BaselineProcessDescription> <http://www.w3.org/2004/02/skos/core#definition> "Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process."@en .
+# 
+# https://w3id.org/stav#BeingNotHighRiskCriteria
+<https://w3id.org/stav#BeingNotHighRiskCriteria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#BeingNotHighRiskCriteria> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#BeingNotHighRiskCriteria> <http://www.w3.org/2000/01/rdf-schema#comment> "Based on which criterion or criteria provided in Article 6(2a) the AI system is considered as not high-risk"@en .
+<https://w3id.org/stav#BeingNotHighRiskCriteria> <http://www.w3.org/2000/01/rdf-schema#label> "Being Not High-Risk Criteria"@en .
+<https://w3id.org/stav#BeingNotHighRiskCriteria> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIII Section C (5)"@en .
+# 
+# https://w3id.org/stav#BeingNotHighRiskGrounds
+<https://w3id.org/stav#BeingNotHighRiskGrounds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#BeingNotHighRiskGrounds> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#BeingNotHighRiskGrounds> <http://www.w3.org/2000/01/rdf-schema#comment> "Short summary of the grounds for considering the AI system as not high-risk in application of the procedure under Article 6(2a)"@en .
+<https://w3id.org/stav#BeingNotHighRiskGrounds> <http://www.w3.org/2000/01/rdf-schema#label> "Being Not High-Risk Grounds"@en .
+<https://w3id.org/stav#BeingNotHighRiskGrounds> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIII Section C (6)"@en .
+# 
+# https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription
+<https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the components and functions supported through this AI system"@en .
+<https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Components And Functions Supported Description"@en .
+<https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIII Section A (5)"@en .
 # 
 # https://w3id.org/stav#ConformityDeclaration
 <https://w3id.org/stav#ConformityDeclaration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -137,6 +225,13 @@
 <https://w3id.org/stav#DataMinimizationPractices> <http://www.w3.org/2000/01/rdf-schema#label> "Data Minimization Practices"@en .
 <https://w3id.org/stav#DataMinimizationPractices> <http://www.w3.org/2004/02/skos/core#definition> "Assessment and documentation of the data minimization practices of a system or process and the duration for which the relevant identifying information and any resulting critical decision is stored."@en .
 # 
+# https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation
+<https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/stav#ImpactAssessmentDocumentation> .
+<https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "A summary of the data protection impact assessment carried out in accordance with Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680 as specified in paragraph 6 of Article 29 of this Regulation, where applicable."@en .
+<https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation> <http://www.w3.org/2000/01/rdf-schema#label> "Data Protection Impact Assessment Documentation"@en .
+<https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIII Section B (7)"@en .
+# 
 # https://w3id.org/stav#DeploymentContext
 <https://w3id.org/stav#DeploymentContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/stav#DeploymentContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
@@ -150,6 +245,13 @@
 <https://w3id.org/stav#ExternalInteractionDescription> <http://www.w3.org/2000/01/rdf-schema#label> "External Interaction Description"@en .
 <https://w3id.org/stav#ExternalInteractionDescription> <http://www.w3.org/2004/02/skos/core#definition> "How the AI system interacts or can be used to interact with hardware or software that is not part of the AI system itself, where applicable."@en .
 # 
+# https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation
+<https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/stav#ImpactAssessmentDocumentation> .
+<https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "A summary of the findings of the fundamental rights impact assessment conducted in accordance with Article 29a."@en .
+<https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation> <http://www.w3.org/2000/01/rdf-schema#label> "Fundamental Rights Impact Assessment Documentation"@en .
+<https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIII Section B (5)"@en .
+# 
 # https://w3id.org/stav#ImpactAssessmentDocumentation
 <https://w3id.org/stav#ImpactAssessmentDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/stav#ImpactAssessmentDocumentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/AssetCollection> .
@@ -162,26 +264,39 @@
 <https://w3id.org/stav#InformationSecurityMeasures> <http://www.w3.org/2000/01/rdf-schema#label> "Information Security Measures"@en .
 <https://w3id.org/stav#InformationSecurityMeasures> <http://www.w3.org/2004/02/skos/core#definition> "Assessment of information security measures with respect to a system or process."@en .
 # 
+# https://w3id.org/stav#InformationSubmissionRepresentative
+<https://w3id.org/stav#InformationSubmissionRepresentative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#InformationSubmissionRepresentative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<https://w3id.org/stav#InformationSubmissionRepresentative> <http://www.w3.org/2000/01/rdf-schema#label> "Information Submission Representative"@en .
+<https://w3id.org/stav#InformationSubmissionRepresentative> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIII Section C (1)"@en .
+# 
+# https://w3id.org/stav#InformationUsedBySystemDescription
+<https://w3id.org/stav#InformationUsedBySystemDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#InformationUsedBySystemDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#InformationUsedBySystemDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A basic and concise description of the information used by the system (data, inputs) and its operating logic"@en .
+<https://w3id.org/stav#InformationUsedBySystemDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Information Used By the System Description"@en .
+<https://w3id.org/stav#InformationUsedBySystemDescription> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIII Section A (5a)"@en .
+# 
 # https://w3id.org/stav#InstallationInstructions
 <https://w3id.org/stav#InstallationInstructions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/stav#InstallationInstructions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
-<https://w3id.org/stav#InstallationInstructions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/stav#SystemGeneralDescription> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/odrl/2/partOf> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/stav#InstallationInstructions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/stav#SystemGeneralDescription> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/odrl/2/partOf> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/stav#InstallationInstructions> <http://www.w3.org/2000/01/rdf-schema#label> "Installation Instructions"@en .
 # 
-# https://w3id.org/stav#InstructionsOfUse
-<https://w3id.org/stav#InstructionsOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/stav#InstructionsOfUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
-<https://w3id.org/stav#InstructionsOfUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/stav#SystemGeneralDescription> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/odrl/2/partOf> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/stav#InstructionsOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "Instructions of Use"@en .
-<https://w3id.org/stav#InstructionsOfUse> <http://www.w3.org/2004/02/skos/core#definition> "‘instructions for use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used."@en .
-<https://w3id.org/stav#InstructionsOfUse> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (15)" .
-<https://w3id.org/stav#InstructionsOfUse> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
+# https://w3id.org/stav#InstructionsForUse
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/stav#SystemGeneralDescription> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/odrl/2/partOf> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2000/01/rdf-schema#label> "Instructions for Use"@en .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2004/02/skos/core#definition> "‘instructions for use’ or ‘instructions of use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used."@en .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/2004/02/skos/core#note> "Article 3 (15)" .
+<https://w3id.org/stav#InstructionsForUse> <http://www.w3.org/ns/odrl/2/source> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
 # 
 # https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess
 <https://w3id.org/stav#IntendedBenefitsOverPreviouslyExistingProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -200,7 +315,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/stav#IntendedPurposes
 <https://w3id.org/stav#IntendedPurposes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/stav#IntendedPurposes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
-<https://w3id.org/stav#IntendedPurposes> <http://www.w3.org/2000/01/rdf-schema#comment> "\"intended purpose\"\nEU AI Act Annex IV (1) (b)\n\n\"purpose\"\nSec. 203. (a) (2) (A)\nS.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_A&nearest=id228689ffe9534563b8ce28c344358201\n\n\"intended purpose\"\nSec. 4 (a) (1) (D)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_D_~T1&nearest=idCD671E7BFB0C45779B5E8802FF584BB4\n\n\"intended purpose\"\nSec. 5. (1) (C)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=5_1_C_~T1&nearest=idf074706698514621a84859fffa6b6fed"@en .
+<https://w3id.org/stav#IntendedPurposes> <http://www.w3.org/2000/01/rdf-schema#comment> "\"intended purpose\"\nEU AI Act\nAnnex IV (1) (b)\nAnnex VIII Section C (4)\nAnnex VIII Section A (5)\nAnnex VIIIa (3)\n\n\"purpose\"\nSec. 203. (a) (2) (A)\nS.3312 - Artificial Intelligence Research, Innovation, and Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_A&nearest=id228689ffe9534563b8ce28c344358201\n\n\"intended purpose\"\nSec. 4 (a) (1) (D)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_D_~T1&nearest=idCD671E7BFB0C45779B5E8802FF584BB4\n\n\"intended purpose\"\nSec. 5. (1) (C)\nS. 2892: Algorithmic Accountability Act of 2023\nhttps://www.govtrack.us/congress/bills/118/s2892/text/is#link=5_1_C_~T1&nearest=idf074706698514621a84859fffa6b6fed"@en .
 <https://w3id.org/stav#IntendedPurposes> <http://www.w3.org/2000/01/rdf-schema#label> "Intended Purposes"@en .
 # 
 # https://w3id.org/stav#Log
@@ -238,7 +353,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/stav#PostMarketEvaluationSystemDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/stav#PostMarketEvaluationSystemDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
 <https://w3id.org/stav#PostMarketEvaluationSystemDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Annex IV (8) EU AI Act"@en .
-<https://w3id.org/stav#PostMarketEvaluationSystemDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Post-Market Evaluation System Description"@en .
+<https://w3id.org/stav#PostMarketEvaluationSystemDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Post-Market Evaluation System Description"@en .
 # 
 # https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation
 <https://w3id.org/stav#PreviouslyExistingProcessEvaluationDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -285,6 +400,27 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/stav#QualityManagementSystemDocumentationObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/stap#InformationCreationObligation> .
 <https://w3id.org/stav#QualityManagementSystemDocumentationObligation> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Management System Documentation Obligation"@en .
 <https://w3id.org/stav#QualityManagementSystemDocumentationObligation> <http://www.w3.org/2004/02/skos/core#definition> "A quality management system ensures compliance of an AI system. A quality management system documentation shall be in the form of written policies, procedures and instructions. It shall include a strategy for regulatory compliance; techniques, procedures and systematic actions to be used for the design, development, and examination of the AI system, etc."@en .
+# 
+# https://w3id.org/stav#RealWorldConditionsTestingPlan
+<https://w3id.org/stav#RealWorldConditionsTestingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#RealWorldConditionsTestingPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#RealWorldConditionsTestingPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A summary of the main characteristics of the plan for testing in real world conditions."@en .
+<https://w3id.org/stav#RealWorldConditionsTestingPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Real World Conditions Testing Plan"@en .
+<https://w3id.org/stav#RealWorldConditionsTestingPlan> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIIIa (4)"@en .
+# 
+# https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation
+<https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Information on the suspension or termination of the testing in real world conditions."@en .
+<https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Real World Conditions Testing Suspension Or Termination Information"@en .
+<https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIIIa (5)"@en .
+# 
+# https://w3id.org/stav#RealWorldConditionsTestingUser
+<https://w3id.org/stav#RealWorldConditionsTestingUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/stav#RealWorldConditionsTestingUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<https://w3id.org/stav#RealWorldConditionsTestingUser> <http://www.w3.org/2000/01/rdf-schema#comment> "users involved in the testing in real world conditions."@en .
+<https://w3id.org/stav#RealWorldConditionsTestingUser> <http://www.w3.org/2000/01/rdf-schema#label> "Real World Conditions Testing User"@en .
+<https://w3id.org/stav#RealWorldConditionsTestingUser> <http://www.w3.org/2004/02/skos/core#note> "EU AI Act Annex VIIIa (2)"@en .
 # 
 # https://w3id.org/stav#RegisterationObligation
 <https://w3id.org/stav#RegisterationObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

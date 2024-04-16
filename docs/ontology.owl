@@ -10,18 +10,18 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/stav">
-        <owl:versionIRI rdf:resource="https://w3id.org/stav/0.3"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/stav/0.5"/>
         <owl:imports rdf:resource="http://spdx.org/rdf/terms/2.3"/>
         <owl:imports rdf:resource="https://w3id.org/stap/0.1"/>
         <terms:creator>Arthit Suriyawongkul</terms:creator>
         <terms:description xml:lang="en">STAV represents AI system accountability concepts and relations.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-26T04:00:00</terms:issued>
+        <terms:issued>2024-01-14T18:30:00</terms:issued>
         <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
-        <terms:modified>2024-01-10T18:30:00</terms:modified>
+        <terms:modified>2024-04-16T14:30:00</terms:modified>
         <terms:publisher>ADAPT Centre, Trinity College Dublin</terms:publisher>
         <terms:title>STAV</terms:title>
         <rdfs:label xml:lang="en">System Trustworthiness and Accountability Vocabulary</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -111,6 +111,55 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/stav#AISystemStatusType -->
+
+
+    <rdfs:Datatype rdf:about="https://w3id.org/stav#AISystemStatusType">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>In service</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>No longer placed on the market/in service</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>On the market</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>Recalled</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -131,6 +180,51 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/odrl/2/partOf"/>
+    
+
+
+    <!-- https://w3id.org/stav#hasAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/stav#hasAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/stav#AIDeployer"/>
+        <rdfs:domain rdf:resource="https://w3id.org/stav#AIProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/stav#hasContactDetails -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/stav#hasContactDetails">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/stav#AIDeployer"/>
+        <rdfs:domain rdf:resource="https://w3id.org/stav#AIProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/stav#hasName -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/stav#hasName">
+        <rdfs:domain rdf:resource="https://w3id.org/stav#AIDeployer"/>
+        <rdfs:domain rdf:resource="https://w3id.org/stav#AIProvider"/>
+        <rdfs:domain rdf:resource="https://w3id.org/stav#AISystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/stav#AuthorisedRepresentative"/>
+        <rdfs:domain rdf:resource="https://w3id.org/stav#InformationSubmissionRepresentative"/>
+        <rdfs:domain rdf:resource="https://w3id.org/stav#MarketSurveillenceAuthority"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/stav#onBehalfOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/stav#onBehalfOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -212,6 +306,25 @@
     
 
 
+    <!-- https://w3id.org/stav#AISystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#AISystem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label xml:lang="en">AI System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#AISystemStatus -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#AISystemStatus">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/stav#AppliedStandards -->
 
 
@@ -219,6 +332,17 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
         <rdfs:comment xml:lang="en">Annex IV (6)</rdfs:comment>
         <rdfs:label xml:lang="en">Applied Standards</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#AuthorisedRepresentative -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#AuthorisedRepresentative">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label xml:lang="en">Authorised Representative</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIII Section C (2)</skos:note>
     </owl:Class>
     
 
@@ -233,6 +357,42 @@ S. 2892: Algorithmic Accountability Act of 2023
 https://www.govtrack.us/congress/bills/118/s2892/text/is#link=4_a_1_A</rdfs:comment>
         <rdfs:label xml:lang="en">Baseline Process Description</rdfs:label>
         <skos:definition xml:lang="en">Desciption of a previously existing decision-making process prior to the deployment of an AI/augmented decision process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#BeingNotHighRiskCriteria -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#BeingNotHighRiskCriteria">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Based on which criterion or criteria provided in Article 6(2a) the AI system is considered as not high-risk</rdfs:comment>
+        <rdfs:label xml:lang="en">Being Not High-Risk Criteria</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIII Section C (5)</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#BeingNotHighRiskGrounds -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#BeingNotHighRiskGrounds">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Short summary of the grounds for considering the AI system as not high-risk in application of the procedure under Article 6(2a)</rdfs:comment>
+        <rdfs:label xml:lang="en">Being Not High-Risk Grounds</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIII Section C (6)</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#ComponentsAndFunctionsSupportedDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Description of the components and functions supported through this AI system</rdfs:comment>
+        <rdfs:label xml:lang="en">Components And Functions Supported Description</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIII Section A (5)</skos:note>
     </owl:Class>
     
 
@@ -272,6 +432,18 @@ Can a text or an URL</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/stav#ImpactAssessmentDocumentation"/>
+        <rdfs:comment xml:lang="en">A summary of the data protection impact assessment carried out in accordance with Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680 as specified in paragraph 6 of Article 29 of this Regulation, where applicable.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Protection Impact Assessment Documentation</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIII Section B (7)</skos:note>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/stav#DeploymentContext -->
 
 
@@ -293,6 +465,18 @@ https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_C&amp;n
         <rdfs:comment>EU AI Act Annex IV (1) (b)</rdfs:comment>
         <rdfs:label xml:lang="en">External Interaction Description</rdfs:label>
         <skos:definition xml:lang="en">How the AI system interacts or can be used to interact with hardware or software that is not part of the AI system itself, where applicable.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/stav#ImpactAssessmentDocumentation"/>
+        <rdfs:comment xml:lang="en">A summary of the findings of the fundamental rights impact assessment conducted in accordance with Article 29a.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fundamental Rights Impact Assessment Documentation</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIII Section B (5)</skos:note>
     </owl:Class>
     
 
@@ -327,6 +511,29 @@ https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_206_b</rdfs:com
     
 
 
+    <!-- https://w3id.org/stav#InformationSubmissionRepresentative -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#InformationSubmissionRepresentative">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label xml:lang="en">Information Submission Representative</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIII Section C (1)</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#InformationUsedBySystemDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#InformationUsedBySystemDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">A basic and concise description of the information used by the system (data, inputs) and its operating logic</rdfs:comment>
+        <rdfs:label xml:lang="en">Information Used By the System Description</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIII Section A (5a)</skos:note>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/stav#InstallationInstructions -->
 
 
@@ -343,10 +550,10 @@ https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_206_b</rdfs:com
     
 
 
-    <!-- https://w3id.org/stav#InstructionsOfUse -->
+    <!-- https://w3id.org/stav#InstructionsForUse -->
 
 
-    <owl:Class rdf:about="https://w3id.org/stav#InstructionsOfUse">
+    <owl:Class rdf:about="https://w3id.org/stav#InstructionsForUse">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -354,8 +561,8 @@ https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_206_b</rdfs:com
                 <owl:someValuesFrom rdf:resource="https://w3id.org/stav#SystemGeneralDescription"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Instructions of Use</rdfs:label>
-        <skos:definition xml:lang="en">‘instructions for use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used.</skos:definition>
+        <rdfs:label xml:lang="en">Instructions for Use</rdfs:label>
+        <skos:definition xml:lang="en">‘instructions for use’ or ‘instructions of use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used.</skos:definition>
         <skos:note>Article 3 (15)</skos:note>
         <odrl:source>https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&amp;from=EN</odrl:source>
     </owl:Class>
@@ -400,7 +607,11 @@ https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_203_a_2_D&amp;n
     <owl:Class rdf:about="https://w3id.org/stav#IntendedPurposes">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
         <rdfs:comment xml:lang="en">&quot;intended purpose&quot;
-EU AI Act Annex IV (1) (b)
+EU AI Act
+Annex IV (1) (b)
+Annex VIII Section C (4)
+Annex VIII Section A (5)
+Annex VIIIa (3)
 
 &quot;purpose&quot;
 Sec. 203. (a) (2) (A)
@@ -478,7 +689,7 @@ https://www.govtrack.us/congress/bills/118/s2892/text/is#link=5_1_C_~T1&amp;near
     <owl:Class rdf:about="https://w3id.org/stav#PostMarketEvaluationSystemDescription">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
         <rdfs:comment xml:lang="en">Annex IV (8) EU AI Act</rdfs:comment>
-        <rdfs:comment xml:lang="en">Post-Market Evaluation System Description</rdfs:comment>
+        <rdfs:label xml:lang="en">Post-Market Evaluation System Description</rdfs:label>
     </owl:Class>
     
 
@@ -576,6 +787,42 @@ One AI system can has more than one form of product or service.</skos:definition
         <rdfs:subClassOf rdf:resource="https://w3id.org/stap#InformationCreationObligation"/>
         <rdfs:label xml:lang="en">Quality Management System Documentation Obligation</rdfs:label>
         <skos:definition xml:lang="en">A quality management system ensures compliance of an AI system. A quality management system documentation shall be in the form of written policies, procedures and instructions. It shall include a strategy for regulatory compliance; techniques, procedures and systematic actions to be used for the design, development, and examination of the AI system, etc.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#RealWorldConditionsTestingPlan -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#RealWorldConditionsTestingPlan">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">A summary of the main characteristics of the plan for testing in real world conditions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Real World Conditions Testing Plan</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIIIa (4)</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#RealWorldConditionsTestingSuspensionOrTerminationInformation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:comment xml:lang="en">Information on the suspension or termination of the testing in real world conditions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Real World Conditions Testing Suspension Or Termination Information</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIIIa (5)</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/stav#RealWorldConditionsTestingUser -->
+
+
+    <owl:Class rdf:about="https://w3id.org/stav#RealWorldConditionsTestingUser">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:comment xml:lang="en">users involved in the testing in real world conditions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Real World Conditions Testing User</rdfs:label>
+        <skos:note xml:lang="en">EU AI Act Annex VIIIa (2)</skos:note>
     </owl:Class>
     
 
