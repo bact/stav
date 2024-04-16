@@ -49,16 +49,13 @@ pip install stav
 from mlflow import log_artifact, log_metric, log_param, set_tag
 import stav
 
-metric_names = [
-    stav.METRICS_RECALL,
-    stav.METRICS_PRECISION,
-    stav.METRICS_RMSE,
-]
+with mlflow.start_run():
+    mlflow.set_tag(stav.INFO_TRAINING, "Basic LR model for iris data")
+    mlflow.set_tag(stav.AI_PROVIDER, "Acme Corporation")
+    mlflow.set_tag(stav.AI_DEPLOYER, "Sirius Cybernetics")
+    mlflow.set_tag(stav.USE_SENSITIVE_PERSONAL_INFO, "No")
 
-set_tag(stav.ENERGY_CONSUMPTION, "3.3M GPU")
-set_tag(stav.AI_PROVIDER, "Acme Corporation")
-set_tag(stav.AI_DEPLOYER, "Sirius Cybernetics")
-log_artifact("use_intructions.txt", artifact_path=stav.INSTRUCTIONS_FOR_USE)
+    mlflow.log_metric(stav.METRICS_ACCURACY, accuracy)
 ```
 
 ## Sister projects
