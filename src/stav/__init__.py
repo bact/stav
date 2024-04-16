@@ -61,21 +61,25 @@ LOG = "Log"
 DATASET_SIZE = "DatasetSize"
 
 # SPDX AI Profile
-AUTONOMY_TYPE = "autonomyType"
-DOMAIN = "domain"
-ENERGY_CONSUMPTION = "energyConsumption"
-HYPERPARAMETER = "hyperparameter"
-INFO_APP = "informationAboutApplication"
-INFO_TRAINING = "informationAboutTraining"
-LIMITATION = "limitation"
-METRIC = "metric"
-METRIC_DECISION_THRESHOLD = "metricDecisionThreshold"
-MODEL_DATA_PROCESSING = "modelDataPreprocessing"
-MODEL_EXPLAINABILITY = "modelExplainability"
-SAFETY_RISK_ASSESSMENT = "safetyRiskAssessment"
-STANDARD_COMPLIANCE = "standardCompliance"
-MODEL_TYPE = "typeOfModel"
-USE_SENSITIVE_PERSONAL_INFO = "useSensitivePersonalInformation"
+AUTONOMY_TYPE = "AutonomyType"
+DOMAIN = "Domain"
+ENERGY_CONSUMPTION = "EnergyConsumption"
+ENERGY_CONSUMPTION_FINE_TUNING = "FineTuningEnergyConsumption"
+ENERGY_CONSUMPTION_INFERENCE = "InferenceEnergyConsumption"
+ENERGY_CONSUMPTION_TRAINING = "TrainingEnergyConsumption"
+ENERGY_UNIT = "EnergyUnit"
+HYPERPARAMETER = "Hyperparameter"
+INFO_APP = "InformationAboutApplication"
+INFO_TRAINING = "InformationAboutTraining"
+LIMITATION = "Limitation"
+METRIC = "Metric"
+METRIC_DECISION_THRESHOLD = "MetricDecisionThreshold"
+MODEL_DATA_PROCESSING = "ModelDataPreprocessing"
+MODEL_EXPLAINABILITY = "ModelExplainability"
+SAFETY_RISK_ASSESSMENT = "SafetyRiskAssessment"
+STANDARD_COMPLIANCE = "StandardCompliance"
+MODEL_TYPE = "TypeOfModel"
+USE_SENSITIVE_PERSONAL_INFO = "UseSensitivePersonalInformation"
 
 __all__ = [
     "LogRecord",
@@ -123,6 +127,10 @@ __all__ = [
     "AUTONOMY_TYPE",
     "DOMAIN",
     "ENERGY_CONSUMPTION",
+    "ENERGY_CONSUMPTION_FINE_TUNING",
+    "ENERGY_CONSUMPTION_INFERENCE",
+    "ENERGY_CONSUMPTION_TRAINING",
+    "ENERGY_UNIT",
     "HYPERPARAMETER",
     "INFO_APP",
     "INFO_TRAINING",
