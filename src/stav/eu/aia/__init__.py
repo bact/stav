@@ -7,10 +7,10 @@ Vocabulary for accountability artifacts from EU AI Act (draft)
 __stav_namespace__ = "eu.aia"
 
 
-class TechnicalDocumentation(object):
+class TechnicalDocumentation:
     NAME = "technical_documentation"
 
-    class Description(object):
+    class Description:
         NAME = "description"
         INTENDED_PURPOSE = "intended_purpose"
         DEVELOPER = "developer"
@@ -22,7 +22,7 @@ class TechnicalDocumentation(object):
         INSTRUCTIONS_INSTALLATION = "instructions_installation"
 
 
-class LogRecord(object):
+class LogRecord:
     NAME = "log_record"
 
 

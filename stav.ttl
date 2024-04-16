@@ -206,15 +206,15 @@ https://www.govtrack.us/congress/bills/118/s3312/text/is#link=II_206_b"""@en ;
                           rdfs:label "Installation Instructions"@en .
 
 
-###  https://w3id.org/stav#InstructionsOfUse
+###  https://w3id.org/stav#InstructionsForUse
 :InstructionsOfUse rdf:type owl:Class ;
                    rdfs:subClassOf odrl:Asset ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty odrl:partOf ;
                                      owl:someValuesFrom :SystemGeneralDescription
                                    ] ;
-                   rdfs:label "Instructions of Use"@en ;
-                   skos:definition "‘instructions for use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used."@en ;
+                   rdfs:label "Instructions for Use"@en ;
+                   skos:definition "‘instructions for use’ or ‘instructions of use’ means the information provided by the provider to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the high-risk AI system is intended to be used."@en ;
                    skos:note "Article 3 (15)" ;
                    odrl:source "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN" .
 

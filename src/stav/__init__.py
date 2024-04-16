@@ -3,70 +3,89 @@
 
 __stav_namespace__ = ""
 
-from stav.eu.aia import TechnicalDocumentation, LogRecord
+from stav.eu.aia import LogRecord, TechnicalDocumentation
 
-AI_PROVIDER = "AIProvider"
-PREVIOUSLY_EXISTING_PROCESS_EVALUATION_DOCUMENTATION = (
-    "PreviouslyExistingProcessEvaluationDocumentation"
-)
+# Obligations
+INFORMATION_CREATION_OBLIGATION = "InformationCreationObligation"
+INFORMATION_SUBMISSION_OBLIGATION = "InformationSubmissionObligation"
+QUALITY_MANAGEMENT_SYSTEM_DOCUMENTATION_OBLIGATION = "QualityManagementSystemDocumentationObligation"
+REGISTERATION_OBLIGATION = "RegisterationObligation"
 TECHNICAL_DOCUMENTATION_OBLIGATION = "TechnicalDocumentationObligation"
-BASELINE_PROCESS_DESCRIPTION = "BaselineProcessDescription"
-INSTRUCTIONS_OF_USE = "InstructionsOfUse"
-MAKING_AVAILABLE_ON_THE_MARKET = "MakingAvailableOnTheMarket"
-MARKET_SURVEILLENCE_AUTHORITY = "MarketSurveillenceAuthority"
-SYSTEM_GENERAL_DESCRIPTION = "SystemGeneralDescription"
-CURRENT_AND_POTENTIAL_FUTURE_IMPACTS = "CurrentAndPotentialFutureImpacts"
-TECHNICAL_DOCUMENTATION = "TechnicalDocumentation"
-QUALITY_MANAGEMENT_SYSTEM_DOCUMENTATION_OBLIGATION = (
-    "QualityManagementSystemDocumentationObligation"
-)
-PUTTING_INTO_SERVICE = "PuttingIntoService"
+
+# System information
+INSTRUCTIONS_FOR_USE = "InstructionsForUse"
+INSTRUCTIONS_INSTALLATION = "InstallationInstructions"
 INTENDED_PURPOSES = "IntendedPurposes"
-DATA_MINIMIZATION_PRACTICES = "DataMinimizationPractices"
-PRIVACY_RISKS_AND_PRIVACY_MEASURES_EVALUATION_DOCUMENTATION = (
-    "PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation"
-)
-PLACING_ON_THE_MARKET = "PlacingOnTheMarket"
-INSTALLATION_INSTRUCTIONS = "InstallationInstructions"
-SYSTEM_EVALUATION_DOCUMENTATION = "SystemEvaluationDocumentation"
+SYSTEM_GENERAL_DESCRIPTION = "SystemGeneralDescription"
+
+# Stakeholders
+AI_PROVIDER = "AIProvider"
+AI_DEPLOYER = "AIDeployer"
+MARKET_SURVEILLENCE_AUTHORITY = "MarketSurveillenceAuthority"
+
+# Documentation
+PREVIOUSLY_EXISTING_PROCESS_DOCUMENTATION = "PreviouslyExistingProcessDocumentation"
+PREVIOUSLY_EXISTING_PROCESS_EVALUATION_DOCUMENTATION = "PreviouslyExistingProcessEvaluationDocumentation"
 PREVIOUSLY_EXISTING_PROCESS_KNOWN_NEGATIVE_IMPACT_INFORMATION = (
     "PreviouslyExistingProcessKnownNegativeImpactInformation"
 )
-PREVIOUSLY_EXISTING_PROCESS_DOCUMENTATION = "PreviouslyExistingProcessDocumentation"
+INTENDED_BENEFITS_OVER_PREVIOUSLY_EXISTING_PROCESS = "IntendedBenefitsOverPreviouslyExistingProcess"
+CURRENT_AND_POTENTIAL_FUTURE_IMPACTS = "CurrentAndPotentialFutureImpacts"
+TECHNICAL_DOCUMENTATION = "TechnicalDocumentation"
+PRIVACY_RISKS_AND_PRIVACY_MEASURES_EVALUATION_DOCUMENTATION = "PrivacyRisksAndPrivacyMeasuresEvaluationDocumentation"
+SYSTEM_EVALUATION_DOCUMENTATION = "SystemEvaluationDocumentation"
 CONSUMER_RIGHTS_EVALUATION_INFORMATION = "ConsumerRightsEvaluationInformation"
-INFORMATION_CREATION_OBLIGATION = "InformationCreationObligation"
-AI_DEPLOYER = "AIDeployer"
 IMPACT_ASSESSMENT_DOCUMENTATION = "ImpactAssessmentDocumentation"
-INTENDED_BENEFITS_OVER_PREVIOUSLY_EXISTING_PROCESS = (
-    "IntendedBenefitsOverPreviouslyExistingProcess"
-)
-INFORMATION_SUBMISSION_OBLIGATION = "InformationSubmissionObligation"
-LOG = "Log"
-INFORMATION_SECURITY_MEASURES = "InformationSecurityMeasures"
-REGISTERATION_OBLIGATION = "RegisterationObligation"
+BASELINE_PROCESS_DESCRIPTION = "BaselineProcessDescription"
+DATA_MINIMIZATION_PRACTICES = "DataMinimizationPractices"
 
-METRICS_RECALL = "MetricsRecall"
+# Actions / Verbs
+MAKING_AVAILABLE_ON_THE_MARKET = "MakingAvailableOnTheMarket"
+PLACING_ON_THE_MARKET = "PlacingOnTheMarket"
+PUTTING_INTO_SERVICE = "PuttingIntoService"
+
+# Measures
+INFORMATION_SECURITY_MEASURES = "InformationSecurityMeasures"
+
+# Metrics
+METRICS_ACCURACY = "MetricsAccuracy"
 METRICS_PRECISION = "MetricsPrecision"
+METRICS_RECALL = "MetricsRecall"
 METRICS_F1 = "MetricsF1"
 METRICS_R2 = "MetricsR2"
 METRICS_RMSE = "MetricsRMSE"
 METRICS_MAE = "MetricsMAE"
-
 METRICS_ENERGY = "MetricsEnergy"
 
+LOG = "Log"
 DATASET_SIZE = "DatasetSize"
 
-ENERGY_CONSUMPTION = "EnergyConsumption"  # SPDX AI Profile
-AUTONOMY_TYPE = "AutonomyType"  # SPDX AI Profile
+# SPDX AI Profile
+AUTONOMY_TYPE = "autonomyType"
+DOMAIN = "domain"
+ENERGY_CONSUMPTION = "energyConsumption"
+HYPERPARAMETER = "hyperparameter"
+INFO_APP = "informationAboutApplication"
+INFO_TRAINING = "informationAboutTraining"
+LIMITATION = "limitation"
+METRIC = "metric"
+METRIC_DECISION_THRESHOLD = "metricDecisionThreshold"
+MODEL_DATA_PROCESSING = "modelDataPreprocessing"
+MODEL_EXPLAINABILITY = "modelExplainability"
+SAFETY_RISK_ASSESSMENT = "safetyRiskAssessment"
+STANDARD_COMPLIANCE = "standardCompliance"
+MODEL_TYPE = "typeOfModel"
+USE_SENSITIVE_PERSONAL_INFO = "useSensitivePersonalInformation"
 
 __all__ = [
-    TechnicalDocumentation,
-    LogRecord,
+    "LogRecord",
+    "TechnicalDocumentation",
     "AI_PROVIDER",
+    "AI_DEPLOYER",
     "PREVIOUSLY_EXISTING_PROCESS_EVALUATION_DOCUMENTATION",
     "TECHNICAL_DOCUMENTATION_OBLIGATION",
     "BASELINE_PROCESS_DESCRIPTION",
-    "INSTRUCTIONS_OF_USE",
+    "INSTRUCTIONS_FOR_USE",
     "MAKING_AVAILABLE_ON_THE_MARKET",
     "MARKET_SURVEILLENCE_AUTHORITY",
     "SYSTEM_GENERAL_DESCRIPTION",
@@ -84,7 +103,6 @@ __all__ = [
     "PREVIOUSLY_EXISTING_PROCESS_DOCUMENTATION",
     "CONSUMER_RIGHTS_EVALUATION_INFORMATION",
     "INFORMATION_CREATION_OBLIGATION",
-    "AI_DEPLOYER",
     "IMPACT_ASSESSMENT_DOCUMENTATION",
     "INTENDED_BENEFITS_OVER_PREVIOUSLY_EXISTING_PROCESS",
     "INFORMATION_SUBMISSION_OBLIGATION",
@@ -100,7 +118,21 @@ __all__ = [
     "METRICS_RMSE",
     "METRICS_MAE",
     "METRICS_ENERGY",
+    "METRICS_ACCURACY",
     "DATASET_SIZE",
-    "ENERGY_CONSUMPTION",
     "AUTONOMY_TYPE",
+    "DOMAIN",
+    "ENERGY_CONSUMPTION",
+    "HYPERPARAMETER",
+    "INFO_APP",
+    "INFO_TRAINING",
+    "LIMITATION",
+    "METRIC",
+    "METRIC_DECISION_THRESHOLD",
+    "MODEL_DATA_PROCESSING",
+    "MODEL_EXPLAINABILITY",
+    "SAFETY_RISK_ASSESSMENT",
+    "STANDARD_COMPLIANCE",
+    "MODEL_TYPE",
+    "USE_SENSITIVE_PERSONAL_INFO",
 ]

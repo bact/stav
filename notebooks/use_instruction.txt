@@ -1,0 +1,4 @@
+# An example instruction for use
+
+Instructions for Use is information provided by the manufacturer to inform the user
+of a product or a service's intended purpose, proper use, and any precautions.

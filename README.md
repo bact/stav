@@ -32,7 +32,7 @@ STAV terms can also be accessible through a Python module called `stav`, availab
 STAV class names are accessible through constants in the `stav` module. These class names are in capital letters with underscores separating words, `LIKE_THIS`, as stated in [PEP 8](https://peps.python.org/pep-0008/#constants).
 Values of these constants are simply a STAV class name, a string in `CamelCase`.
 
-For example, `stav.INSTRUCTIONS_OF_USE` is a string with value of "InstructionsOfUse".
+For example, `stav.INSTRUCTIONS_FOR_USE` is a string with value of "InstructionsForUse".
 (In the future, it should be able to configure the casing to "instructions_of_use", etc.)
 
 With this, it will make the standardization of documentation within an organization, or across organizations, easier and can facilitate the use of the terms in MLOps settings, where data scientists and data engineers can use STAV terms as keys in their model logging and registration.
@@ -46,7 +46,7 @@ pip install stav
 ### Use with MLflow
 
 ```python
-from mlflow import log_artifact, log_metric, log_param
+from mlflow import log_artifact, log_metric, log_param, set_tag
 import stav
 
 metric_names = [
@@ -55,11 +55,10 @@ metric_names = [
     stav.METRICS_RMSE,
 ]
 
-log_param(stav.ENERGY_CONSUMPTION, "3.3M GPU")
-
-log_param(stav.AI_PROVIDER, "Acme Corporation")
-log_param(stav.AI_DEPLOYER, "Sirius Cybernetics")
-log_artifact("use_intructions.txt", artifact_path=stav.INSTRUCTIONS_OF_USE)
+set_tag(stav.ENERGY_CONSUMPTION, "3.3M GPU")
+set_tag(stav.AI_PROVIDER, "Acme Corporation")
+set_tag(stav.AI_DEPLOYER, "Sirius Cybernetics")
+log_artifact("use_intructions.txt", artifact_path=stav.INSTRUCTIONS_FOR_USE)
 ```
 
 ## Sister projects
