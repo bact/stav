@@ -37,6 +37,8 @@ For example, `stav.INSTRUCTIONS_FOR_USE` is a string with value of "Instructions
 
 With this, it will make the standardization of documentation within an organization, or across organizations, easier and can facilitate the use of the terms in MLOps settings, where data scientists and data engineers can use STAV terms as keys in their model logging and registration.
 
+[![Watch the video](https://img.youtube.com/vi/nSQ3rsaqpaQ/sddefault.jpg)](https://youtu.be/nSQ3rsaqpaQ?si=hZlHBSMUDnkbguSA "Watch the presentation from the Open Source Summit North America 2024")
+
 ### Installation
 
 ```console
