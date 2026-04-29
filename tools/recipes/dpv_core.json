@@ -1,0 +1,14 @@
+{
+  "source_desc": "W3C Data Privacy Vocabulary (DPV) Core v2.3",
+  "submodule": "vocab.dpv",
+  "output": "../../src/stav/vocab/dpv/_core.py",
+  "emit_constants": true,
+  "sources": [
+    {
+      "path": "../../../dpv/2.3/dpv/dpv.csv",
+      "format": "csv",
+      "source_vocab": "DPV"
+    }
+  ],
+  "enums": []
+}

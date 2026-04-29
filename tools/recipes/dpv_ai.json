@@ -1,0 +1,78 @@
+{
+  "source_desc": "W3C Data Privacy Vocabulary (DPV) AI Extension v2.3",
+  "submodule": "vocab.dpv.ai",
+  "output": "../../src/stav/vocab/dpv/ai.py",
+  "sources": [
+    {
+      "path": "../../../dpv/2.3/ai/ai.csv",
+      "format": "csv",
+      "source_vocab": "DPV-AI"
+    }
+  ],
+  "enums": [
+    {
+      "name": "AITechnique",
+      "doc": "AI technique types from the W3C Data Privacy Vocabulary (DPV) AI extension. Use for annotating the machine learning or AI technique used in a model — maps to the SPDX 3 ai_typeOfModel field.",
+      "filter": {
+        "broader_in": [
+          "https://w3id.org/dpv/ai#Technique",
+          "https://w3id.org/dpv/ai#MachineLearning",
+          "https://w3id.org/dpv/ai#NeuralNetwork",
+          "https://w3id.org/dpv/ai#StatisticalTechnique",
+          "https://w3id.org/dpv/ai#SearchMethod",
+          "https://w3id.org/dpv/ai#OptimisationMethod",
+          "https://w3id.org/dpv/ai#ReasoningTechnique",
+          "https://w3id.org/dpv/ai#RuleBasedTechnique",
+          "https://w3id.org/dpv/ai#KnowledgeTechnique"
+        ],
+        "include_roots": true
+      }
+    },
+    {
+      "name": "AICapability",
+      "doc": "AI capability types from the W3C Data Privacy Vocabulary (DPV) AI extension. Use for annotating the capabilities or outputs of an AI system — maps to the SPDX 3 ai_domain field.",
+      "filter": {
+        "broader_in": [
+          "https://w3id.org/dpv/ai#Capability",
+          "https://w3id.org/dpv/ai#HumanOrientedCapability",
+          "https://w3id.org/dpv/ai#LanguageCapability",
+          "https://w3id.org/dpv/ai#BiometricCapability",
+          "https://w3id.org/dpv/ai#AudioCapability",
+          "https://w3id.org/dpv/ai#NaturalLanguageProcessing",
+          "https://w3id.org/dpv/ai#ComputerVision"
+        ],
+        "include_roots": true
+      }
+    },
+    {
+      "name": "AILifecycleStage",
+      "doc": "AI lifecycle stages from the W3C Data Privacy Vocabulary (DPV) AI extension. Use for annotating which stage of the AI development or operation pipeline a piece of code or data belongs to.",
+      "filter": {
+        "broader_in": [
+          "https://w3id.org/dpv/ai#LifecycleStage",
+          "https://w3id.org/dpv/ai#OperationStage",
+          "https://w3id.org/dpv/ai#RetirementStage"
+        ],
+        "include_roots": true
+      }
+    },
+    {
+      "name": "AISystemType",
+      "doc": "AI system classification types from the W3C Data Privacy Vocabulary (DPV) AI extension. Use for annotating the broad category or architecture of an AI system.",
+      "filter": {
+        "iris": [
+          "https://w3id.org/dpv/ai#AI",
+          "https://w3id.org/dpv/ai#NarrowAI",
+          "https://w3id.org/dpv/ai#AGI",
+          "https://w3id.org/dpv/ai#AISystem",
+          "https://w3id.org/dpv/ai#AIAgent",
+          "https://w3id.org/dpv/ai#PerceptionBasedAI",
+          "https://w3id.org/dpv/ai#ReasoningSystem",
+          "https://w3id.org/dpv/ai#Robot",
+          "https://w3id.org/dpv/ai#RoboticProcessAutomation",
+          "https://w3id.org/dpv/ai#CyberphysicalSystem"
+        ]
+      }
+    }
+  ]
+}

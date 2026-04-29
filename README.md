@@ -9,6 +9,7 @@
 `This work is still under development.`
 
 **stav**:
+
 - Norwegian: *to spell (words)*
 - Swedish: *letter (alphabet)*
 - Slovak: *state (condition)*
@@ -84,6 +85,7 @@ and with the organizational support from members of these research groups:
 ## Related works
 
 Members of [RegTech group at ADAPT Centre](https://regtech.adaptcentre.ie/) contribute to AI and data ontology projects below, and they are may be of your interest:
+
 - [Trustworthy AI Requirements Ontology (TAIR)](https://tair.adaptcentre.ie/)
 - [AI Risk Ontology (AIRO)](https://w3id.org/airo)
 - [Vocabulary of AI Risks (VAIR)](https://w3id.org/vair)

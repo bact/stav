@@ -1,3 +1,4 @@
-# SPDX-FileCopyrightText: 2023-present Arthit Suriyawongkul <arthit@gmail.com>
+# SPDX-FileCopyrightText: 2023-present Arthit Suriyawongkul
+# SPDX-FileType: SOURCE
 # SPDX-License-Identifier: Apache-2.0
-__version__ = "0.2.dev8"
+__version__ = "0.3.0"

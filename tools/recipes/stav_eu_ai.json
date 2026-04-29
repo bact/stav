@@ -1,0 +1,65 @@
+{
+  "source_desc": "STAV — EU AI Act concepts and obligations",
+  "submodule": "vocab.eu.aia",
+  "output": "../../src/stav/vocab/eu/aia.py",
+  "emit_constants": true,
+  "sources": [
+    {
+      "path": "../../stav.ttl",
+      "format": "ttl",
+      "source_vocab": "STAV"
+    },
+    {
+      "path": "../../stav-eu-aia.ttl",
+      "format": "ttl",
+      "source_vocab": "STAV-EU-AIA"
+    }
+  ],
+  "enums": [
+    {
+      "name": "AIRole",
+      "doc": "Roles of actors in AI systems as defined in the EU AI Act (via STAV). Covers providers, deployers, and oversight bodies.",
+      "filter": {
+        "iris": [
+          "https://w3id.org/stav#AIProvider",
+          "https://w3id.org/stav#AIDeployer",
+          "https://w3id.org/stav#AuthorisedRepresentative",
+          "https://w3id.org/stav#MarketSurveillenceAuthority",
+          "https://w3id.org/stav#InformationSubmissionRepresentative"
+        ]
+      }
+    },
+    {
+      "name": "AIActObligation",
+      "doc": "Documentation and compliance obligations under the EU AI Act (via STAV).",
+      "filter": {
+        "iris": [
+          "https://w3id.org/stav#TechnicalDocumentationObligation",
+          "https://w3id.org/stav#QualityManagementSystemDocumentationObligation",
+          "https://w3id.org/stav#RegisterationObligation",
+          "https://w3id.org/stav-eu-aia#EUAIAAIDatabaseRegisterationObligation",
+          "https://w3id.org/stav-eu-aia#EUAIAQualityManagementSystemDocumentationObligation",
+          "https://w3id.org/stav-eu-aia#EUAIATechnicalDocumentationObligation"
+        ]
+      }
+    },
+    {
+      "name": "AIActDocumentation",
+      "doc": "Documentation artifacts required or recommended by the EU AI Act (via STAV).",
+      "filter": {
+        "iris": [
+          "https://w3id.org/stav#TechnicalDocumentation",
+          "https://w3id.org/stav#ImpactAssessmentDocumentation",
+          "https://w3id.org/stav#DataProtectionImpactAssessmentDocumentation",
+          "https://w3id.org/stav#FundamentalRightsImpactAssessmentDocumentation",
+          "https://w3id.org/stav#SystemEvaluationDocumentation",
+          "https://w3id.org/stav#RiskManagementSystemDescription",
+          "https://w3id.org/stav#SystemGeneralDescription",
+          "https://w3id.org/stav#IntendedPurposes",
+          "https://w3id.org/stav#InstructionsForUse",
+          "https://w3id.org/stav#Log"
+        ]
+      }
+    }
+  ]
+}
