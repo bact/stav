@@ -1,0 +1,32 @@
+{
+  "source_desc": "SPDX 3.0.1 Dataset profile",
+  "submodule": "vocab.spdx.dataset",
+  "output": "../../src/stav/vocab/spdx/dataset.py",
+  "sources": [
+    {
+      "path": "../../../spdx-spec/rdf/spdx-model.ttl",
+      "format": "ttl",
+      "source_vocab": "SPDX-3.0.1"
+    }
+  ],
+  "enums": [
+    {
+      "name": "DatasetType",
+      "doc": "Dataset content types from SPDX 3.0.1 Dataset profile. Use for the dataset_type argument in pitloom loom.add_dataset() and related calls — maps directly to the SPDX dataset_datasetType field.",
+      "filter": {
+        "types_in": [
+          "https://spdx.org/rdf/3.0.1/terms/Dataset/DatasetType"
+        ]
+      }
+    },
+    {
+      "name": "ConfidentialityLevel",
+      "doc": "Dataset confidentiality levels from SPDX 3.0.1 Dataset profile (traffic-light protocol). Use to annotate the sensitivity classification of a dataset.",
+      "filter": {
+        "types_in": [
+          "https://spdx.org/rdf/3.0.1/terms/Dataset/ConfidentialityLevelType"
+        ]
+      }
+    }
+  ]
+}

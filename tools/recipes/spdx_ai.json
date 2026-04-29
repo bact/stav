@@ -1,0 +1,32 @@
+{
+  "source_desc": "SPDX 3.0.1 AI profile",
+  "submodule": "vocab.spdx.ai",
+  "output": "../../src/stav/vocab/spdx/ai.py",
+  "sources": [
+    {
+      "path": "../../../spdx-spec/rdf/spdx-model.ttl",
+      "format": "ttl",
+      "source_vocab": "SPDX-3.0.1"
+    }
+  ],
+  "enums": [
+    {
+      "name": "SafetyRiskLevel",
+      "doc": "AI safety risk assessment levels from SPDX 3.0.1 AI profile. Use to annotate the risk level of an AI model — maps to the SPDX ai_safetyRiskAssessment field.",
+      "filter": {
+        "types_in": [
+          "https://spdx.org/rdf/3.0.1/terms/AI/SafetyRiskAssessmentType"
+        ]
+      }
+    },
+    {
+      "name": "EnergyUnit",
+      "doc": "Energy measurement units from SPDX 3.0.1 AI profile. Use when recording training, inference, or fine-tuning energy consumption — maps to the SPDX ai_energyUnit field.",
+      "filter": {
+        "types_in": [
+          "https://spdx.org/rdf/3.0.1/terms/AI/EnergyUnitType"
+        ]
+      }
+    }
+  ]
+}
