@@ -48,8 +48,15 @@ generate = "python -m stav.codegen.generate {args}"
 all = [
   "python -m stav.codegen.generate tools/recipes/dpv_core.json",
   "python -m stav.codegen.generate tools/recipes/dpv_ai.json",
+  "python -m stav.codegen.generate tools/recipes/spdx_core.json",
+  "python -m stav.codegen.generate tools/recipes/spdx_software.json",
   "python -m stav.codegen.generate tools/recipes/spdx_dataset.json",
   "python -m stav.codegen.generate tools/recipes/spdx_ai.json",
+  "python -m stav.codegen.generate tools/recipes/spdx_security.json",
+  "python -m stav.codegen.generate tools/recipes/spdx_build.json",
+  "python -m stav.codegen.generate tools/recipes/spdx_expanded_licensing.json",
+  "python -m stav.codegen.generate tools/recipes/spdx_simple_licensing.json",
+  "python -m stav.codegen.generate tools/recipes/spdx_extension.json",
   "python -m stav.codegen.generate tools/recipes/stav_eu_ai.json",
 ]
 [tool.hatch.envs.default.scripts]

@@ -3,7 +3,7 @@
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![PyPI - Version](https://img.shields.io/pypi/v/stav.svg)](https://pypi.org/project/stav)
 ![GitHub License](https://img.shields.io/github/license/bact/stav)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/stav.svg)](https://pypi.org/project/stav)
+[![DOI](https://zenodo.org/badge/695166654.svg)](https://doi.org/10.5281/zenodo.19912074)
 
 `This work is still under development.`
 
@@ -55,16 +55,29 @@ pip install stav
 ### Use with MLflow
 
 ```python
-from mlflow import log_artifact, log_metric, log_param, set_tag
-import stav
+import mlflow
+from stav.vocab import dpv, spdx
 
 with mlflow.start_run():
-    mlflow.set_tag(stav.INFO_TRAINING, "Basic LR model for iris data")
-    mlflow.set_tag(stav.AI_PROVIDER, "Acme Corporation")
-    mlflow.set_tag(stav.AI_DEPLOYER, "Sirius Cybernetics")
-    mlflow.set_tag(stav.USE_SENSITIVE_PERSONAL_INFO, "No")
+    mlflow.set_tag("data_subject_type", dpv.NaturalPerson)
+    mlflow.set_tag("dataset_type",      spdx.dataset.DatasetType.text)
+    mlflow.set_tag("confidentiality",   spdx.dataset.ConfidentialityLevelType.amber)
+```
 
-    mlflow.log_metric(stav.METRICS_ACCURACY, accuracy)
+All terms are plain strings (IRIs), so they work anywhere a string is accepted.
+Use `stav.label()` to get a human-readable name from any term.
+
+### Use with Pitloom
+
+```python
+from pitloom import loom
+from stav.vocab import dpv, spdx
+
+@loom.shoot("training_sbom.json")
+def train(dataset_path):
+    loom.set_model("my-model", model_type=dpv.ai.AITechnique.SupervisedLearning)
+    loom.add_dataset(dataset_path, dataset_type=spdx.dataset.DatasetType.text)
+    ...
 ```
 
 ## Sister projects

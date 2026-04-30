@@ -61,6 +61,8 @@ def parse(path: str, source_vocab: str = "", **_) -> list[VocabTerm]:
         str(OWL.NamedIndividual),
         str(OWL.Class),
         str(RDFS.Class),
+        str(OWL.ObjectProperty),
+        str(OWL.DatatypeProperty),
         "http://www.w3.org/2004/02/skos/core#Concept",
     }
 

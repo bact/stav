@@ -1,0 +1,38 @@
+{
+  "source_desc": "SPDX 3.0.1 Security profile",
+  "submodule": "vocab.spdx.security",
+  "output": "../../src/stav/vocab/spdx/security.py",
+  "emit_constants": true,
+  "terms_filter": {
+    "iri_prefix": "https://spdx.org/rdf/3.0.1/terms/Security/"
+  },
+  "sources": [
+    {
+      "path": "../../../spdx-spec/rdf/spdx-model.ttl",
+      "format": "ttl",
+      "source_vocab": "SPDX-3.0.1"
+    }
+  ],
+  "enums": [
+    {
+      "name": "CvssSeverityType",
+      "doc": "CVSS severity levels from SPDX 3.0.1 Security profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Security/CvssSeverityType"] }
+    },
+    {
+      "name": "ExploitCatalogType",
+      "doc": "Exploit catalog types from SPDX 3.0.1 Security profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Security/ExploitCatalogType"] }
+    },
+    {
+      "name": "SsvcDecisionType",
+      "doc": "SSVC decision types from SPDX 3.0.1 Security profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Security/SsvcDecisionType"] }
+    },
+    {
+      "name": "VexJustificationType",
+      "doc": "VEX not-affected justification types from SPDX 3.0.1 Security profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Security/VexJustificationType"] }
+    }
+  ]
+}

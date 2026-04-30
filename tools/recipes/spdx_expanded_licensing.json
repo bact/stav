@@ -1,0 +1,17 @@
+{
+  "source_desc": "SPDX 3.0.1 ExpandedLicensing profile",
+  "submodule": "vocab.spdx.expanded_licensing",
+  "output": "../../src/stav/vocab/spdx/expanded_licensing.py",
+  "emit_constants": true,
+  "terms_filter": {
+    "iri_prefix": "https://spdx.org/rdf/3.0.1/terms/ExpandedLicensing/"
+  },
+  "sources": [
+    {
+      "path": "../../../spdx-spec/rdf/spdx-model.ttl",
+      "format": "ttl",
+      "source_vocab": "SPDX-3.0.1"
+    }
+  ],
+  "enums": []
+}

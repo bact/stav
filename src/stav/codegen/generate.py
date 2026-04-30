@@ -68,6 +68,7 @@ from stav.codegen.emitter import emit
 from stav.codegen.grouper import (
     build_ancestor_map,
     filter_by_broader,
+    filter_by_iri_prefix,
     filter_by_iris,
     filter_by_types,
 )
@@ -175,11 +176,31 @@ def run_recipe(recipe_path: str) -> None:
     enum_specs = _build_enum_specs(recipe.get("enums", []), all_terms, ancestor_map)
 
     emit_constants = recipe.get("emit_constants", True)
+
+    # Apply optional recipe-level terms_filter (e.g. iri_prefix to isolate a profile)
+    terms_for_constants = list(all_terms)
+    tf = recipe.get("terms_filter", {})
+    if "iri_prefix" in tf:
+        terms_for_constants = filter_by_iri_prefix(terms_for_constants, tf["iri_prefix"])
+
+    # Exclude enum members and their vocabulary class IRIs from constants to
+    # avoid flooding the namespace and naming collisions with enum class names.
+    if emit_constants and enum_specs:
+        excluded: set[str] = set()
+        for spec in enum_specs:
+            for t in spec.terms:
+                excluded.add(t.iri)
+        # Also exclude the vocabulary class IRIs used as types_in filters
+        for edef in recipe.get("enums", []):
+            for iri in edef.get("filter", {}).get("types_in", []):
+                excluded.add(iri)
+        terms_for_constants = [t for t in terms_for_constants if t.iri not in excluded]
+
     module = VocabModule(
         output_path=recipe["output"],
         source_desc=recipe.get("source_desc", rp.stem),
         enums=enum_specs,
-        all_terms=all_terms if emit_constants else [],
+        all_terms=terms_for_constants if emit_constants else [],
         emit_constants=emit_constants,
     )
 
