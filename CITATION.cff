@@ -2,7 +2,7 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: STAV - System Trustworthiness and Accountability Vocabulary
+title: "STAV: System Trustworthiness and Accountability Vocabulary"
 message: >-
   If you use this software, please cite it using the metadata from this file.
 type: software
@@ -20,6 +20,9 @@ abstract: >-
 keywords:
   - Python
   - vocabulary
+  - transparency
+  - accountability
+  - trustworthiness
   - taxonomy
   - ontology
   - standardised
