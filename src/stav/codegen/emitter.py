@@ -78,9 +78,8 @@ def emit(module: VocabModule, recipe_path: str = "", submodule: str = "") -> str
     for spec in module.enums:
         sections.append(_emit_class(spec))
 
-    # Metadata registry — all terms registered at import time
-    if module.all_terms:
-        sections.append(_emit_register(module.all_terms))
+    # Metadata registry — constants + enum members, deduped by IRI
+    sections.append(_emit_register(module))
 
     # __all__: constants first, then enum class names
     const_names = _constant_names(module.all_terms) if module.emit_constants else []
@@ -167,18 +166,30 @@ def _emit_class(spec: EnumSpec) -> str:
     )
 
 
-def _emit_register(terms: list[VocabTerm]) -> str:
-    """Emit the _register({...}) call that populates metadata at import time."""
+def _emit_register(module: VocabModule) -> str:
+    """Emit the _register({...}) call that populates metadata at import time.
+
+    Collects all_terms (constants) plus every term in every enum spec so the
+    registry is complete even when enum members are excluded from the constants
+    block (e.g. SPDX profile modules where vocab members live only in enums).
+    """
+    all_to_register: list[VocabTerm] = list(module.all_terms)
+    seen_iris: set[str] = {t.iri for t in all_to_register}
+    for spec in module.enums:
+        for t in spec.terms:
+            if t.iri not in seen_iris:
+                all_to_register.append(t)
+                seen_iris.add(t.iri)
+
+    if not all_to_register:
+        return ""
+
     lines = [
         "# ── Metadata registry ──────────────────────────────────────────────────────────────",
         "# Populated at import time so stav.label() / .definition() / .broader() work.",
         "_register({",
     ]
-    seen_iris: set[str] = set()
-    for term in sorted(terms, key=lambda t: t.iri):
-        if term.iri in seen_iris:
-            continue
-        seen_iris.add(term.iri)
+    for term in sorted(all_to_register, key=lambda t: t.iri):
         entry_parts = []
         if term.label:
             entry_parts.append(f'"label": {term.label!r}')

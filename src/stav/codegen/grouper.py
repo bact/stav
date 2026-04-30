@@ -99,3 +99,16 @@ def filter_by_iris(
             result.append(t)
             seen.add(iri)
     return result
+
+
+def filter_by_iri_prefix(
+    terms: list[VocabTerm],
+    prefix: str,
+) -> list[VocabTerm]:
+    """Return terms whose IRI starts with *prefix*.
+
+    Used to isolate terms belonging to a single ontology profile, e.g.
+    ``"https://spdx.org/rdf/3.0.1/terms/AI/"`` to restrict to the SPDX AI
+    profile without cross-contamination from Dataset or Core terms.
+    """
+    return [t for t in terms if t.iri.startswith(prefix)]
