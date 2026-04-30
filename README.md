@@ -8,6 +8,8 @@
 
 `This work is still under development.`
 
+Ease the uses of standardised vocabularies in Python workflow.
+
 **stav**:
 
 - Norwegian: *to spell (words)*
@@ -24,13 +26,18 @@
 
 ## STAV Taxonomy
 
-Available at [https://w3id.org/stav](https://w3id.org/stav.)
+Apart from providing access to standardised vocabularies,
+STAV also provide a minimal taxonomy at
+[https://w3id.org/stav](https://w3id.org/stav.)
 
 ## STAV Python module
 
-STAV terms can also be accessible through a Python module called `stav`, available freely on the [Python Package Index](https://pypi.org/project/stav/).
+STAV terms can also be accessible through a Python module called `stav`,
+available freely on the [Python Package Index](https://pypi.org/project/stav/).
 
-STAV class names are accessible through constants in the `stav` module. These class names are in capital letters with underscores separating words, `LIKE_THIS`, as stated in [PEP 8](https://peps.python.org/pep-0008/#constants).
+STAV class names are accessible through constants in the `stav` module.
+These class names are in capital letters with underscores separating words,
+`LIKE_THIS`, as stated in [PEP 8](https://peps.python.org/pep-0008/#constants).
 Values of these constants are simply a STAV class name, a string in `CamelCase`.
 
 For example, `stav.INSTRUCTIONS_FOR_USE` is a string with value of "InstructionsForUse".
