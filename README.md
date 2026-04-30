@@ -23,7 +23,7 @@ Ease the uses of standardised vocabularies in Python workflow.
 - [License](#license)
 -->
 
-## STAV Taxonomy
+## STAV taxonomy
 
 Apart from providing access to standardised vocabularies,
 STAV also provide a minimal taxonomy at
