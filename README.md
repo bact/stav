@@ -2,9 +2,8 @@
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![PyPI - Version](https://img.shields.io/pypi/v/stav.svg)](https://pypi.org/project/stav)
+![GitHub License](https://img.shields.io/github/license/bact/stav)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/stav.svg)](https://pypi.org/project/stav)
-
------
 
 `This work is still under development.`
 
