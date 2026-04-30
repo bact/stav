@@ -92,7 +92,8 @@ and with the organizational support from members of these research groups:
 
 Members of [RegTech group at ADAPT Centre](https://regtech.adaptcentre.ie/) contribute to AI and data ontology projects below, and they are may be of your interest:
 
+- [Pitloom](https://github.com/bact/pitloom) - SBOM (software bill of materials) generator. Its SBOM fragments generation works with STAV vocabs.
 - [Trustworthy AI Requirements Ontology (TAIR)](https://tair.adaptcentre.ie/)
 - [AI Risk Ontology (AIRO)](https://w3id.org/airo)
 - [Vocabulary of AI Risks (VAIR)](https://w3id.org/vair)
-- [Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) - [AI Extenstion](https://github.com/w3c/dpv/issues/126) (under development)
+- [Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) - with AI extenstion
