@@ -6,10 +6,16 @@
 
 from __future__ import annotations
 
+import keyword
 import textwrap
 from datetime import datetime, timezone
 
 from stav.codegen.model import EnumSpec, VocabModule, VocabTerm
+
+
+def _safe_name(name: str) -> str:
+    """Append ``_`` to names that are Python keywords (e.g. ``from`` → ``from_``)."""
+    return f"{name}_" if keyword.iskeyword(name) else name
 
 _BANNER = """\
 # SPDX-FileCopyrightText: 2026-present Arthit Suriyawongkul
@@ -113,7 +119,7 @@ def _emit_constants(terms: list[VocabTerm]) -> str:
     ]
     seen: dict[str, int] = {}
     for term in sorted(terms, key=lambda t: t.name.lower()):
-        name = term.name
+        name = _safe_name(term.name)
         if name in seen:
             seen[name] += 1
             name = f"{name}_{seen[name]}"
@@ -129,7 +135,7 @@ def _constant_names(terms: list[VocabTerm]) -> list[str]:
     names: list[str] = []
     seen: dict[str, int] = {}
     for term in sorted(terms, key=lambda t: t.name.lower()):
-        name = term.name
+        name = _safe_name(term.name)
         if name in seen:
             seen[name] += 1
             name = f"{name}_{seen[name]}"
@@ -155,6 +161,7 @@ def _emit_class(spec: EnumSpec) -> str:
             raw = f"{raw}_{seen_names[raw]}"
         else:
             seen_names[raw] = 0
+        raw = _safe_name(raw)
         comment = f"  # {term.label}" if term.label and term.label != raw else ""
         members_lines.append(f"    {raw} = {term.iri!r}{comment}")
 

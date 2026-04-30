@@ -1,0 +1,38 @@
+{
+  "source_desc": "SPDX 3.0.1 Software profile",
+  "submodule": "vocab.spdx.software",
+  "output": "../../src/stav/vocab/spdx/software.py",
+  "emit_constants": true,
+  "terms_filter": {
+    "iri_prefix": "https://spdx.org/rdf/3.0.1/terms/Software/"
+  },
+  "sources": [
+    {
+      "path": "../../../spdx-spec/rdf/spdx-model.ttl",
+      "format": "ttl",
+      "source_vocab": "SPDX-3.0.1"
+    }
+  ],
+  "enums": [
+    {
+      "name": "ContentIdentifierType",
+      "doc": "Content identifier types from SPDX 3.0.1 Software profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Software/ContentIdentifierType"] }
+    },
+    {
+      "name": "FileKindType",
+      "doc": "File kind types from SPDX 3.0.1 Software profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Software/FileKindType"] }
+    },
+    {
+      "name": "SbomType",
+      "doc": "SBOM type classifications from SPDX 3.0.1 Software profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Software/SbomType"] }
+    },
+    {
+      "name": "SoftwarePurpose",
+      "doc": "Software purpose / type classifications from SPDX 3.0.1 Software profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Software/SoftwarePurpose"] }
+    }
+  ]
+}

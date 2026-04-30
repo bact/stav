@@ -1,0 +1,68 @@
+{
+  "source_desc": "SPDX 3.0.1 Core profile",
+  "submodule": "vocab.spdx.core",
+  "output": "../../src/stav/vocab/spdx/core.py",
+  "emit_constants": true,
+  "terms_filter": {
+    "iri_prefix": "https://spdx.org/rdf/3.0.1/terms/Core/"
+  },
+  "sources": [
+    {
+      "path": "../../../spdx-spec/rdf/spdx-model.ttl",
+      "format": "ttl",
+      "source_vocab": "SPDX-3.0.1"
+    }
+  ],
+  "enums": [
+    {
+      "name": "AnnotationType",
+      "doc": "Annotation types from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/AnnotationType"] }
+    },
+    {
+      "name": "ExternalIdentifierType",
+      "doc": "External identifier types from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/ExternalIdentifierType"] }
+    },
+    {
+      "name": "ExternalRefType",
+      "doc": "External reference types from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/ExternalRefType"] }
+    },
+    {
+      "name": "HashAlgorithm",
+      "doc": "Hash / digest algorithm identifiers from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/HashAlgorithm"] }
+    },
+    {
+      "name": "LifecycleScopeType",
+      "doc": "Lifecycle scope types from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/LifecycleScopeType"] }
+    },
+    {
+      "name": "PresenceType",
+      "doc": "Presence / assertion types (yes / no / noAssertion) from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/PresenceType"] }
+    },
+    {
+      "name": "ProfileIdentifierType",
+      "doc": "SPDX profile identifiers from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/ProfileIdentifierType"] }
+    },
+    {
+      "name": "RelationshipCompleteness",
+      "doc": "Relationship completeness values from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/RelationshipCompleteness"] }
+    },
+    {
+      "name": "RelationshipType",
+      "doc": "Relationship types between SPDX elements from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/RelationshipType"] }
+    },
+    {
+      "name": "SupportType",
+      "doc": "Support level types from SPDX 3.0.1 Core profile.",
+      "filter": { "types_in": ["https://spdx.org/rdf/3.0.1/terms/Core/SupportType"] }
+    }
+  ]
+}

@@ -14,9 +14,10 @@ authors:
     orcid: "https://orcid.org/0000-0002-9698-1899"
 repository-code: "https://github.com/bact/stav.git"
 url: "https://pypi.org/project/stav/"
+doi: 10.5281/zenodo.19912074
 abstract: >-
-  Ease the uses of standardised vocabularies in Python workflow.
-  Preloaded with vocabularies for AI and dataset transparency.
+  Ease the uses of standardised vocabularies in Python workflow. Preloaded with
+  vocabularies for AI, dataset, and software transparency.
 keywords:
   - Python
   - vocabulary
@@ -28,5 +29,5 @@ keywords:
   - standardised
   - standardized
 license: Apache-2.0
-version: 0.3.0
+version: 0.4.0
 date-released: "2026-04-30"

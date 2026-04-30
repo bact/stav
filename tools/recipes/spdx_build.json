@@ -1,0 +1,17 @@
+{
+  "source_desc": "SPDX 3.0.1 Build profile",
+  "submodule": "vocab.spdx.build",
+  "output": "../../src/stav/vocab/spdx/build.py",
+  "emit_constants": true,
+  "terms_filter": {
+    "iri_prefix": "https://spdx.org/rdf/3.0.1/terms/Build/"
+  },
+  "sources": [
+    {
+      "path": "../../../spdx-spec/rdf/spdx-model.ttl",
+      "format": "ttl",
+      "source_vocab": "SPDX-3.0.1"
+    }
+  ],
+  "enums": []
+}
