@@ -1,0 +1,29 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: STAV - System Trustworthiness and Accountability Vocabulary
+message: >-
+  If you use this software, please cite it using the metadata from this file.
+type: software
+authors:
+  - given-names: Arthit
+    family-names: Suriyawongkul
+    email: suriyawa@tcd.ie
+    affiliation: "ADAPT Centre, Trinity College Dublin"
+    orcid: "https://orcid.org/0000-0002-9698-1899"
+repository-code: "https://github.com/bact/stav.git"
+url: "https://pypi.org/project/stav/"
+abstract: >-
+  Ease the uses of standardised vocabularies in Python workflow.
+  Preloaded with vocabularies for AI and dataset transparency.
+keywords:
+  - Python
+  - vocabulary
+  - taxonomy
+  - ontology
+  - standardised
+  - standardized
+license: Apache-2.0
+version: 0.3.0
+date-released: "2026-04-30"
