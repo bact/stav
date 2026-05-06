@@ -1,4 +1,4 @@
-# STAV: System Trustworthiness and Accountability Vocabulary
+# STAV: System Trustworthiness and Accountability Vocabularies
 
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![PyPI - Version](https://img.shields.io/pypi/v/stav.svg)](https://pypi.org/project/stav)
@@ -71,12 +71,13 @@ Use `stav.label()` to get a human-readable name from any term.
 
 ```python
 from pitloom import loom
-from stav.vocab import dpv, spdx
+from stav.vocab.dpv import ai as dpv_ai
+from stav.vocab.spdx import dataset as spdx_dataset
 
 @loom.shoot("training_sbom.json")
 def train(dataset_path):
-    loom.set_model("my-model", model_type=dpv.ai.AITechnique.SupervisedLearning)
-    loom.add_dataset(dataset_path, dataset_type=spdx.dataset.DatasetType.text)
+    loom.set_model("my-model", model_type=dpv_ai.AITechnique.SupervisedLearning)
+    loom.add_dataset(dataset_path, dataset_type=spdx_dataset.DatasetType.text)
     ...
 ```
 
@@ -109,4 +110,4 @@ Members of [RegTech group at ADAPT Centre](https://regtech.adaptcentre.ie/) cont
 - [Trustworthy AI Requirements Ontology (TAIR)](https://tair.adaptcentre.ie/)
 - [AI Risk Ontology (AIRO)](https://w3id.org/airo)
 - [Vocabulary of AI Risks (VAIR)](https://w3id.org/vair)
-- [Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) - with AI extenstion
+- [Data Privacy Vocabulary (DPV)](https://w3id.org/dpv) - with AI extension
