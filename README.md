@@ -3,9 +3,7 @@
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![PyPI - Version](https://img.shields.io/pypi/v/stav.svg)](https://pypi.org/project/stav)
 ![GitHub License](https://img.shields.io/github/license/bact/stav)
-[![DOI](https://zenodo.org/badge/695166654.svg)](https://doi.org/10.5281/zenodo.19912074)
-
-`This work is still under development.`
+[![DOI](https://img.shields.io/badge/doi-10.5281%2Fzenodo.19912074-blue)](https://doi.org/10.5281/zenodo.19912074)
 
 Ease the uses of standardised vocabularies in Python workflow.
 
